@@ -1,8 +1,8 @@
-# Chris Hullman & Mick Caffery <!-- omit in toc -->
-# T3A2 (Part A) Assignment <!-- omit in toc -->
-## Volunteer Cleanup: MERN full-stack app <!-- omit in toc -->
+# Community Cleanup: MERN full-stack app <!-- omit in toc -->
+### Chris Hullman & Mick Caffery <!-- omit in toc -->
+### T3A2 (Part A) Assignment <!-- omit in toc -->
 
-# Table of Contents <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Links](#links)
 - [Overview](#overview)
   - [Purpose](#purpose)
@@ -15,6 +15,9 @@
 - [Wireframes](#wireframes)
 - [Project Management](#project-management)
     - [Setup](#setup)
+      - [***Timeframe***](#timeframe)
+      - [***Kanban Board***](#kanban-board)
+      - [***Scrum Sprints & Ceremonies***](#scrum-sprints--ceremonies)
     - [Sprint 1](#sprint-1)
     - [Sprint 2](#sprint-2)
     - [Sprint 3](#sprint-3)
@@ -79,18 +82,33 @@ After a natural disaster strikes, communities are often left with the enormous c
 
 #### Setup
 
-On day one of this assignment, we discussed how we should effectively manage the project and the tools we should use. We aimed to incorporate different tools and methods from Agile Project Management frameworks like Scrum and Kanban that would suit our team size, project scope and timeframe. 
+In the beginning, we discussed how we should effectively manage the project and the tools we should use. We aimed to incorporate different tools and methods from Agile Project Management frameworks like Scrum and Kanban that would suit our team size, project scope and timeframe. 
+
+##### ***Timeframe***
+
+We were given a timeframe of five weeks to complete both Part A and Part B of the assignment, starting on Wednesday 19th of October 2022 until the final due date of Wednesday 23rd of November 2022. The contact hours throughout the Bootcamp were Monday to Wednesday, 9 am to 5 pm. We chose to keep this as the core contact hours for the project. Due to team members' work commitments and job search efforts, we decided that any additional hours from Thursday to Sunday would be planned ahead.
+
+##### ***Kanban Board***
 
 We decided to use Trello to manage our Kanban board as we both had experience with this product. We used the Kanban board to create a backlog of tasks or user stories that would be required to move the project forward. Then move each item into an “in progress” section while being worked on, then finally move the item to the “done” section once complete. As a team, we both took responsibility for organising the backlog and communicating to each which items were being updated. 
 
-We were given a timeframe of five weeks to complete both Part A and Part B of the assignment, starting on Wednesday 19th of October 2022 until the final due date of Wednesday 23rd of November 2022. We decided to break the 5-week period into five sprints based on the Scrum framework. We would use these sprints to plan and build our product in a series of five iterations, which would help break down the final product into manageable pieces of work. We predict that this approach will help us ship our work sooner and more frequently, whilst giving us the opportunity to adapt and change as we receive feedback from user testing. 
+##### ***Scrum Sprints & Ceremonies***
 
-We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). At the start of each planning meeting would review the backlog. Following this, we would discuss what we would like to accomplish during the sprint and then move tasks and stories from the backlog to the current sprint. To help with tracking the tasks in each weeks sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt which made it easy to move Kanban cards in the backlog into each sprint’s Gantt chart. 
+We decided to break the 5-week period into five sprints based on the Scrum framework. We would use these sprints to plan and build our product in a series of five iterations, which would help break down the final product into manageable pieces of work. We predict that this approach will help us ship our work sooner and more frequently, whilst giving us the opportunity to adapt and change as we receive feedback from user testing. 
 
-As we were a small team of just two, on top of our morning stand up we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. Also due to our small team size, the sprint review was incorporated into the following week’s sprint planning meeting. Each of the five sprint reviews are detailed below.
+We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). At the start of each planning meeting would review the backlog. Following this, we would discuss what we would like to accomplish during the sprint and then move tasks and stories from the backlog to the current sprint. To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt which made it easy to move Kanban cards in the backlog into each sprint’s Gantt chart. 
 
+As we were a small team of just two, on top of our morning stand-up (during core days) we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. Also due to our small team size, the sprint review was incorporated into the following week’s planning meeting. Each of the five sprint reviews are detailed below.
 
 #### Sprint 1
+
+We kicked off the project with an initial planning meeting. This is where we discussed potential ideas and submitted our chosen idea for approval. We then discussed how we would like to manage the project and which tools and methods would suit. We then talked about the initial tasks that we both would work on. 
+
+The Kanban board below was created after this initial planning meeting and reflects these initial tasks and backlog. We decided that we should place an emphasis on revising the MERN masterclass presented by our class instructors on the previous two days, as the concepts covered were crucial to our team performing well on this assignment.
+
+![Week 1 Day 1 Trello Screenshot](./trello-screenshots/wk1-day1.png)
+
+Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on Monday. 
 
 #### Sprint 2
 
