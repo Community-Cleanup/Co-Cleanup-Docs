@@ -68,10 +68,11 @@ After a natural disaster strikes, communities are often left with the enormous c
 
 ## Dataflow Diagram
 
+![Data Flow Diagram](./diagrams/data-flow.png)
 
 ## Application Architecture Diagram
 
-![Application Architecture Diagram](./diagrams/architecture-diagram.png)
+![Application Architecture Diagram](./diagrams/architecture.png)
 
 ## User Stories
 
