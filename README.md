@@ -71,6 +71,7 @@ After a natural disaster strikes, communities are often left with the enormous c
 
 ## Application Architecture Diagram
 
+![Application Architecture Diagram](./diagrams/architecture-diagram.png)
 
 ## User Stories
 
