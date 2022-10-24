@@ -18,9 +18,9 @@
   - [Timeframe](#timeframe)
   - [Kanban Board](#kanban-board)
   - [Scrum Sprints & Ceremonies](#scrum-sprints--ceremonies)
-    - [Planning Meetings](#planning-meetings)
-    - [Daily Standups](#daily-standups)
-    - [Sprint Reviews](#sprint-reviews)
+    - [*Planning Meetings*](#planning-meetings)
+    - [*Daily Standups*](#daily-standups)
+    - [*Sprint Reviews*](#sprint-reviews)
 - [Sprint 1](#sprint-1)
   - [Planning meeting 1](#planning-meeting-1)
   - [Planning meeting 2](#planning-meeting-2)
@@ -112,7 +112,7 @@ We decided to use Trello to manage our Kanban board as we both had experience wi
 
 We decided to break the 5-week period into five sprints based on the Scrum framework. We would use these sprints to plan and build our product in a series of five iterations, which would help break down the final product into manageable pieces of work. We predict that this approach will help us ship our work sooner and more frequently, whilst giving us the opportunity to adapt and change as we receive feedback from user testing. 
 
-#### Planning Meetings
+#### *Planning Meetings*
 
 We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). Each planning meeting addressed the following three questions:
 
@@ -126,11 +126,11 @@ Elaborating on these topics we would discuss what we would like to achieve durin
 
 To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt which made it easy to move Kanban cards in the backlog into each sprint’s Gantt chart. 
 
-#### Daily Standups
+#### *Daily Standups*
 
 The purpose of our teams morning standup was to discuss the progress towards the sprint goal and adapt the backlog as necessary. As we were a small team of just two, on top of our morning stand-up (during core days) we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. 
 
-#### Sprint Reviews
+#### *Sprint Reviews*
 
 The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations. 
 
