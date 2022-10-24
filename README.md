@@ -14,15 +14,29 @@
 - [User Stories](#user-stories)
 - [Wireframes](#wireframes)
 - [Project Management](#project-management)
-    - [Setup](#setup)
-      - [***Timeframe***](#timeframe)
-      - [***Kanban Board***](#kanban-board)
-      - [***Scrum Sprints & Ceremonies***](#scrum-sprints--ceremonies)
-    - [Sprint 1](#sprint-1)
-    - [Sprint 2](#sprint-2)
-    - [Sprint 3](#sprint-3)
-    - [Sprint 4](#sprint-4)
-    - [Sprint 5](#sprint-5)
+  - [Setup](#setup)
+    - [Timeframe](#timeframe)
+    - [Kanban Board](#kanban-board)
+    - [Scrum Sprints & Ceremonies](#scrum-sprints--ceremonies)
+      - [Planning Meetings](#planning-meetings)
+        - [Daily Standups](#daily-standups)
+      - [Sprint Reviews](#sprint-reviews)
+- [Sprint 1](#sprint-1)
+  - [Planning meeting 1](#planning-meeting-1)
+  - [Planning meeting 2](#planning-meeting-2)
+  - [Sprint Review](#sprint-review)
+- [Sprint 2](#sprint-2)
+  - [Planning meeting](#planning-meeting)
+  - [Sprint Review](#sprint-review-1)
+- [Sprint 3](#sprint-3)
+  - [Planning meeting](#planning-meeting-1)
+  - [Sprint Review](#sprint-review-2)
+- [Sprint 4](#sprint-4)
+  - [Planning meeting](#planning-meeting-2)
+  - [Sprint Review](#sprint-review-3)
+- [Sprint 5](#sprint-5)
+  - [Planning meeting](#planning-meeting-3)
+  - [Sprint Review](#sprint-review-4)
 
 ## Links
 
@@ -82,23 +96,23 @@ After a natural disaster strikes, communities are often left with the enormous c
 
 ## Project Management
 
-#### Setup
+### Setup
 
 In the beginning, we discussed how we should effectively manage the project and the tools we should use. We aimed to incorporate different tools and methods from Agile Project Management frameworks like Scrum and Kanban that would suit our team size, project scope and timeframe. 
 
-##### ***Timeframe***
+#### Timeframe
 
 We were given a timeframe of five weeks to complete both Part A and Part B of the assignment, starting on Wednesday 19th of October 2022 until the final due date of Wednesday 23rd of November 2022. The contact hours throughout the Bootcamp were Monday to Wednesday, 9 am to 5 pm. We chose to keep this as the core contact hours for the project. Due to team members' work commitments and job search efforts, we decided that any additional hours from Thursday to Sunday would be planned ahead.
 
-##### ***Kanban Board***
+#### Kanban Board
 
 We decided to use Trello to manage our Kanban board as we both had experience with this product. We used the Kanban board to create a backlog of tasks or user stories that would be required to move the project forward. Then move each item into an “in progress” section while being worked on, then finally move the item to the “done” section once complete. As a team, we both took responsibility for organising the backlog and communicating to each which items were being updated. 
 
-##### ***Scrum Sprints & Ceremonies***
+#### Scrum Sprints & Ceremonies
 
 We decided to break the 5-week period into five sprints based on the Scrum framework. We would use these sprints to plan and build our product in a series of five iterations, which would help break down the final product into manageable pieces of work. We predict that this approach will help us ship our work sooner and more frequently, whilst giving us the opportunity to adapt and change as we receive feedback from user testing. 
 
-###### Planning Meetings
+##### Planning Meetings
 
 We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). Each planning meeting addressed the following three questions:
 
@@ -120,9 +134,9 @@ The purpose of our teams morning standup was to discuss the progress towards the
 
 The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations. 
 
-#### Sprint 1
+## Sprint 1
 
-##### Planning meeting 1
+### Planning meeting 1
 
 We kicked off the project with an initial planning meeting. This is where we discussed potential ideas and submitted our chosen idea for approval. We then discussed how we would like to manage the project and which tools and methods would suit. We then talked about the initial tasks that we both would work on. 
 
@@ -132,7 +146,7 @@ The Kanban board below was created after this initial planning meeting and refle
 
 Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on Monday. 
 
-##### Planning meeting 2
+### Planning meeting 2
 
 **The topics discussed were:**
 
@@ -142,15 +156,15 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 **How should we break down the chosen items into daily increments?**
 
-##### Sprint Review
+### Sprint Review
 
 Insert Trello Screenshot
 
 Insert Gantt Chart Screenshot
 
-#### Sprint 2
+## Sprint 2
 
-##### Planning meeting 2
+### Planning meeting
 
 **The topics discussed were:**
 
@@ -160,7 +174,7 @@ Insert Gantt Chart Screenshot
 
 **How should we break down the chosen items into daily increments?**
 
-##### Sprint Review
+### Sprint Review
 
 Short overview of what was achieved
 
@@ -168,9 +182,9 @@ Insert Trello Screenshot
 
 Insert Gantt Chart Screenshot
 
-#### Sprint 3
+## Sprint 3
 
-##### Planning meeting 2
+### Planning meeting
 
 **The topics discussed were:**
 
@@ -180,7 +194,7 @@ Insert Gantt Chart Screenshot
 
 **How should we break down the chosen items into daily increments?**
 
-##### Sprint Review
+### Sprint Review
 
 Short overview of what was achieved
 
@@ -188,9 +202,9 @@ Insert Trello Screenshot
 
 Insert Gantt Chart Screenshot
 
-#### Sprint 4
+## Sprint 4
 
-##### Planning meeting 2
+### Planning meeting
 
 **The topics discussed were:**
 
@@ -200,7 +214,7 @@ Insert Gantt Chart Screenshot
 
 **How should we break down the chosen items into daily increments?**
 
-##### Sprint Review
+### Sprint Review
 
 Short overview of what was achieved
 
@@ -208,9 +222,9 @@ Insert Trello Screenshot
 
 Insert Gantt Chart Screenshot
 
-#### Sprint 5
+## Sprint 5
 
-##### Planning meeting 2
+### Planning meeting
 
 **The topics discussed were:**
 
@@ -220,7 +234,7 @@ Insert Gantt Chart Screenshot
 
 **How should we break down the chosen items into daily increments?**
 
-##### Sprint Review
+### Sprint Review
 
 Short overview of what was achieved
 
