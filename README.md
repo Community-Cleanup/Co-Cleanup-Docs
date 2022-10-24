@@ -114,7 +114,9 @@ We decided to break the 5-week period into five sprints based on the Scrum frame
 
 #### *Planning Meetings*
 
-We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). Each planning meeting addressed the following three questions:
+We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). During each planning meeting we discussed what we would like to achieve during the sprint and the value that goal would bring to the project. We then moved items from the product backlog that were necessary to complete the sprint, and delegated how we would complete these items. Finally each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
+
+Based on this approach, each planning meeting addressed the following three questions:
 
 **What is the main sprint goal and the value that would bring to the project?**
 
@@ -122,17 +124,15 @@ We decided that each sprint would start each Wednesday and begin with the planni
 
 **How should we break down the chosen items into daily increments?**
 
-Elaborating on these topics we would discuss what we would like to achieve during the sprint and the value that would bring to the project. We then moved items from the product backlog that were necessary to complete the sprint, and delegated how we would complete these items. Finally each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
-
-To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt which made it easy to move Kanban cards in the backlog into each sprint’s Gantt chart. 
+To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt, making it easy to move tasks in the backlog into each sprint. 
 
 #### *Daily Standups*
 
-The purpose of our teams morning standup was to discuss the progress towards the sprint goal and adapt the backlog as necessary. As we were a small team of just two, on top of our morning stand-up (during core days) we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. 
+The purpose of our team's morning standup (during core days) was to discuss the progress towards the sprint goal and adapt the backlog as necessary. As we were a small team of just two, on top of our morning stand-up we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. 
 
 #### *Sprint Reviews*
 
-The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations. 
+The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations to the project. 
 
 ## Sprint 1
 
@@ -144,17 +144,33 @@ The Kanban board below was created after this initial planning meeting and refle
 
 ![Week 1 Day 1 Trello Screenshot](./trello-screenshots/wk1-day1.png)
 
-Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on Monday. 
+Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on the following Monday. 
 
 ### Planning meeting 2
 
 **The topics discussed were:**
 
-**What is the main sprint goal and the value that would bring to the project?**
+**What is the main sprint goal and the value it would bring to the project?**
+
+- The main sprint goal this week was to have a basic Express server deployed deployed to heroku with CRUD functionality for ‘users’ and ‘events’, with data being stored on MongoDB cloud. On top of this we would create a React Front end deployed to netlify with a simple form to create an event. 
+- A secondary goal was to have all of our initial users stories documented
+- The value these goals would bring to our project follow on from the principles of CI/CD and “deploy early”. Due to the flexibility of Express and the MongoDB data structure we aimed to build a working “core server” that was deployed that we could build upon as we worked through each user story.
 
 **Which items can be moved from the backlog to achieve this goal?**
 
+- Items moved from the backlog included:
+  - Setting up Express Back-end and deploy
+  - Document user stories
+  - Scaffold React front-end and deploy
+  - Build basic forms for Register & Sign In
+  - Build basic form for Registering an Event
+
 **How should we break down the chosen items into daily increments?**
+
+- Each of the items in Sprint 1 were less than one days work
+  - Monday would be spent developing User stories and documentation
+  - Tuesday would be spent Setting up Express Back-end and deploy
+  - Wednesday would be spent setting up React front-end, deployment and basic forms
 
 ### Sprint Review
 
