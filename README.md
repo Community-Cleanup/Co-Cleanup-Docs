@@ -98,11 +98,31 @@ We decided to use Trello to manage our Kanban board as we both had experience wi
 
 We decided to break the 5-week period into five sprints based on the Scrum framework. We would use these sprints to plan and build our product in a series of five iterations, which would help break down the final product into manageable pieces of work. We predict that this approach will help us ship our work sooner and more frequently, whilst giving us the opportunity to adapt and change as we receive feedback from user testing. 
 
-We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). At the start of each planning meeting would review the backlog. Following this, we would discuss what we would like to accomplish during the sprint and then move tasks and stories from the backlog to the current sprint. To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt which made it easy to move Kanban cards in the backlog into each sprint’s Gantt chart. 
+###### Planning Meetings
 
-As we were a small team of just two, on top of our morning stand-up (during core days) we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. Also due to our small team size, the sprint review was incorporated into the following week’s planning meeting. Each of the five sprint reviews are detailed below.
+We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). Each planning meeting addressed the following three questions:
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+**How should we break down the chosen items into daily increments?**
+
+Elaborating on these topics we would discuss what we would like to achieve during the sprint and the value that would bring to the project. We then moved items from the product backlog that were necessary to complete the sprint, and delegated how we would complete these items. Finally each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
+
+To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt which made it easy to move Kanban cards in the backlog into each sprint’s Gantt chart. 
+
+###### Daily Standups
+
+The purpose of our teams morning standup was to discuss the progress towards the sprint goal and adapt the backlog as necessary. As we were a small team of just two, on top of our morning stand-up (during core days) we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. 
+
+##### Sprint Reviews
+
+The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations. 
 
 #### Sprint 1
+
+##### Planning meeting 1
 
 We kicked off the project with an initial planning meeting. This is where we discussed potential ideas and submitted our chosen idea for approval. We then discussed how we would like to manage the project and which tools and methods would suit. We then talked about the initial tasks that we both would work on. 
 
@@ -112,11 +132,98 @@ The Kanban board below was created after this initial planning meeting and refle
 
 Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on Monday. 
 
+##### Planning meeting 2
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+**How should we break down the chosen items into daily increments?**
+
+##### Sprint Review
+
+Insert Trello Screenshot
+
+Insert Gantt Chart Screenshot
+
 #### Sprint 2
+
+##### Planning meeting 2
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+**How should we break down the chosen items into daily increments?**
+
+##### Sprint Review
+
+Short overview of what was achieved
+
+Insert Trello Screenshot
+
+Insert Gantt Chart Screenshot
 
 #### Sprint 3
 
+##### Planning meeting 2
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+**How should we break down the chosen items into daily increments?**
+
+##### Sprint Review
+
+Short overview of what was achieved
+
+Insert Trello Screenshot
+
+Insert Gantt Chart Screenshot
+
 #### Sprint 4
+
+##### Planning meeting 2
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+**How should we break down the chosen items into daily increments?**
+
+##### Sprint Review
+
+Short overview of what was achieved
+
+Insert Trello Screenshot
+
+Insert Gantt Chart Screenshot
 
 #### Sprint 5
 
+##### Planning meeting 2
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+**How should we break down the chosen items into daily increments?**
+
+##### Sprint Review
+
+Short overview of what was achieved
+
+Insert Trello Screenshot
+
+Insert Gantt Chart Screenshot
