@@ -152,9 +152,9 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 **What is the main sprint goal and the value it would bring to the project?**
 
-- The main sprint goal this week was to have a basic Express server deployed to heroku with CRUD functionality for ‘users’ and ‘events’, with data being stored on MongoDB cloud. On top of this we would create a React Front end deployed to netlify with a simple form to create an event. 
+- The main sprint goal this week was to have a basic Express server deployed to Heroku with CRUD functionality for ‘users’ and ‘events’, with data being stored on MongoDB cloud. On top of this we would create a React Front end deployed to Netlify with a simple form to create an event. 
 - A secondary goal was to have all of our initial users stories documented
-- The value these goals would bring to our project follow on from the principles of CI/CD and “deploy early”. Due to the flexibility of Express and the MongoDB data structure we aimed to build a working “core server” that was deployed that we could build upon as we worked through each user story.
+- These goals would bring value to our project by following the principles of CI/CD and the mantra “deploy often and deploy early”. Due to the flexibility of Express and the MongoDB data structure we aimed to build a working “core server” that was deployed that we could build upon as we worked through each user story.
 
 **Which items can be moved from the backlog to achieve this goal?**
 
