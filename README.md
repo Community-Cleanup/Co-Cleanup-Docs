@@ -21,6 +21,7 @@
     - [*Planning Meetings*](#planning-meetings)
     - [*Daily Standups*](#daily-standups)
     - [*Sprint Reviews*](#sprint-reviews)
+  - [Pair Programming](#pair-programming)
 - [Sprint 1](#sprint-1)
   - [Planning meeting 1](#planning-meeting-1)
   - [Planning meeting 2](#planning-meeting-2)
@@ -133,6 +134,10 @@ The purpose of our team's morning standup (during core days) was to discuss the 
 #### *Sprint Reviews*
 
 The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations to the project. 
+
+### Pair Programming
+
+We wanted to incorporate pair programming into our workflow as a way to share knowledge, write better code and problem solve together. We chose to use pair programming as a way get started on our server and client code bases, and when each of us encountered any difficult work items. The main tool we used to pair program was VS Code Live Share. We discovered this was a great tool where we could collaborate and write code in unison live on the one project. While pair programming in VS Code Live Share we used Discord to provide video, voice and chat. 
 
 ## Sprint 1
 
