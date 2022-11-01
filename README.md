@@ -147,7 +147,7 @@ We kicked off the project with an initial planning meeting. This is where we dis
 
 The Kanban board below was created after this initial planning meeting and reflects these initial tasks and backlog. We decided that we should place an emphasis on revising the MERN masterclass presented by our class instructors on the previous two days, as the concepts covered were crucial to our team performing well on this assignment.
 
-![Week 1 Day 1 Trello Screenshot](./trello-screenshots/wk1-day1.png)
+![Week 1 Day 1 Trello Screenshot](./trello-screenshots/backlog-wk1-day1.png)
 
 Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on the following Monday. 
 
@@ -172,16 +172,23 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 **How should we break down the chosen items into daily increments?**
 
-- Each of the items in Sprint 1 were less than one days work
   - Monday would be spent developing User stories and documentation
   - Tuesday would be spent Setting up Express Back-end and deploy
   - Wednesday would be spent setting up React front-end, deployment and basic forms
 
 ### Sprint Review
 
-Insert Trello Screenshot
+The screenshots below show the implementation board at the end of week 1, which marks the end of our first sprint. We achieved the majority of what we planned for the sprint, however, did not start any development of the front end. The Gantt chart shows which items we worked on each day of the sprint. 
 
-Insert Gantt Chart Screenshot
+![Week 1 Review Implementation Board](./trello-screenshots/backlog-wk1.png)
+
+![Week 1 Gantt Chart](./trello-screenshots/sprint1.png)
+
+As this was the first sprint for the assignment we learnt a lot about time management and what is achievable in a single sprint. We also came up against parts of the development process that were more difficult than expected. 
+
+During this sprint, a difficult task was understanding how to set up Firebase Authentication on the frontend. We decided that we should adjust our backlog and devote time to researching and understanding how best to implement Firebase authentication into our project. 
+
+There were no major adaptations to the project. However, in review, we were able to adjust which tasks should be given priority in order to meet the assignment requirement of submitting the Part A documentation by the end of sprint two. 
 
 ## Sprint 2
 
@@ -191,9 +198,21 @@ Insert Gantt Chart Screenshot
 
 **What is the main sprint goal and the value that would bring to the project?**
 
+- The main sprint goal this week was to research and understand Firebase Authentication. Our next main goal was to finish all the required wireframes, diagrams, and Readme documentation required for the Part A submission. 
+- The value these goals would bring to the project would be that through a better understanding of authentication, we would be able to design and draw more accurate data flow diagrams, which is a requirement for Part A. The goal of finalising the Readme documentation ahead of time, will also allow us to review and make any changes before the Part A due date, and also enable us to continue working on Part B of the assignment. 
+
 **Which items can be moved from the backlog to achieve this goal?**
 
+- Items moved from the backlog included:
+  - Research Firebase Authentication
+  - DataFlow Diagram Increment 2
+  - Architecture Diagram Increment 2
+  - Finalise Wireframes
+  - Finalise Part A Readme
+
 **How should we break down the chosen items into daily increments?**
+
+- Following on from our previous sprint, the dataflow diagram and architecture diagram have already been broken down into a daily increments, with the first increments being completed in sprint 1. The remainder of the tasks have been planned to take less than one day.
 
 ### Sprint Review
 
