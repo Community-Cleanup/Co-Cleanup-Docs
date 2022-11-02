@@ -83,7 +83,17 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Dataflow Diagram
 
-![Data Flow Diagram](./diagrams/data-flow.png)
+![Data Flow Diagram - Legend](./diagrams/data-flow-legend.png)
+
+![Data Flow Diagram - Diagram 1 - Client App Production Deployment](./diagrams/data-flow-diagram1.png)
+
+![Data Flow Diagram - Diagram 2 - New User Sign-Up/Register then Automatic Sign-In/Login](./diagrams/data-flow-diagram2.png)
+
+![Data Flow Diagram - Diagram 3 - Logout](./diagrams/data-flow-diagram3.png)
+
+![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' Resource](./diagrams/data-flow-diagram4.png)
+
+![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' Resource](./diagrams/data-flow-diagram5.png)
 
 ## Application Architecture Diagram
 
