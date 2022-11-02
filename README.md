@@ -91,6 +91,13 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## User Stories
 
+### Revision 1:
+
+![User Stories - Revision 1](./trello-screenshots/user-stories-revision1.png)
+
+### Revision 2:
+
+![User Stories - Revision 1](./trello-screenshots/user-stories-revision2.png)
 
 ## Wireframes
 
