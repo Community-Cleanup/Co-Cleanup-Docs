@@ -83,17 +83,32 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Dataflow Diagram
 
-![Data Flow Diagram](./diagrams/data-flow.png)
+![Data Flow Diagram](./docs/diagrams/data-flow.png)
 
 ## Application Architecture Diagram
 
-![Application Architecture Diagram](./diagrams/architecture.png)
+![Landing Page Wireframe](./docs/wireframes/landing-page.png)
+
+![Sign Up Page Wireframe](./docs/wireframes/sign-up.png)
+
+![Sign In Page Wireframe](./docs/wireframes/sign-in.png)
+
+![Home Events Page Wireframe](./docs/wireframes/home-search.png)
+
+![Event Page Wireframe](./docs/wireframes/event.png)
+
+![Create Event Page Wireframe](./docs/wireframes/create-event.png)
+
+![User Dashboard Page Wireframe](./docs/wireframes/user-dashboard.png)
+
+![Admin Dashboard Page Wireframe](./docs/wireframes/admin-dashboard.png)
 
 ## User Stories
 
 
 ## Wireframes
 
+![Week 1 Day 1 Trello Screenshot](./docs/trello-screenshots/backlog-wk1-day1.png)
 
 ## Project Management
 
@@ -147,7 +162,7 @@ We kicked off the project with an initial planning meeting. This is where we dis
 
 The Kanban board below was created after this initial planning meeting and reflects these initial tasks and backlog. We decided that we should place an emphasis on revising the MERN masterclass presented by our class instructors on the previous two days, as the concepts covered were crucial to our team performing well on this assignment.
 
-![Week 1 Day 1 Trello Screenshot](./trello-screenshots/backlog-wk1-day1.png)
+![Week 1 Day 1 Trello Screenshot](./docs/trello-screenshots/backlog-wk1-day1.png)
 
 Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on the following Monday. 
 
@@ -180,9 +195,9 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 The screenshots below show the implementation board at the end of week 1, which marks the end of our first sprint. We achieved the majority of what we planned for the sprint, however, did not start any development of the front end. The Gantt chart shows which items we worked on each day of the sprint. 
 
-![Week 1 Review Implementation Board](./trello-screenshots/backlog-wk1.png)
+![Week 1 Review Implementation Board](./docs/trello-screenshots/backlog-wk1.png)
 
-![Week 1 Gantt Chart](./trello-screenshots/sprint1.png)
+![Week 1 Gantt Chart](./docs/trello-screenshots/sprint1.png)
 
 As this was the first sprint for the assignment we learnt a lot about time management and what is achievable in a single sprint. We also came up against parts of the development process that were more difficult than expected. 
 
