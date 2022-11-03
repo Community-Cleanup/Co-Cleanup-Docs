@@ -90,13 +90,17 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Dataflow Diagram
 
-### Note about the below diagrams
+#### Note about the below diagrams
 
 **Besides the 'Legend' diagram below, all subsequent Dataflow Diagrams have their processes (circle shapes) numbered.**
 
 **The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.**
 
+#### Legend
+
 ![Data Flow Diagram - Legend](./docs/diagrams/data-flow-legend.png)
+
+#### Diagram 1 - Client or Server App Production Deployment
 
 ![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./docs/diagrams/data-flow-diagram1.png)
 
@@ -107,6 +111,8 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 5. The signed certificate will be sent back to the client or server app PaaS system to enable HTTPS on the deployed client or server app.
 6. For the client app, the public access keys to the cloud authentication services systems will be sent.
 7. The cloud authentication services systems will return an authentication ID token to store in a cookie on the client app PaaS system.
+
+#### Diagram 2 - Sign-Up then Automatic Sign-In
 
 ![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./docs/diagrams/data-flow-diagram2.png)
 
@@ -128,6 +134,8 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 *Note that for any future requests to protected endpoints that requires sign in or other authorisation (e.g. user administrator role requirements), the token stored in the cookie from process #7 will be used to send back to the server API to repeat the above same token decoding and database query processes.*
 
+#### Diagram 3 - Logout
+
 ![Data Flow Diagram - Diagram 3 - Logout](./docs/diagrams/data-flow-diagram3.png)
 
 **If the signed in end-user clicks the logout button, the following three processes will occur:**
@@ -136,6 +144,8 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 3. Functions will be executed to clear out the user *state* on the client app.
 
 **Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.**
+
+#### Diagram 4 - Co Cleanup 'Events' API Resource
 
 ![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./docs/diagrams/data-flow-diagram4.png)
 
@@ -160,6 +170,8 @@ The client app will then either send one of the following relevent CRUD requests
 18. If the POST, PUT or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
 19. The server API will respond to the client app a validated model instance of the event(s) object including status code/message.
 
+#### Diagram 5 - Co Cleanup 'Comments' API Resource
+
 ![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./docs/diagrams/data-flow-diagram5.png)
 
 1. The end-user triggers an action on their webpage to see all comments by an event UID.
@@ -177,6 +189,8 @@ The client app will then either send one of the following relevent CRUD requests
 12. If the POST or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
 13. The server API will respond to the client app a validated model instance of the comment(s) object including status code/message.
 
+#### Diagram 6 (Part 1) - Administrator User Role - Find Any User
+
 ![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./docs/diagrams/data-flow-diagram6-1.png)
 
 1. The administrator end-user searches for any user by their username on their administrator only webpage on the client app.
@@ -186,6 +200,8 @@ The client app will then either send one of the following relevent CRUD requests
 5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
 6. If the query operation was successful, respond with an object with details of the selected user.
 7. The promise on the client app should resolve successfully with the user's details from the server API app.
+
+#### Diagram 6 (Part 2) - Administrator User Role - Disable/Reenable Found User
 
 ![Data Flow Diagram - Diagram 6-2 - Administrator User Role - Disable/Reenable Found User](./docs/diagrams/data-flow-diagram6-2.png)
 
@@ -197,11 +213,15 @@ The client app will then either send one of the following relevent CRUD requests
 6. If the query operation was successful, respond with an object with details of selected and now updated user.
 7. The promise on the client app should resolve successfully with the now updated user's details from the server API app.
 
+#### Diagram 7 - External 'Map' API Forward Geocoding
+
 ![Data Flow Diagram - Diagram 7 - External 'Map' API Forward Geocoding](./docs/diagrams/data-flow-diagram7.png)
 
 1. The server API app sends a GET request of an object including the URL of the Geocoding API endpoint, and the query string/params of the access token for the API and the address of the location to forward geocode.
 2. The server API app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the server API app.
 3. If successful, the server API app will receive a resolved promise that the Geocoding API will respond with an object containing the latitude and longitude coordinates of the address, if found.
+
+#### Diagram 8 - External 'Map' API Rendering on Client App
 
 ![Data Flow Diagram - Diagram 8 - External 'Map' API Rendering on Client App](./docs/diagrams/data-flow-diagram8.png)
 
