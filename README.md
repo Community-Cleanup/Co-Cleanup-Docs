@@ -98,8 +98,6 @@ The numbered lists below each Dataflow Diagram indicate the sequence, in ascendi
 
 #### Legend
 
-#### Legend
-
 ![Data Flow Diagram - Legend](./docs/diagrams/data-flow-legend.png)
 
 #### Diagram 1 - Client or Server App Production Deployment
@@ -146,8 +144,6 @@ If the signed in end-user clicks the logout button, the following three processe
 3. Functions will be executed to clear out the user *state* on the client app.
 
 Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.
-
-#### Diagram 4 - Co Cleanup 'Events' API Resource
 
 #### Diagram 4 - Co Cleanup 'Events' API Resource
 
