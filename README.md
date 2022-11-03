@@ -103,6 +103,24 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./diagrams/data-flow-diagram2.png)
 
+1. From a sign up form on the client app, the user's username, email and password as user input will added to the client app.
+2. With the client-app-side validated username, email and password it will be sent as a POST request to the cloud authentication services. Included in the request will be a flag to bypass any email verification requirements for the sign up.
+3. With the cloud authentication services attempt at validating the email and password on its systems, if this is a *sign up*, attempt to save the user's email and secured password on its systems, alternatively for *sign in* attemp to retrieve the existing user from its systems. The auth services will respond back with an object to the client, depending whether it was successful or not.
+4. From process #3, one of three error responses may occur: "Weak Password", "Invalid Email", or "Operation Not Allowed". Or only "User Not Found" error if this is a *sign in* request only.
+5. Alternatively, if successful user creation on the auth system services, return a response object with the ID token (JWT) with token metadata such as expiry time.
+6. Clear any existing cookie stored on the end-user's web browser.
+7. Store a copy of the ID token on a cookie on the end-user's web browser.
+8. Send a POST request to the server API app with the ID token for validatation against the "admin" side of the cloud authentication services.
+9. From process #8, an error response of "Connection Refused" may occur if there's a network error, for example.
+10. Send a POST request with the ID token to the admin cloud authentication services to validate it.
+11. If the ID token is deemed still valid, decode the user's claims from the payload to retrieve the user's details (email, username, etc.) in plain text.
+12. With the decoded claims, as an object, and as a query filter, send a database query to the NoSQL database to create a new user (for *sign up*) on the database, or fetch the user (for *sign in*) from the database.
+13. Respond with any connection/network errors to the database that may have occured.
+14. If the database query was successful retrieve the user's details from the database as a document as per NoSQL database design, of which the server API app will handle and store as an object.
+15. A promise from the client app for the user's details from the database should be resolved and the user's decoded details stored into *state* on the client app.
+
+*Note that for any future requests to protected endpoints that requires sign in or other authorisation (e.g. user administrator role requirements), the token stored in the cookie from process #7 will be used to send back to the server API to repeat the above same token decoding and database query processes.*
+
 ![Data Flow Diagram - Diagram 3 - Logout](./diagrams/data-flow-diagram3.png)
 
 ![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./diagrams/data-flow-diagram4.png)
