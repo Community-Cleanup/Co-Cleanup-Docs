@@ -112,11 +112,24 @@ The Co Cleanup app [Trello User Stories board here](https://trello.com/b/kBMQdaE
 
 ### Revision 1:
 
+This is the original draft User Stories version from Week 1 of the sprint, with the planned articulated User Stories categorised into persona needs and "must haves" vs "would like to have" features of the app.
+
 ![User Stories - Revision 1](./trello-screenshots/user-stories-revision1.png)
 
 ### Revision 2:
 
+In this revision from Week 2 of the sprint, the following changes were made:
+- It was discussed and clarified that our target audience would like to see, as view only, all existing cleaning events that are scheduled without needing to be signed in to the app.
+- For clarity, when the user first signs up into the app, they can specify a nickname as their username, hence we discarded the user story card relating to concerns of privacy of the user's full, real name.
+
 ![User Stories - Revision 1](./trello-screenshots/user-stories-revision2.png)
+
+### Revision 3:
+
+In this revision from Week 2 of the sprint, the following changes were made:
+- The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of scope of MVP as per discussed project timeframe concerns.
+
+![User Stories - Revision 3](./trello-screenshots/user-stories-revision3.png)
 
 ## Wireframes
 
