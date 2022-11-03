@@ -90,7 +90,124 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Dataflow Diagram
 
-![Data Flow Diagram](./docs/diagrams/data-flow.png)
+### Note about the below diagrams
+
+**Besides the 'Legend' diagram below, all subsequent Dataflow Diagrams have their processes (circle shapes) numbered.**
+
+**The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.**
+
+![Data Flow Diagram - Legend](./docs/diagrams/data-flow-legend.png)
+
+![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./docs/diagrams/data-flow-diagram1.png)
+
+1. One or more developers on a local development machine will push (or pull request) the latest code base to the central main/master branch of a version control/source code repository.
+2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the intial version of the code base will automatically sent to the PaaS system.
+3. Polls will be sent to and/or from the repository and the PaaS system to monitor for codebase changes, and if a new change is detected, automically re-push the new code onto the PaaS system (i.e. Continuous Deployment).
+4. The client or server app PaaS system will request from a Certificate Authority (CA) for a new or renewed TSL/SSL certificate.
+5. The signed certificate will be sent back to the client or server app PaaS system to enable HTTPS on the deployed client or server app.
+6. For the client app, the public access keys to the cloud authentication services systems will be sent.
+7. The cloud authentication services systems will return an authentication ID token to store in a cookie on the client app PaaS system.
+
+![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./docs/diagrams/data-flow-diagram2.png)
+
+1. From a sign up form on the client app, the user's username, email and password as user input will added to the client app.
+2. With the client-app-side validated username, email and password it will be sent as a POST request to the cloud authentication services. Included in the request will be a flag to bypass any email verification requirements for the sign up.
+3. With the cloud authentication services attempt at validating the email and password on its systems, if this is a *sign up*, attempt to save the user's email and secured password on its systems, alternatively for *sign in* attemp to retrieve the existing user from its systems. The auth services will respond back with an object to the client, depending whether it was successful or not.
+4. From process #3, one of three error responses may occur: "Weak Password", "Invalid Email", or "Operation Not Allowed". Or only "User Not Found" error if this is a *sign in* request only.
+5. Alternatively, if successful user creation on the auth system services, return a response object with the ID token (JWT) with token metadata such as expiry time.
+6. Clear any existing cookie stored on the end-user's web browser.
+7. Store a copy of the ID token on a cookie on the end-user's web browser.
+8. Send a POST request to the server API app with the ID token for validatation against the "admin" side of the cloud authentication services.
+9. From process #8, an error response of "Connection Refused" may occur if there's a network error, for example.
+10. Send a POST request with the ID token to the admin cloud authentication services to validate it.
+11. If the ID token is deemed still valid, decode the user's claims from the payload to retrieve the user's details (email, username, etc.) in plain text.
+12. With the decoded claims, as an object, and as a query filter, send a database query to the NoSQL database to create a new user (for *sign up*) on the database, or fetch the user (for *sign in*) from the database.
+13. Respond with any connection/network errors to the database that may have occured.
+14. If the database query was successful retrieve the user's details from the database as a document as per NoSQL database design, of which the server API app will handle and store as an object.
+15. A promise from the client app for the user's details from the database should be resolved and the user's decoded details stored into *state* on the client app.
+
+*Note that for any future requests to protected endpoints that requires sign in or other authorisation (e.g. user administrator role requirements), the token stored in the cookie from process #7 will be used to send back to the server API to repeat the above same token decoding and database query processes.*
+
+![Data Flow Diagram - Diagram 3 - Logout](./docs/diagrams/data-flow-diagram3.png)
+
+**If the signed in end-user clicks the logout button, the following three processes will occur:**
+1. The signed in end-user fires/clicks the logout button on a webpage which will trigger a handler on the client app to request a logout.
+2. Functions will be executed to delete the cookie on the end-user's web browser.
+3. Functions will be executed to clear out the user *state* on the client app.
+
+**Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.**
+
+![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./docs/diagrams/data-flow-diagram4.png)
+
+1. The end-user triggers an action on their webpage to see all created events.
+2. Or, the end-user triggers an event on their webpage to see only their own created events.
+3. Or, the end-user triggers an event on their webpage to see a particular event by requesting the unique ID (UID) of the event.
+The client app will then either send one of the following relevent CRUD requests (from #4 to #9) to the server API app:
+4. Send a GET request for all existing events.
+5. Send a GET request for the user's own created events.
+6. Send a GET request to get a particular event by its UID.
+7. Send a POST request to create a new event with the event details (title, address, description, etc.) as an object - only if the user is signed in.
+8. Send a PUT request to edit an event with the updated details as an object - only if the user is signed in, and its their own event or the user is an administrator.
+9. Send a DELETE request to delete an event - only if the user is signed in, and its their own event or the user is an administrator.
+10. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+11. Query the database depending on the above CRUD operation chosen.
+12. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following three CRUD processes against the database:
+13. Query the database to create a new event.
+14. Query the database to edit an event.
+15. Query the database to delete an event.
+16. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+17. If the query operation was successful, respond with an object with details of the selected, or updated event. If the event was deleted, respond with the correct status code.
+18. If the POST, PUT or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
+19. The server API will respond to the client app a validated model instance of the event(s) object including status code/message.
+
+![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./docs/diagrams/data-flow-diagram5.png)
+
+1. The end-user triggers an action on their webpage to see all comments by an event UID.
+The client app will then either send one of the following relevent CRUD requests (from #2 to #4) to the server API app:
+2. Send a GET request for all existing comments on an event.
+3. Send a POST request for a new comment on an event with an object containing the comment description -  only if the user is signed in and they are attending the event.
+4. Send a DELETE request to delete a comment - only if the user is signed in, and its their own comment or the user is an administrator.
+5. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+6. Query the database for comment(s) depending on the above CRUD operation chosen.
+7. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following two CRUD processes against the database:
+8. Query the database to create a new comment to an event.
+9. Query the database to delete a comment on an event.
+10. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+11. If the query operation was successful, respond with an object with details of the selected comment. If the event was deleted, respond with the correct status code.
+12. If the POST or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
+13. The server API will respond to the client app a validated model instance of the comment(s) object including status code/message.
+
+![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./docs/diagrams/data-flow-diagram6-1.png)
+
+1. The administrator end-user searches for any user by their username on their administrator only webpage on the client app.
+2. A GET request with the requested user's username as a query string/param is sent to the server API app.
+3. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+4. Query the database with the requested user's username and find their database entry by their UID.
+5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+6. If the query operation was successful, respond with an object with details of the selected user.
+7. The promise on the client app should resolve successfully with the user's details from the server API app.
+
+![Data Flow Diagram - Diagram 6-2 - Administrator User Role - Disable/Reenable Found User](./docs/diagrams/data-flow-diagram6-2.png)
+
+1. The administrator end-user, with their found user, triggers a form action or button to enable or disable a user's account.
+2. A PUT request with the found user's details with the enable/disable boolean is sent to the server API.
+3. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+4. Query the database with the requested user's UID and find their database entry by their UID and update their database document with the enabled/disabled boolean.
+5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+6. If the query operation was successful, respond with an object with details of selected and now updated user.
+7. The promise on the client app should resolve successfully with the now updated user's details from the server API app.
+
+![Data Flow Diagram - Diagram 7 - External 'Map' API Forward Geocoding](./docs/diagrams/data-flow-diagram7.png)
+
+1. The server API app sends a GET request of an object including the URL of the Geocoding API endpoint, and the query string/params of the access token for the API and the address of the location to forward geocode.
+2. The server API app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the server API app.
+3. If successful, the server API app will receive a resolved promise that the Geocoding API will respond with an object containing the latitude and longitude coordinates of the address, if found.
+
+![Data Flow Diagram - Diagram 8 - External 'Map' API Rendering on Client App](./docs/diagrams/data-flow-diagram8.png)
+
+1. The client app sends a GET request of an object including the URL of the Maps API endpoint, and the query string/params of the access token for the API.
+2. The client app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the client API app.
+3. If successful, the cleint API app will receive a resolved promise that the Maps API will respond with the object with the maps details that the pre-installed client-side SDK of the maps service can utilise to render the map graphics on the client app display.
 
 ## Application Architecture Diagram
 
@@ -113,6 +230,35 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## User Stories
 
+The Co Cleanup app [Trello User Stories board here](https://trello.com/b/kBMQdaEN/user-stories-co-cleanup) has an **INFORMATION** list (first board column) with cards that explain the approach, formatting and syntax to reading and editing the board and its User Stories. Below are direct links to the information cards (for each card, please read the card title, and the card description, if there is one):
+
+- Structure of a User Story text - [https://trello.com/c/ikJvrfnR](https://trello.com/c/ikJvrfnR)
+- Who are the personas? - [https://trello.com/c/uO42CR5e](https://trello.com/c/uO42CR5e)
+- About RED labelled cards - [https://trello.com/c/FrhWO1ks](https://trello.com/c/FrhWO1ks)
+- About ORANGE labelled cards - [https://trello.com/c/DpYXKgNt](https://trello.com/c/DpYXKgNt)
+- How to delete/discard cards - [https://trello.com/c/3QqTMrCv](https://trello.com/c/3QqTMrCv)
+- How to edit cards - [https://trello.com/c/zDDxwutQ](https://trello.com/c/zDDxwutQ)
+
+### Revision 1:
+
+This is the original draft User Stories version from Week 1 of the sprint, with the planned articulated User Stories categorised into persona needs and "must haves" vs "would like to have" features of the app.
+
+![User Stories - Revision 1](./docs/trello-screenshots/user-stories-revision1.png)
+
+### Revision 2:
+
+In this revision from Week 2 of the sprint, the following changes were made:
+- It was discussed and clarified that our target audience would like to see, as view only, all existing cleaning events that are scheduled without needing to be signed in to the app.
+- For clarity, when the user first signs up into the app, they can specify a nickname as their username, hence we discarded the user story card relating to concerns of privacy of the user's full, real name.
+
+![User Stories - Revision 1](./docs/trello-screenshots/user-stories-revision2.png)
+
+### Revision 3:
+
+In this revision from Week 2 of the sprint, the following changes were made:
+- The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of scope of MVP as per discussed project timeframe concerns.
+
+![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
 
 ## Wireframes
 
