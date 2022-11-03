@@ -60,7 +60,24 @@ After a natural disaster strikes, communities are often left with the enormous c
 
 ### Functionality & Features
 
-- Post description, time, location of needing help with a cleanup
+The functionality & features are described below for unregistered visitors, registered users and administrators. 
+
+**Visitors**
+
+- Can view the landing page to understand Co Cleanups' purpose and why it might be useful
+- Can search and view all planned clean up events (locations displayed on a map)
+- Are able to sign up to become a registered user
+
+**Registered Users**
+
+- Can create clean up events
+- Can register to participate in a clean up event
+- Can add comments to a clean up event
+
+**Administrators**
+
+- Can search for and view all users
+- Can deactivate users or events
 
 ### Target Audience
 
@@ -72,21 +89,23 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **Back-end:** Node, ExpressJS, Mongoose, MongoDB
 
+**Authentication:** Firebase Authentication
+
 **Deployment (Server):** Heroku 
 
 **Deployment (Database):** MongoDB Cloud Services
 
 **Deployment (Front-End):** Netlify
 
+**APIs** Mapbox maps & geocoding
+
 **Testing:**  Jest
 
 **Source Control:** Git & Github
 
-**Project Management:** Trello
+**Project Management:** Trello & TeamGantt
 
 **UI Design:** Figma
-
-
 
 ## Dataflow Diagram
 
