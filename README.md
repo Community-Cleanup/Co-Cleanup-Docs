@@ -123,17 +123,84 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ![Data Flow Diagram - Diagram 3 - Logout](./diagrams/data-flow-diagram3.png)
 
+**If the signed in end-user clicks the logout button, the following three processes will occur:**
+1. The signed in end-user fires/clicks the logout button on a webpage which will trigger a handler on the client app to request a logout.
+2. Functions will be executed to delete the cookie on the end-user's web browser.
+3. Functions will be executed to clear out the user *state* on the client app.
+
+**Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.**
+
 ![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./diagrams/data-flow-diagram4.png)
+
+1. The end-user triggers an action on their webpage to see all created events.
+2. Or, the end-user triggers an event on their webpage to see only their own created events.
+3. Or, the end-user triggers an event on their webpage to see a particular event by requesting the unique ID (UID) of the event.
+The client app will then either send one of the following relevent CRUD requests (from #4 to #9) to the server API app:
+4. Send a GET request for all existing events.
+5. Send a GET request for the user's own created events.
+6. Send a GET request to get a particular event by its UID.
+7. Send a POST request to create a new event with the event details (title, address, description, etc.) as an object - only if the user is signed in.
+8. Send a PUT request to edit an event with the updated details as an object - only if the user is signed in, and its their own event or the user is an administrator.
+9. Send a DELETE request to delete an event - only if the user is signed in, and its their own event or the user is an administrator.
+10. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+11. Query the database depending on the above CRUD operation chosen.
+12. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following three CRUD processes against the database:
+13. Query the database to create a new event.
+14. Query the database to edit an event.
+15. Query the database to delete an event.
+16. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+17. If the query operation was successful, respond with an object with details of the selected, or updated event. If the event was deleted, respond with the correct status code.
+18. If the POST, PUT or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
+19. The server API will respond to the client app a validated model instance of the event(s) object including status code/message.
 
 ![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./diagrams/data-flow-diagram5.png)
 
+1. The end-user triggers an action on their webpage to see all comments by an event UID.
+The client app will then either send one of the following relevent CRUD requests (from #2 to #4) to the server API app:
+2. Send a GET request for all existing comments on an event.
+3. Send a POST request for a new comment on an event with an object containing the comment description -  only if the user is signed in and they are attending the event.
+4. Send a DELETE request to delete a comment - only if the user is signed in, and its their own comment or the user is an administrator.
+5. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+6. Query the database for comment(s) depending on the above CRUD operation chosen.
+7. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following two CRUD processes against the database:
+8. Query the database to create a new comment to an event.
+9. Query the database to delete a comment on an event.
+10. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+11. If the query operation was successful, respond with an object with details of the selected comment. If the event was deleted, respond with the correct status code.
+12. If the POST or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
+13. The server API will respond to the client app a validated model instance of the comment(s) object including status code/message.
+
 ![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./diagrams/data-flow-diagram6-1.png)
+
+1. The administrator end-user searches for any user by their username on their administrator only webpage on the client app.
+2. A GET request with the requested user's username as a query string/param is sent to the server API app.
+3. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+4. Query the database with the requested user's username and find their database entry by their UID.
+5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+6. If the query operation was successful, respond with an object with details of the selected user.
+7. The promise on the client app should resolve successfully with the user's details from the server API app.
 
 ![Data Flow Diagram - Diagram 6-2 - Administrator User Role - Disable/Reenable Found User](./diagrams/data-flow-diagram6-2.png)
 
+1. The administrator end-user, with their found user, triggers a form action or button to enable or disable a user's account.
+2. A PUT request with the found user's details with the enable/disable boolean is sent to the server API.
+3. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
+4. Query the database with the requested user's UID and find their database entry by their UID and update their database document with the enabled/disabled boolean.
+5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+6. If the query operation was successful, respond with an object with details of selected and now updated user.
+7. The promise on the client app should resolve successfully with the now updated user's details from the server API app.
+
 ![Data Flow Diagram - Diagram 7 - External 'Map' API Forward Geocoding](./diagrams/data-flow-diagram7.png)
 
+1. The server API app sends a GET request of an object including the URL of the Geocoding API endpoint, and the query string/params of the access token for the API and the address of the location to forward geocode.
+2. The server API app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the server API app.
+3. If successful, the server API app will receive a resolved promise that the Geocoding API will respond with an object containing the latitude and longitude coordinates of the address, if found.
+
 ![Data Flow Diagram - Diagram 8 - External 'Map' API Rendering on Client App](./diagrams/data-flow-diagram8.png)
+
+1. The client app sends a GET request of an object including the URL of the Maps API endpoint, and the query string/params of the access token for the API.
+2. The client app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the client API app.
+3. If successful, the cleint API app will receive a resolved promise that the Maps API will respond with the object with the maps details that the pre-installed client-side SDK of the maps service can utilise to render the map graphics on the client app display.
 
 ## Application Architecture Diagram
 
