@@ -11,6 +11,7 @@
   - [Tech Stack](#tech-stack)
 - [Dataflow Diagram](#dataflow-diagram)
 - [Application Architecture Diagram](#application-architecture-diagram)
+    - [Legend](#legend)
 - [User Stories](#user-stories)
 - [Wireframes](#wireframes)
   - [Landing Page](#landing-page)
@@ -95,6 +96,8 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ![Application Architecture Diagram](./docs/diagrams/architecture.png)
 
+#### Legend
+
 1. The client (front end) represents the technologies that users interact with directly. The main components are React (components), Axios (XHR), and deployed on Netlify
 2. React is an open-source front-end JavaScript library for building user interfaces with UI components. The diagram shows the main front-end React components that make up the application. Each of these components uses Axios to make XHR requests and the event pages use the Mapbox API for geocoding.  
 3. Axios is a promise-based XMLHttpRequests (XHR) client that is used to make requests to the backend. These requests send and receive JSON data. An example is sending data from the “Create Event” form to a backend REST API endpoint. The React front-end components also receive JSON data via Axios to update state and access the data. 
@@ -116,6 +119,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 ### Landing Page
 
 The landing page will be the page that visitors see when they navigate to the root URL. It is designed so that users can quickly learn what the app is for and why it might be useful for them. Details about this page include:
+
 1. The search bar can be used by visitors who are not logged in to view events. When the search bar is focused, the landing page will navigate to the events search page. The about and volunteer links will navigate to information about how the site work and how users can volunteer at events. The create event link will navigate to the create event form, but only if the user is signed in. If the user is not signed in, then this form will navigate to the sign up page.
 2. The log in and sign up links will not be displayed if a user is signed in, instead a user account icon link will be displayed.
 3. The landing page component will consist of a Co Cleanup title, blurb about Co Cleanup, hero image and links to sign up and view events. 
@@ -126,6 +130,7 @@ The landing page will be the page that visitors see when they navigate to the ro
 ### Sign Up Page
 
 The sign up page is a minimal design that makes it clear to the user what is needed to sign up.
+
 5. By signing up the users agree to the Terms of Service, Privacy Policy, and Cookie Policy. Coloring and underlining will show the user that these headings are also clickable links so that they can read the associated terms and policies.
 
 ![Sign Up Page Wireframe](./docs/wireframes/sign-up.png)
@@ -133,6 +138,7 @@ The sign up page is a minimal design that makes it clear to the user what is nee
 ### Sign In Page
 
 The sign in page is another minimal design and will use similar components for the sign up page.
+
 6. There will be a link to the sign up page, in case the user has not created an account previously. 
 
 ![Sign In Page Wireframe](./docs/wireframes/sign-in.png)
@@ -146,6 +152,7 @@ The sign in page is another minimal design and will use similar components for t
 ### Event Page
 
 The event page is designed to clearly show all details about the upcoming event.
+
 8. A register button so that signed in users can register for an event. If the users are not registered, then this button will navigate them to the sign in page. 
 9. Is a feature for users to be able to leave comments about the event, so that event organisers can reply with further information. 
 
@@ -154,6 +161,7 @@ The event page is designed to clearly show all details about the upcoming event.
 ### Create & Update Event Page
 
 The create event page is designed so that users can easily create and update events. 
+
 10. Signed in users can navigate to this page from the create event button in the navbar. If they would like to update an event they can navigate to update event page by a link in their user dashboard under the heading “My Events”, which lists the events they have organised. 
 
 ![Create Event Page Wireframe](./docs/wireframes/create-event.png)
@@ -161,6 +169,7 @@ The create event page is designed so that users can easily create and update eve
 ### User Dashboard
 
 The user dashboard is designed so that users can easily see all details relating to them.
+
 11. The details section will show their username and email which can be updated.
 12. The “Attending” section will show all events that they have registered for. These events can be clicked and the user is navigated to the event page.
 13. The “My Events” section will show a list of all the events that the user has created. They can choose to update or delete the event. 
@@ -170,6 +179,7 @@ The user dashboard is designed so that users can easily see all details relating
 ### Admin Dashboard
 
 The admin dashboard is designed so that administrators of Co Cleanup can manage users and events.
+
 14. Admin can select if they will search for users or events. Once they have found the user or event, they can deactivate the user or event. 
 
 ![Admin Dashboard Page Wireframe](./docs/wireframes/admin-dashboard.png)
