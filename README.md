@@ -89,9 +89,9 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.**
 
-![Data Flow Diagram - Legend](./diagrams/data-flow-legend.png)
+![Data Flow Diagram - Legend](./docs/diagrams/data-flow-legend.png)
 
-![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./diagrams/data-flow-diagram1.png)
+![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./docs/diagrams/data-flow-diagram1.png)
 
 1. One or more developers on a local development machine will push (or pull request) the latest code base to the central main/master branch of a version control/source code repository.
 2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the intial version of the code base will automatically sent to the PaaS system.
@@ -101,7 +101,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 6. For the client app, the public access keys to the cloud authentication services systems will be sent.
 7. The cloud authentication services systems will return an authentication ID token to store in a cookie on the client app PaaS system.
 
-![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./diagrams/data-flow-diagram2.png)
+![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./docs/diagrams/data-flow-diagram2.png)
 
 1. From a sign up form on the client app, the user's username, email and password as user input will added to the client app.
 2. With the client-app-side validated username, email and password it will be sent as a POST request to the cloud authentication services. Included in the request will be a flag to bypass any email verification requirements for the sign up.
@@ -121,7 +121,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 *Note that for any future requests to protected endpoints that requires sign in or other authorisation (e.g. user administrator role requirements), the token stored in the cookie from process #7 will be used to send back to the server API to repeat the above same token decoding and database query processes.*
 
-![Data Flow Diagram - Diagram 3 - Logout](./diagrams/data-flow-diagram3.png)
+![Data Flow Diagram - Diagram 3 - Logout](./docs/diagrams/data-flow-diagram3.png)
 
 **If the signed in end-user clicks the logout button, the following three processes will occur:**
 1. The signed in end-user fires/clicks the logout button on a webpage which will trigger a handler on the client app to request a logout.
@@ -130,7 +130,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.**
 
-![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./diagrams/data-flow-diagram4.png)
+![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./docs/diagrams/data-flow-diagram4.png)
 
 1. The end-user triggers an action on their webpage to see all created events.
 2. Or, the end-user triggers an event on their webpage to see only their own created events.
@@ -153,7 +153,7 @@ The client app will then either send one of the following relevent CRUD requests
 18. If the POST, PUT or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
 19. The server API will respond to the client app a validated model instance of the event(s) object including status code/message.
 
-![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./diagrams/data-flow-diagram5.png)
+![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./docs/diagrams/data-flow-diagram5.png)
 
 1. The end-user triggers an action on their webpage to see all comments by an event UID.
 The client app will then either send one of the following relevent CRUD requests (from #2 to #4) to the server API app:
@@ -170,7 +170,7 @@ The client app will then either send one of the following relevent CRUD requests
 12. If the POST or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
 13. The server API will respond to the client app a validated model instance of the comment(s) object including status code/message.
 
-![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./diagrams/data-flow-diagram6-1.png)
+![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./docs/diagrams/data-flow-diagram6-1.png)
 
 1. The administrator end-user searches for any user by their username on their administrator only webpage on the client app.
 2. A GET request with the requested user's username as a query string/param is sent to the server API app.
@@ -180,7 +180,7 @@ The client app will then either send one of the following relevent CRUD requests
 6. If the query operation was successful, respond with an object with details of the selected user.
 7. The promise on the client app should resolve successfully with the user's details from the server API app.
 
-![Data Flow Diagram - Diagram 6-2 - Administrator User Role - Disable/Reenable Found User](./diagrams/data-flow-diagram6-2.png)
+![Data Flow Diagram - Diagram 6-2 - Administrator User Role - Disable/Reenable Found User](./docs/diagrams/data-flow-diagram6-2.png)
 
 1. The administrator end-user, with their found user, triggers a form action or button to enable or disable a user's account.
 2. A PUT request with the found user's details with the enable/disable boolean is sent to the server API.
@@ -190,13 +190,13 @@ The client app will then either send one of the following relevent CRUD requests
 6. If the query operation was successful, respond with an object with details of selected and now updated user.
 7. The promise on the client app should resolve successfully with the now updated user's details from the server API app.
 
-![Data Flow Diagram - Diagram 7 - External 'Map' API Forward Geocoding](./diagrams/data-flow-diagram7.png)
+![Data Flow Diagram - Diagram 7 - External 'Map' API Forward Geocoding](./docs/diagrams/data-flow-diagram7.png)
 
 1. The server API app sends a GET request of an object including the URL of the Geocoding API endpoint, and the query string/params of the access token for the API and the address of the location to forward geocode.
 2. The server API app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the server API app.
 3. If successful, the server API app will receive a resolved promise that the Geocoding API will respond with an object containing the latitude and longitude coordinates of the address, if found.
 
-![Data Flow Diagram - Diagram 8 - External 'Map' API Rendering on Client App](./diagrams/data-flow-diagram8.png)
+![Data Flow Diagram - Diagram 8 - External 'Map' API Rendering on Client App](./docs/diagrams/data-flow-diagram8.png)
 
 1. The client app sends a GET request of an object including the URL of the Maps API endpoint, and the query string/params of the access token for the API.
 2. The client app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the client API app.
@@ -204,7 +204,7 @@ The client app will then either send one of the following relevent CRUD requests
 
 ## Application Architecture Diagram
 
-![Application Architecture Diagram](./diagrams/architecture.png)
+![Application Architecture Diagram](./docs/diagrams/architecture.png)
 
 ## User Stories
 
@@ -221,7 +221,7 @@ The Co Cleanup app [Trello User Stories board here](https://trello.com/b/kBMQdaE
 
 This is the original draft User Stories version from Week 1 of the sprint, with the planned articulated User Stories categorised into persona needs and "must haves" vs "would like to have" features of the app.
 
-![User Stories - Revision 1](./trello-screenshots/user-stories-revision1.png)
+![User Stories - Revision 1](./docs/trello-screenshots/user-stories-revision1.png)
 
 ### Revision 2:
 
@@ -229,14 +229,14 @@ In this revision from Week 2 of the sprint, the following changes were made:
 - It was discussed and clarified that our target audience would like to see, as view only, all existing cleaning events that are scheduled without needing to be signed in to the app.
 - For clarity, when the user first signs up into the app, they can specify a nickname as their username, hence we discarded the user story card relating to concerns of privacy of the user's full, real name.
 
-![User Stories - Revision 1](./trello-screenshots/user-stories-revision2.png)
+![User Stories - Revision 1](./docs/trello-screenshots/user-stories-revision2.png)
 
 ### Revision 3:
 
 In this revision from Week 2 of the sprint, the following changes were made:
 - The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of scope of MVP as per discussed project timeframe concerns.
 
-![User Stories - Revision 3](./trello-screenshots/user-stories-revision3.png)
+![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
 
 ## Wireframes
 
@@ -293,7 +293,7 @@ We kicked off the project with an initial planning meeting. This is where we dis
 
 The Kanban board below was created after this initial planning meeting and reflects these initial tasks and backlog. We decided that we should place an emphasis on revising the MERN masterclass presented by our class instructors on the previous two days, as the concepts covered were crucial to our team performing well on this assignment.
 
-![Week 1 Day 1 Trello Screenshot](./trello-screenshots/backlog-wk1-day1.png)
+![Week 1 Day 1 Trello Screenshot](./docs/trello-screenshots/backlog-wk1-day1.png)
 
 Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on the following Monday. 
 
@@ -326,9 +326,9 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 The screenshots below show the implementation board at the end of week 1, which marks the end of our first sprint. We achieved the majority of what we planned for the sprint, however, did not start any development of the front end. The Gantt chart shows which items we worked on each day of the sprint. 
 
-![Week 1 Review Implementation Board](./trello-screenshots/backlog-wk1.png)
+![Week 1 Review Implementation Board](./docs/trello-screenshots/backlog-wk1.png)
 
-![Week 1 Gantt Chart](./trello-screenshots/sprint1.png)
+![Week 1 Gantt Chart](./docs/trello-screenshots/sprint1.png)
 
 As this was the first sprint for the assignment we learnt a lot about time management and what is achievable in a single sprint. We also came up against parts of the development process that were more difficult than expected. 
 
