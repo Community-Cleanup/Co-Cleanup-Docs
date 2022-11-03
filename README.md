@@ -92,9 +92,11 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 #### Note about the below diagrams
 
-**Besides the 'Legend' diagram below, all subsequent Dataflow Diagrams have their processes (circle shapes) numbered.**
+Besides the 'Legend' diagram below, all subsequent Dataflow Diagrams have their processes (circle shapes) numbered.
 
-**The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.**
+The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.
+
+#### Legend
 
 #### Legend
 
@@ -138,12 +140,14 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ![Data Flow Diagram - Diagram 3 - Logout](./docs/diagrams/data-flow-diagram3.png)
 
-**If the signed in end-user clicks the logout button, the following three processes will occur:**
+If the signed in end-user clicks the logout button, the following three processes will occur:
 1. The signed in end-user fires/clicks the logout button on a webpage which will trigger a handler on the client app to request a logout.
 2. Functions will be executed to delete the cookie on the end-user's web browser.
 3. Functions will be executed to clear out the user *state* on the client app.
 
-**Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.**
+Alternatively, if a listener/observer on the client app detects from the cloud authentication services that the user's token has been changed or is no longer valid on the cloud auth services, process #5 will occur to trigger the same processes as processes #2 and #3, above.
+
+#### Diagram 4 - Co Cleanup 'Events' API Resource
 
 #### Diagram 4 - Co Cleanup 'Events' API Resource
 
