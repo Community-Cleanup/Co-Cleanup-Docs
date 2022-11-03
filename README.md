@@ -4,6 +4,7 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
+  - [GitHub Part A Link](#github-part-a-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
@@ -23,6 +24,8 @@
 - [Application Architecture Diagram](#application-architecture-diagram)
     - [Legend](#legend)
 - [User Stories](#user-stories)
+    - [User Stories - Board Link](#user-stories---board-link)
+    - [User Stories - About](#user-stories---about)
 - [Wireframes](#wireframes)
   - [Landing Page](#landing-page)
   - [Sign Up Page](#sign-up-page)
@@ -60,19 +63,24 @@
 
 ## Links
 
+#### GitHub Part A Link:
+
+[**https://github.com/Community-Cleanup/community-cleanup-docs-partA**](https://github.com/Community-Cleanup/community-cleanup-docs-partA)
+
 ## Overview
 
 ### Purpose
 
-After a natural disaster strikes, communities are often left with the enormous clean-up effort required to restore people's homes, businesses and community areas. During these times government, council and emergency services resources are often stretched thin. Co Cleanup, short for Community Cleanup, aims to help communities better coordinate the clean up process after a natural disaster, or any time that community members would like to coordinate group action for the betterment of their community.
+After a natural disaster strikes, communities are often left with the enormous clean-up effort required to restore people's homes, businesses and community areas. During these times government, council and emergency services resources are often stretched thin. Co Cleanup, short for Community Cleanup, aims to help communities better coordinate the clean-up process after a natural disaster, or any time that community members would like to coordinate group action for the betterment of their community. Clean-up tasks may involve the removal of debris, non-hazardous waste, and/or minor repairs, removal or replacements of small objects such as plants, furniture or garbage.
 
-It should be noted that this platform is not to replace the coordination of emergency services in critical disaster recovery contexts or when the safety of individuals is at risk due any given disaster situation.
+It should be noted that this platform is not to replace the coordination of emergency services in critical disaster recovery contexts or when the personal safety of any individual is at risk due any given disaster situation.
 
 **Co Cleanup has been designed and built by Chris Hullman and Mick Caffery as their final cap-stone project for Coder Academy’s Full Stack Development Bootcamp, 2022.**
 
 ### Functionality & Features
 
-- Tailored meetup platform for like-minded volunteers to create meetup events and/or join existing meetup events focused on responding to urgent disaster recovery/cleaning efforts.
+- Tailored meetup platform for like-minded volunteers to create meetup events and/or join existing meetup events focused on responding to non-threatening/safe disaster recovery/cleaning efforts.
+- Any registered user can create an event to request for the crowd sourced efforts of volunteers to join to help with the aforementioned cleaning efforts.
 - Secure user sign up/sign in against a robust cloud authentication platform (Firebase).
 - Real-time map integration for address lookup, geocoding and map display for event location display.
 - Scoped to communities located in Australia for a tailored platform focused on description, time and location display and information near you.
@@ -90,7 +98,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **Front-end:** HTML5, CSS3, JavaScript, React.js, Axios
 
-**Back-end:** Node, ExpressJS, Mongoose, MongoDB
+**Back-end:** Node, ExpressJS, Mongoose, MongoDB, Firebase Authentication, Firebase Cloud Storage
 
 **Deployment (Server):** Heroku 
 
@@ -268,7 +276,13 @@ The client app will then either send one of the following relevent CRUD requests
 
 ## User Stories
 
-The Co Cleanup app [Trello User Stories board here](https://trello.com/b/kBMQdaEN/user-stories-co-cleanup) has an **INFORMATION** list (first board column) with cards that explain the approach, formatting and syntax to reading and editing the board and its User Stories. Below are direct links to the information cards (for each card, please read the card title, and the card description, if there is one):
+### User Stories - Board Link: 
+
+[**https://trello.com/b/kBMQdaEN/user-stories-co-cleanup**](https://trello.com/b/kBMQdaEN/user-stories-co-cleanup)
+
+### User Stories - About: 
+
+The Co Cleanup app User Stories Trello board has an **INFORMATION** list (first board column) with cards that explain the approach, formatting and syntax to reading and editing the board and its User Stories. Below are direct links to the information cards (for each card, please read the card title, and the card description, if there is one):
 
 - Structure of a User Story text - [https://trello.com/c/ikJvrfnR](https://trello.com/c/ikJvrfnR)
 - Who are the personas? - [https://trello.com/c/uO42CR5e](https://trello.com/c/uO42CR5e)
