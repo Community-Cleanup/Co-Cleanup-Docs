@@ -70,7 +70,15 @@ After a natural disaster strikes, communities are often left with the enormous c
 
 ### Functionality & Features
 
-- Post description, time, location of needing help with a cleanup
+- Tailored meetup platform for like-minded volunteers to create meetup events and/or join existing meetup events focused on responding to urgent disaster recovery/cleaning efforts.
+- Secure user sign up/sign in against a robust cloud authentication platform (Firebase).
+- Real-time map integration for address lookup, geocoding and map display for event location display.
+- Scoped to communities located in Australia for a tailored platform focused on description, time and location display and information near you.
+- Easily see cleanup mevents near you thanks to the pronounced map displays.
+- Assured safety of registered users with the functionality of role-based access control (RBAC) to allow assigned administrator end-users to disable or remove inappropriate content or users.
+- Vital safety information displayed as paramount to all users attending a cleanup event, with reminders to leave critical emergency recovery situations to trained safety and recovery professionals (e.g. SES).
+- Comment on cleaning meetup events that you've created or attending to discuss and share finer details before the event.
+- Functionality to upload and display high-quality photos relevant to a particular cleaning event to visually share scope of what needs cleaning to attendees.
 
 ### Target Audience
 
