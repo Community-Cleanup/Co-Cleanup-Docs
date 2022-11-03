@@ -83,17 +83,39 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Dataflow Diagram
 
+### Note about the below diagrams
+
+**Besides the 'Legend' diagram below, all subsequent Dataflow Diagrams have their processes (circle shapes) numbered.**
+
+**The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.**
+
 ![Data Flow Diagram - Legend](./diagrams/data-flow-legend.png)
 
-![Data Flow Diagram - Diagram 1 - Client App Production Deployment](./diagrams/data-flow-diagram1.png)
+![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./diagrams/data-flow-diagram1.png)
 
-![Data Flow Diagram - Diagram 2 - New User Sign-Up/Register then Automatic Sign-In/Login](./diagrams/data-flow-diagram2.png)
+1. One or more developers on a local development machine will push (or pull request) the latest code base to the central main/master branch of a version control/source code repository.
+2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the intial version of the code base will automatically sent to the PaaS system.
+3. Polls will be sent to and/or from the repository and the PaaS system to monitor for codebase changes, and if a new change is detected, automically re-push the new code onto the PaaS system (i.e. Continuous Deployment).
+4. The client or server app PaaS system will request from a Certificate Authority (CA) for a new or renewed TSL/SSL certificate.
+5. The signed certificate will be sent back to the client or server app PaaS system to enable HTTPS on the deployed client or server app.
+6. For the client app, the public access keys to the cloud authentication services systems will be sent.
+7. The cloud authentication services systems will return an authentication ID token to store in a cookie on the client app PaaS system.
+
+![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./diagrams/data-flow-diagram2.png)
 
 ![Data Flow Diagram - Diagram 3 - Logout](./diagrams/data-flow-diagram3.png)
 
-![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' Resource](./diagrams/data-flow-diagram4.png)
+![Data Flow Diagram - Diagram 4 - Co Cleanup 'Events' API Resource](./diagrams/data-flow-diagram4.png)
 
-![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' Resource](./diagrams/data-flow-diagram5.png)
+![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./diagrams/data-flow-diagram5.png)
+
+![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./diagrams/data-flow-diagram6-1.png)
+
+![Data Flow Diagram - Diagram 6-2 - Administrator User Role - Disable/Reenable Found User](./diagrams/data-flow-diagram6-2.png)
+
+![Data Flow Diagram - Diagram 7 - External 'Map' API Forward Geocoding](./diagrams/data-flow-diagram7.png)
+
+![Data Flow Diagram - Diagram 8 - External 'Map' API Rendering on Client App](./diagrams/data-flow-diagram8.png)
 
 ## Application Architecture Diagram
 
