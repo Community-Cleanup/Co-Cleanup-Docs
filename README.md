@@ -9,7 +9,17 @@
   - [Functionality & Features](#functionality--features)
   - [Target Audience](#target-audience)
   - [Tech Stack](#tech-stack)
-- [Dataflow Diagram](#dataflow-diagram)
+- [Dataflow Diagrams](#dataflow-diagrams)
+    - [Dataflow Diagrams Legend](#dataflow-diagrams-legend)
+    - [Diagram 1](#diagram-1---client-or-server-app-production-deployment)
+    - [Diagram 2](#diagram-2---sign-up-then-automatic-sign-in)
+    - [Diagram 3](#diagram-3---logout)
+    - [Diagram 4](#diagram-4---co-cleanup-events-api-resource)
+    - [Diagram 5](#diagram-5---co-cleanup-comments-api-resource)
+    - [Diagram 6 (Part 1)](#diagram-6-part-1---administrator-user-role---find-any-user)
+    - [Diagram 6 (Part 2)](#diagram-6-part-2---administrator-user-role---disablereenable-found-user)
+    - [Diagram 7](#diagram-7---external-map-api-forward-geocoding)
+    - [Diagram 8](#diagram-8---external-map-api-rendering-on-client-app)
 - [Application Architecture Diagram](#application-architecture-diagram)
     - [Legend](#legend)
 - [User Stories](#user-stories)
@@ -86,9 +96,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **UI Design:** Figma
 
-
-
-## Dataflow Diagram
+## Dataflow Diagrams
 
 #### Note about the below diagrams
 
@@ -96,7 +104,7 @@ Besides the 'Legend' diagram below, all subsequent Dataflow Diagrams have their 
 
 The numbered lists below each Dataflow Diagram indicate the sequence, in ascending order, of data flow for each process. Note however that many processes are performed asynchronously, or sometimes not at all for any given live process transaction - e.g. in the case of error responses.
 
-#### Legend
+#### Dataflow Diagrams Legend
 
 ![Data Flow Diagram - Legend](./docs/diagrams/data-flow-legend.png)
 
