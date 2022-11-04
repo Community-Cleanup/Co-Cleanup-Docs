@@ -440,6 +440,8 @@ We wanted to incorporate pair programming into our workflow as a way to share kn
 
 ### Source Control
 
+We decided that the 'Git Feature Branch Workflow' would be the best for our small team size. Both of us would work on separate feature branches and push our branches to the central repository, then merge our changes into the main codebase using a pull request. This meant that the main codebase would never contain broken code and allow for continuous integration of the deployed back-end and front-end.
+
 ## Sprint 1
 
 ### Planning meeting 1
