@@ -74,7 +74,7 @@ The functionality & features are described below for unregistered visitors, regi
 
 **Visitors**
 
-- Can view the landing page to understand Co Cleanups' purpose and why it might be useful
+- Can view the landing page to understand Co Cleanup's purpose and why it might be useful
 - Can search and view all planned clean up events (locations displayed on a map)
 - Are able to sign up to become a registered user
 
@@ -94,7 +94,7 @@ The functionality & features are described below for unregistered visitors, regi
 - Secure user sign up/sign in against a robust cloud authentication platform (Firebase).
 - Real-time map integration for address lookup, geocoding and map display for event location display.
 - Scoped to communities located in Australia for a tailored platform focused on description, time and location display and information near you.
-- Easily see cleanup mevents near you thanks to the pronounced map displays.
+- Easily see cleanup events near you thanks to the pronounced map displays.
 - Assured safety of registered users with the functionality of role-based access control (RBAC) to allow assigned administrator end-users to disable or remove inappropriate content or users.
 - Vital safety information displayed as paramount to all users attending a cleanup event, with reminders to leave critical emergency recovery situations to trained safety and recovery professionals (e.g. SES).
 - Comment on cleaning meetup events that you've created or attending to discuss and share finer details before the event.
@@ -147,8 +147,8 @@ The numbered lists below each Dataflow Diagram indicate the sequence, in ascendi
 ![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./docs/diagrams/data-flow-diagram1.png)
 
 1. One or more developers on a local development machine will push (or pull request) the latest code base to the central main/master branch of a version control/source code repository.
-2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the intial version of the code base will automatically sent to the PaaS system.
-3. Polls will be sent to and/or from the repository and the PaaS system to monitor for codebase changes, and if a new change is detected, automically re-push the new code onto the PaaS system (i.e. Continuous Deployment).
+2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the initial version of the code base will automatically sent to the PaaS system.
+3. Polls will be sent to and/or from the repository and the PaaS system to monitor for codebase changes, and if a new change is detected, automatically re-push the new code onto the PaaS system (i.e. Continuous Deployment).
 4. The client or server app PaaS system will request from a Certificate Authority (CA) for a new or renewed TSL/SSL certificate.
 5. The signed certificate will be sent back to the client or server app PaaS system to enable HTTPS on the deployed client or server app.
 6. For the client app, the public access keys to the cloud authentication services systems will be sent.
@@ -160,17 +160,17 @@ The numbered lists below each Dataflow Diagram indicate the sequence, in ascendi
 
 1. From a sign up form on the client app, the user's username, email and password as user input will added to the client app.
 2. With the client-app-side validated username, email and password it will be sent as a POST request to the cloud authentication services. Included in the request will be a flag to bypass any email verification requirements for the sign up.
-3. With the cloud authentication services attempt at validating the email and password on its systems, if this is a *sign up*, attempt to save the user's email and secured password on its systems, alternatively for *sign in* attemp to retrieve the existing user from its systems. The auth services will respond back with an object to the client, depending whether it was successful or not.
+3. With the cloud authentication services attempt at validating the email and password on its systems, if this is a *sign up*, attempt to save the user's email and secured password on its systems, alternatively for *sign in* attempt to retrieve the existing user from its systems. The auth services will respond back with an object to the client, depending whether it was successful or not.
 4. From process #3, one of three error responses may occur: "Weak Password", "Invalid Email", or "Operation Not Allowed". Or only "User Not Found" error if this is a *sign in* request only.
 5. Alternatively, if successful user creation on the auth system services, return a response object with the ID token (JWT) with token metadata such as expiry time.
 6. Clear any existing cookie stored on the end-user's web browser.
 7. Store a copy of the ID token on a cookie on the end-user's web browser.
-8. Send a POST request to the server API app with the ID token for validatation against the "admin" side of the cloud authentication services.
+8. Send a POST request to the server API app with the ID token for validation against the "admin" side of the cloud authentication services.
 9. From process #8, an error response of "Connection Refused" may occur if there's a network error, for example.
 10. Send a POST request with the ID token to the admin cloud authentication services to validate it.
 11. If the ID token is deemed still valid, decode the user's claims from the payload to retrieve the user's details (email, username, etc.) in plain text.
 12. With the decoded claims, as an object, and as a query filter, send a database query to the NoSQL database to create a new user (for *sign up*) on the database, or fetch the user (for *sign in*) from the database.
-13. Respond with any connection/network errors to the database that may have occured.
+13. Respond with any connection/network errors to the database that may have occurred.
 14. If the database query was successful retrieve the user's details from the database as a document as per NoSQL database design, of which the server API app will handle and store as an object.
 15. A promise from the client app for the user's details from the database should be resolved and the user's decoded details stored into *state* on the client app.
 
@@ -199,8 +199,8 @@ The client app will then either send one of the following relevent CRUD requests
 5. Send a GET request for the user's own created events.
 6. Send a GET request to get a particular event by its UID.
 7. Send a POST request to create a new event with the event details (title, address, description, etc.) as an object - only if the user is signed in.
-8. Send a PUT request to edit an event with the updated details as an object - only if the user is signed in, and its their own event or the user is an administrator.
-9. Send a DELETE request to delete an event - only if the user is signed in, and its their own event or the user is an administrator.
+8. Send a PUT request to edit an event with the updated details as an object - only if the user is signed in, and it's their own event or the user is an administrator.
+9. Send a DELETE request to delete an event - only if the user is signed in, and it's their own event or the user is an administrator.
 10. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
 11. Query the database depending on the above CRUD operation chosen.
 12. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following three CRUD processes against the database:
@@ -217,10 +217,10 @@ The client app will then either send one of the following relevent CRUD requests
 ![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./docs/diagrams/data-flow-diagram5.png)
 
 1. The end-user triggers an action on their webpage to see all comments by an event UID.
-The client app will then either send one of the following relevent CRUD requests (from #2 to #4) to the server API app:
+The client app will then either send one of the following relevant CRUD requests (from #2 to #4) to the server API app:
 2. Send a GET request for all existing comments on an event.
-3. Send a POST request for a new comment on an event with an object containing the comment description -  only if the user is signed in and they are attending the event.
-4. Send a DELETE request to delete a comment - only if the user is signed in, and its their own comment or the user is an administrator.
+3. Send a POST request for a new comment on an event with an object containing the comment description - only if the user is signed in and they are attending the event.
+4. Send a DELETE request to delete a comment - only if the user is signed in, and it's their own comment or the user is an administrator.
 5. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
 6. Query the database for comment(s) depending on the above CRUD operation chosen.
 7. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following two CRUD processes against the database:
@@ -269,7 +269,7 @@ The client app will then either send one of the following relevent CRUD requests
 
 1. The client app sends a GET request of an object including the URL of the Maps API endpoint, and the query string/params of the access token for the API.
 2. The client app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the client API app.
-3. If successful, the cleint API app will receive a resolved promise that the Maps API will respond with the object with the maps details that the pre-installed client-side SDK of the maps service can utilise to render the map graphics on the client app display.
+3. If successful, the client API app will receive a resolved promise that the Maps API will respond with the object with the map's details that the pre-installed client-side SDK of the maps service can utilise to render the map graphics on the client app display.
 
 ## Application Architecture Diagram
 
@@ -280,12 +280,12 @@ The client app will then either send one of the following relevent CRUD requests
 1. The client (front end) represents the technologies that users interact with directly. The main components are React (components), Axios (XHR), and deployed on Netlify
 2. React is an open-source front-end JavaScript library for building user interfaces with UI components. The diagram shows the main front-end React components that make up the application. Each of these components uses Axios to make XHR requests and the event pages use the Mapbox API for geocoding.  
 3. Axios is a promise-based XMLHttpRequests (XHR) client that is used to make requests to the backend. These requests send and receive JSON data. An example is sending data from the “Create Event” form to a backend REST API endpoint. The React front-end components also receive JSON data via Axios to update state and access the data. 
-4. The front end is built, deployed and hosted by Netlify, which also allows for automated deployments direct from Github. 
+4. The front end is built, deployed and hosted by Netlify, which also allows for automated deployments direct from GitHub. 
 5. The server (back end) represents all of the technologies that process incoming requests from the client and generate the response. The server uses Node.js as an environment runtime, ExpressJS to create the REST API, Mongoose for database modelling, Firebase for user authentication and MongoDB as a cloud-hosted NoSQL database. 
 6. Node.js is the environment runtime that executes JavaScript code outside of a web browser. 
 7. ExpressJS is a backend framework that is used to build RESTful APIs. ExpressJS has been used to create all the backend API endpoints for CRUD operations for different database collections. 
 8. Mongoose is used to create database models using schemas. These schemas represent how data will be stored in each database collection. Mongoose is responsible for creating and reading documents from the MongoDB database. 
-9. The Node.js backend is built, deployed and hosted by Heroku. Heroku also allows for automated deployments direct from Github. 
+9. The Node.js backend is built, deployed and hosted by Heroku. Heroku also allows for automated deployments direct from GitHub. 
 10. Firebase Authentication provides a front and back-end authentication service, via node.js software development kits (SDK). These kits handle the authentication for the application. Firebase stores user details on a Firebase database. 
 11. MongoDB is a NoSQL cloud-hosted database. With the use of Mongoose, data is modelled and stored within collections. 
 12. The Mapbox Maps API is used to display Mapbox-created maps that can be used as a base layer for location data to be overlaid. The Mapbox Geocoding API converts location text into geographic coordinates. Geocoding is used when a user creates an event, then the location can be plotted on the base layer map. 
@@ -325,6 +325,7 @@ In this revision from Week 2 of the sprint, the following changes were made:
 
 In this revision from Week 2 of the sprint, the following changes were made:
 - The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of scope of MVP as per discussed project timeframe concerns.
+- A user story card added for the optional user want for a feature to be able to instant message/chat to other attendees of cleanup events.
 
 ![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
 
@@ -345,7 +346,7 @@ The landing page will be the page that visitors see when they navigate to the ro
 
 The sign up page is a minimal design that makes it clear to the user what is needed to sign up.
 
-5. By signing up the users agree to the Terms of Service, Privacy Policy, and Cookie Policy. Coloring and underlining will show the user that these headings are also clickable links so that they can read the associated terms and policies.
+5. By signing up the users agree to the Terms of Service, Privacy Policy, and Cookie Policy. Colouring and underlining will show the user that these headings are also clickable links so that they can read the associated terms and policies.
 
 ![Sign Up Page Wireframe](./docs/wireframes/sign-up.png)
 
