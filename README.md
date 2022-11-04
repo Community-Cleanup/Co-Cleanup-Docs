@@ -24,11 +24,11 @@
     - [Diagram 8 - External 'Map' API Rendering on Client App](#diagram-8---external-map-api-rendering-on-client-app)
 - [Application Architecture Diagram](#application-architecture-diagram)
 - [User Stories](#user-stories)
-  - [User Stories - Board Link:](#user-stories---board-link)
-  - [User Stories - About:](#user-stories---about)
-  - [Revision 1:](#revision-1)
-  - [Revision 2:](#revision-2)
-  - [Revision 3:](#revision-3)
+  - [User Stories - Board Link](#user-stories---board-link)
+  - [User Stories - About](#user-stories---about)
+  - [User Stories Revision 1](#revision-1)
+  - [User Stories Revision 2](#revision-2)
+  - [User Stories Revision 3](#revision-3)
 - [Wireframes](#wireframes)
   - [Landing Page](#landing-page)
   - [Sign Up Page](#sign-up-page)
@@ -78,7 +78,7 @@ The functionality & features are described below for unregistered visitors, regi
 
 **Visitors**
 
-- Can view the landing page to understand Co Cleanups' purpose and why it might be useful
+- Can view the landing page to understand Co Cleanup's purpose and why it might be useful
 - Can search and view all clean-up events (locations displayed on a map)
 - Can view all details about clean-up events
 - Are able to sign up to become a registered user
@@ -276,12 +276,12 @@ The client app will then either send one of the following relevant CRUD requests
 1. The client (front end) represents the technologies that users interact with directly. The main components are React (components), Axios (XHR), and deployed on Netlify
 2. React is an open-source front-end JavaScript library for building user interfaces with UI components. The diagram shows the main front-end React components that make up the application. Each of these components uses Axios to make XHR requests and the event pages use the Mapbox API for geocoding.  
 3. Axios is a promise-based XMLHttpRequests (XHR) client that is used to make requests to the backend. These requests send and receive JSON data. An example is sending data from the “Create Event” form to a backend REST API endpoint. The React front-end components also receive JSON data via Axios to update state and access the data. 
-4. The front end is built, deployed and hosted by Netlify, which also allows for automated deployments direct from Github. 
+4. The front end is built, deployed and hosted by Netlify, which also allows for automated deployments direct from GitHub. 
 5. The server (back end) represents all of the technologies that process incoming requests from the client and generate the response. The server uses Node.js as an environment runtime, ExpressJS to create the REST API, Mongoose for database modelling, Firebase for user authentication and MongoDB as a cloud-hosted NoSQL database. 
 6. Node.js is the environment runtime that executes JavaScript code outside of a web browser. 
 7. ExpressJS is a backend framework that is used to build RESTful APIs. ExpressJS has been used to create all the backend API endpoints for CRUD operations for different database collections. 
 8. Mongoose is used to create database models using schemas. These schemas represent how data will be stored in each database collection. Mongoose is responsible for creating and reading documents from the MongoDB database. 
-9. The Node.js backend is built, deployed and hosted by Heroku. Heroku also allows for automated deployments direct from Github. 
+9. The Node.js backend is built, deployed and hosted by Heroku. Heroku also allows for automated deployments direct from GitHub. 
 10. Firebase Authentication provides a front and back-end authentication service, via node.js software development kits (SDK). These kits handle the authentication for the application. Firebase stores user details on a Firebase database. 
 11. MongoDB is a NoSQL cloud-hosted database. With the use of Mongoose, data is modelled and stored within collections. 
 12. The Mapbox Maps API is used to display Mapbox-created maps that can be used as a base layer for location data to be overlaid. The Mapbox Geocoding API converts location text into geographic coordinates. Geocoding is used when a user creates an event, then the location can be plotted on the base layer map. 
@@ -321,6 +321,7 @@ In this revision from Week 2 of the sprint, the following changes were made:
 
 In this revision from Week 2 of the sprint, the following changes were made:
 - The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of the scope of the MVP and will be implemented if the timeframe allows.
+- A user story card added for the optional user want for a feature to be able to instant message/chat to other attendees of cleanup events.
 
 ![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
 
@@ -341,7 +342,7 @@ The landing page will be the page that visitors see when they navigate to the ro
 
 The sign-up page is a minimal design that makes it clear to the user what is needed to sign up.
 
-5. By signing up the users agree to the Terms of Service, Privacy Policy, and Cookie Policy. Coloring and underlining will show the user that these headings are also clickable links so that they can read the associated terms and policies.
+5. By signing up the users agree to the Terms of Service, Privacy Policy, and Cookie Policy. Colouring and underlining will show the user that these headings are also clickable links so that they can read the associated terms and policies.
 
 ![Sign Up Page Wireframe](./docs/wireframes/sign-up.png)
 
