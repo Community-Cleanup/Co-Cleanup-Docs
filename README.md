@@ -22,7 +22,6 @@
     - [Diagram 7](#diagram-7---external-map-api-forward-geocoding)
     - [Diagram 8](#diagram-8---external-map-api-rendering-on-client-app)
 - [Application Architecture Diagram](#application-architecture-diagram)
-    - [Legend](#legend)
 - [User Stories](#user-stories)
     - [User Stories - Board Link](#user-stories---board-link)
     - [User Stories - About](#user-stories---about)
@@ -36,7 +35,7 @@
   - [User Dashboard](#user-dashboard)
   - [Admin Dashboard](#admin-dashboard)
 - [Project Management](#project-management)
-  - [Setup](#setup)
+  - [Overview](#overview-1)
   - [Timeframe](#timeframe)
   - [Kanban Board](#kanban-board)
   - [Scrum Sprints & Ceremonies](#scrum-sprints--ceremonies)
@@ -44,6 +43,7 @@
     - [*Daily Standups*](#daily-standups)
     - [*Sprint Reviews*](#sprint-reviews)
   - [Pair Programming](#pair-programming)
+  - [Source Control](#source-control)
 - [Sprint 1](#sprint-1)
   - [Planning meeting 1](#planning-meeting-1)
   - [Planning meeting 2](#planning-meeting-2)
@@ -51,15 +51,6 @@
 - [Sprint 2](#sprint-2)
   - [Planning meeting](#planning-meeting)
   - [Sprint Review](#sprint-review-1)
-- [Sprint 3](#sprint-3)
-  - [Planning meeting](#planning-meeting-1)
-  - [Sprint Review](#sprint-review-2)
-- [Sprint 4](#sprint-4)
-  - [Planning meeting](#planning-meeting-2)
-  - [Sprint Review](#sprint-review-3)
-- [Sprint 5](#sprint-5)
-  - [Planning meeting](#planning-meeting-3)
-  - [Sprint Review](#sprint-review-4)
 
 ## Links
 
@@ -79,6 +70,25 @@ It should be noted that this platform is not to replace the coordination of emer
 
 ### Functionality & Features
 
+The functionality & features are described below for unregistered visitors, registered users and administrators. 
+
+**Visitors**
+
+- Can view the landing page to understand Co Cleanups' purpose and why it might be useful
+- Can search and view all planned clean up events (locations displayed on a map)
+- Are able to sign up to become a registered user
+
+**Registered Users**
+
+- Can create clean up events
+- Can register to participate in a clean up event
+- Can add comments to a clean up event
+
+**Administrators**
+
+- Can search for and view all users
+- Can deactivate users or events
+
 - Tailored meetup platform for like-minded volunteers to create meetup events and/or join existing meetup events focused on responding to non-threatening/safe disaster recovery/cleaning efforts.
 - Any registered user can create an event to request for the crowd sourced efforts of volunteers to join to help with the aforementioned cleaning efforts.
 - Secure user sign up/sign in against a robust cloud authentication platform (Firebase).
@@ -90,6 +100,7 @@ It should be noted that this platform is not to replace the coordination of emer
 - Comment on cleaning meetup events that you've created or attending to discuss and share finer details before the event.
 - Functionality to upload and display high-quality photos relevant to a particular cleaning event to visually share scope of what needs cleaning to attendees.
 
+
 ### Target Audience
 
 Co Cleanup is aimed at community members, organisations, emergency services or councils to help inform and coordinate clean-up efforts post-natural disaster. Willing volunteers can use this app to know the time and locations of coordinated clean-ups and where help is most needed.
@@ -100,19 +111,24 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **Back-end:** Node, ExpressJS, Mongoose, MongoDB, Firebase Authentication, Firebase Cloud Storage
 
+**Authentication:** Firebase Authentication
+
 **Deployment (Server):** Heroku 
 
 **Deployment (Database):** MongoDB Cloud Services
 
 **Deployment (Front-End):** Netlify
 
+**APIs** Mapbox maps & geocoding
+
 **Testing:**  Jest
 
 **Source Control:** Git & Github
 
-**Project Management:** Trello
+**Project Management:** Trello & TeamGantt
 
 **UI Design:** Figma
+
 
 ## Dataflow Diagrams
 
@@ -259,7 +275,7 @@ The client app will then either send one of the following relevent CRUD requests
 
 ![Application Architecture Diagram](./docs/diagrams/architecture.png)
 
-#### Legend
+**Legend**
 
 1. The client (front end) represents the technologies that users interact with directly. The main components are React (components), Axios (XHR), and deployed on Netlify
 2. React is an open-source front-end JavaScript library for building user interfaces with UI components. The diagram shows the main front-end React components that make up the application. Each of these components uses Axios to make XHR requests and the event pages use the Mapbox API for geocoding.  
@@ -384,7 +400,7 @@ The admin dashboard is designed so that administrators of Co Cleanup can manage 
 
 ## Project Management
 
-### Setup
+### Overview
 
 In the beginning, we discussed how we should effectively manage the project and the tools we should use. We aimed to incorporate different tools and methods from Agile Project Management frameworks like Scrum and Kanban that would suit our team size, project scope and timeframe. 
 
@@ -402,7 +418,7 @@ We decided to break the 5-week period into five sprints based on the Scrum frame
 
 #### *Planning Meetings*
 
-We decided that each sprint would start each Wednesday and begin with the planning ceremony (meeting). During each planning meeting we discussed what we would like to achieve during the sprint and the value that goal would bring to the project. We then moved items from the product backlog that were necessary to complete the sprint, and delegated how we would complete these items. Finally each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
+We decided that each sprint would start each Monday and begin with the planning ceremony (meeting). During each planning meeting we discussed what we would like to achieve during the sprint and the value that goal would bring to the project. We then moved items from the product backlog that were necessary to complete the sprint, and delegated how we would complete these items. Finally each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
 
 Based on this approach, each planning meeting addressed the following three questions:
 
@@ -426,6 +442,8 @@ The purpose of our sprint reviews is to review what was accomplished during the 
 
 We wanted to incorporate pair programming into our workflow as a way to share knowledge, write better code and problem solve together. We chose to use pair programming as a way get started on our server and client code bases, and when each of us encountered any difficult work items. The main tool we used to pair program was VS Code Live Share. We discovered this was a great tool where we could collaborate and write code in unison live on the one project. While pair programming in VS Code Live Share we used Discord to provide video, voice and chat. 
 
+### Source Control
+
 ## Sprint 1
 
 ### Planning meeting 1
@@ -434,7 +452,7 @@ We kicked off the project with an initial planning meeting. This is where we dis
 
 The Kanban board below was created after this initial planning meeting and reflects these initial tasks and backlog. We decided that we should place an emphasis on revising the MERN masterclass presented by our class instructors on the previous two days, as the concepts covered were crucial to our team performing well on this assignment.
 
-![Week 1 Day 1 Trello Screenshot](./docs/trello-screenshots/backlog-wk1-day1.png)
+![Week 1 Day 1 Trello Screenshot](./docs/trello-screenshots/day1-implement.png)
 
 Due to the first day of the project starting on Wednesday, and the core contact hours for the project being Monday to Wednesday we decided that we would hold another planning meeting on the following Monday. 
 
@@ -465,17 +483,17 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 ### Sprint Review
 
-The screenshots below show the implementation board at the end of week 1, which marks the end of our first sprint. We achieved the majority of what we planned for the sprint, however, did not start any development of the front end. The Gantt chart shows which items we worked on each day of the sprint. 
-
-![Week 1 Review Implementation Board](./docs/trello-screenshots/backlog-wk1.png)
-
-![Week 1 Gantt Chart](./docs/trello-screenshots/sprint1.png)
+The screenshots below show the implementation board at the end of sprint 1. We achieved the majority of what we planned for the sprint, however, did not start any development of the front end. The Gantt chart shows which items were worked on each day of the sprint. 
 
 As this was the first sprint for the assignment we learnt a lot about time management and what is achievable in a single sprint. We also came up against parts of the development process that were more difficult than expected. 
 
 During this sprint, a difficult task was understanding how to set up Firebase Authentication on the frontend. We decided that we should adjust our backlog and devote time to researching and understanding how best to implement Firebase authentication into our project. 
 
 There were no major adaptations to the project. However, in review, we were able to adjust which tasks should be given priority in order to meet the assignment requirement of submitting the Part A documentation by the end of sprint two. 
+
+![Sprint 1 Review Implementation Board](./docs/trello-screenshots/sprint1-implement.png)
+
+![Sprint 1 Gantt Chart](./docs/trello-screenshots/sprint1-gantt.png)
 
 ## Sprint 2
 
@@ -503,68 +521,10 @@ There were no major adaptations to the project. However, in review, we were able
 
 ### Sprint Review
 
-Short overview of what was achieved
+The screenshots below show the implementation board at the end of sprint 2. The Gantt chart shows which items were worked on each day of the sprint. We successfully completed all of the major items and completed the Part A Submission ahead of time. 
 
-Insert Trello Screenshot
+There were no major adaptations to the project. The end of sprint 2 marks the end of our planning phase for the project. 
 
-Insert Gantt Chart Screenshot
+![Sprint 2 Review Implementation Board](./docs/trello-screenshots/sprint2-implement.png)
 
-## Sprint 3
-
-### Planning meeting
-
-**The topics discussed were:**
-
-**What is the main sprint goal and the value that would bring to the project?**
-
-**Which items can be moved from the backlog to achieve this goal?**
-
-**How should we break down the chosen items into daily increments?**
-
-### Sprint Review
-
-Short overview of what was achieved
-
-Insert Trello Screenshot
-
-Insert Gantt Chart Screenshot
-
-## Sprint 4
-
-### Planning meeting
-
-**The topics discussed were:**
-
-**What is the main sprint goal and the value that would bring to the project?**
-
-**Which items can be moved from the backlog to achieve this goal?**
-
-**How should we break down the chosen items into daily increments?**
-
-### Sprint Review
-
-Short overview of what was achieved
-
-Insert Trello Screenshot
-
-Insert Gantt Chart Screenshot
-
-## Sprint 5
-
-### Planning meeting
-
-**The topics discussed were:**
-
-**What is the main sprint goal and the value that would bring to the project?**
-
-**Which items can be moved from the backlog to achieve this goal?**
-
-**How should we break down the chosen items into daily increments?**
-
-### Sprint Review
-
-Short overview of what was achieved
-
-Insert Trello Screenshot
-
-Insert Gantt Chart Screenshot
+![Sprint 2 Gantt Chart](./docs/trello-screenshots/sprint2-gantt.png)
