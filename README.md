@@ -4,31 +4,35 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-  - [GitHub Part A Link](#github-part-a-link)
+    - [GitHub Part A Link:](#github-part-a-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
   - [Target Audience](#target-audience)
   - [Tech Stack](#tech-stack)
 - [Dataflow Diagrams](#dataflow-diagrams)
+    - [Note about the below diagrams](#note-about-the-below-diagrams)
     - [Dataflow Diagrams Legend](#dataflow-diagrams-legend)
-    - [Diagram 1](#diagram-1---client-or-server-app-production-deployment)
-    - [Diagram 2](#diagram-2---sign-up-then-automatic-sign-in)
-    - [Diagram 3](#diagram-3---logout)
-    - [Diagram 4](#diagram-4---co-cleanup-events-api-resource)
-    - [Diagram 5](#diagram-5---co-cleanup-comments-api-resource)
-    - [Diagram 6 (Part 1)](#diagram-6-part-1---administrator-user-role---find-any-user)
-    - [Diagram 6 (Part 2)](#diagram-6-part-2---administrator-user-role---disablereenable-found-user)
-    - [Diagram 7](#diagram-7---external-map-api-forward-geocoding)
-    - [Diagram 8](#diagram-8---external-map-api-rendering-on-client-app)
+    - [Diagram 1 - Client or Server App Production Deployment](#diagram-1---client-or-server-app-production-deployment)
+    - [Diagram 2 - Sign-Up then Automatic Sign-In](#diagram-2---sign-up-then-automatic-sign-in)
+    - [Diagram 3 - Logout](#diagram-3---logout)
+    - [Diagram 4 - Co Cleanup 'Events' API Resource](#diagram-4---co-cleanup-events-api-resource)
+    - [Diagram 5 - Co Cleanup 'Comments' API Resource](#diagram-5---co-cleanup-comments-api-resource)
+    - [Diagram 6 (Part 1) - Administrator User Role - Find Any User](#diagram-6-part-1---administrator-user-role---find-any-user)
+    - [Diagram 6 (Part 2) - Administrator User Role - Disable/Reenable Found User](#diagram-6-part-2---administrator-user-role---disablereenable-found-user)
+    - [Diagram 7 - External 'Map' API Forward Geocoding](#diagram-7---external-map-api-forward-geocoding)
+    - [Diagram 8 - External 'Map' API Rendering on Client App](#diagram-8---external-map-api-rendering-on-client-app)
 - [Application Architecture Diagram](#application-architecture-diagram)
 - [User Stories](#user-stories)
-    - [User Stories - Board Link](#user-stories---board-link)
-    - [User Stories - About](#user-stories---about)
+  - [User Stories - Board Link:](#user-stories---board-link)
+  - [User Stories - About:](#user-stories---about)
+  - [Revision 1:](#revision-1)
+  - [Revision 2:](#revision-2)
+  - [Revision 3:](#revision-3)
 - [Wireframes](#wireframes)
   - [Landing Page](#landing-page)
   - [Sign Up Page](#sign-up-page)
-  - [Sign In Page](#sign-in-page)
+  - [Sign-In Page](#sign-in-page)
   - [Events Search Page](#events-search-page)
   - [Event Page](#event-page)
   - [Create & Update Event Page](#create--update-event-page)
@@ -62,9 +66,9 @@
 
 ### Purpose
 
-After a natural disaster strikes, communities are often left with the enormous clean-up effort required to restore people's homes, businesses and community areas. During these times government, council and emergency services resources are often stretched thin. Co Cleanup, short for Community Cleanup, aims to help communities better coordinate the clean-up process after a natural disaster, or any time that community members would like to coordinate group action for the betterment of their community. Clean-up tasks may involve the removal of debris, non-hazardous waste, and/or minor repairs, removal or replacements of small objects such as plants, furniture or garbage.
+After a natural disaster strikes, communities are often left with the enormous clean-up effort required to restore people's homes, businesses and community areas. During these times government, council and emergency services resources are often stretched thin. Co Cleanup, short for Community Clean-up, aims to help communities better coordinate the clean-up process after a natural disaster, or any time that community members would like to coordinate group action for the betterment of their community. Clean-up tasks may involve the removal of debris, non-hazardous waste, and/or minor repairs, removal or replacements of small objects such as plants, furniture or garbage.
 
-It should be noted that this platform is not to replace the coordination of emergency services in critical disaster recovery contexts or when the personal safety of any individual is at risk due any given disaster situation.
+It should be noted that this platform is not to replace the coordination of emergency services in critical disaster recovery contexts or when the personal safety of any individual is at risk due to any given disaster situation.
 
 **Co Cleanup has been designed and built by Chris Hullman and Mick Caffery as their final cap-stone project for Coder Academy’s Full Stack Development Bootcamp, 2022.**
 
@@ -75,31 +79,24 @@ The functionality & features are described below for unregistered visitors, regi
 **Visitors**
 
 - Can view the landing page to understand Co Cleanups' purpose and why it might be useful
-- Can search and view all planned clean up events (locations displayed on a map)
+- Can search and view all clean-up events (locations displayed on a map)
+- Can view all details about clean-up events
 - Are able to sign up to become a registered user
+- Vital safety information displayed as paramount to all users attending a clean-up event, with reminders to leave critical emergency recovery situations to trained safety and recovery professionals (e.g. SES)
 
 **Registered Users**
 
-- Can create clean up events
-- Can register to participate in a clean up event
-- Can add comments to a clean up event
+- Secure sign-up & sign-in with a robust cloud authentication platform (Firebase)
+- Can create clean-up events
+- Functionality to upload and display photos to an event the user has created.
+- Can register to participate in a clean-up event
+- Can add comments to a clean-up event that you are registered for or have created
 
 **Administrators**
 
+- Assure the safety of registered users with the functionality of role-based access control (RBAC).
 - Can search for and view all users
-- Can deactivate users or events
-
-- Tailored meetup platform for like-minded volunteers to create meetup events and/or join existing meetup events focused on responding to non-threatening/safe disaster recovery/cleaning efforts.
-- Any registered user can create an event to request for the crowd sourced efforts of volunteers to join to help with the aforementioned cleaning efforts.
-- Secure user sign up/sign in against a robust cloud authentication platform (Firebase).
-- Real-time map integration for address lookup, geocoding and map display for event location display.
-- Scoped to communities located in Australia for a tailored platform focused on description, time and location display and information near you.
-- Easily see cleanup mevents near you thanks to the pronounced map displays.
-- Assured safety of registered users with the functionality of role-based access control (RBAC) to allow assigned administrator end-users to disable or remove inappropriate content or users.
-- Vital safety information displayed as paramount to all users attending a cleanup event, with reminders to leave critical emergency recovery situations to trained safety and recovery professionals (e.g. SES).
-- Comment on cleaning meetup events that you've created or attending to discuss and share finer details before the event.
-- Functionality to upload and display high-quality photos relevant to a particular cleaning event to visually share scope of what needs cleaning to attendees.
-
+- Can deactivate or remove any users and events if any inappropriate content is shown.
 
 ### Target Audience
 
@@ -129,7 +126,6 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **UI Design:** Figma
 
-
 ## Dataflow Diagrams
 
 #### Note about the below diagrams
@@ -147,8 +143,8 @@ The numbered lists below each Dataflow Diagram indicate the sequence, in ascendi
 ![Data Flow Diagram - Diagram 1 - Client or Server App Production Deployment](./docs/diagrams/data-flow-diagram1.png)
 
 1. One or more developers on a local development machine will push (or pull request) the latest code base to the central main/master branch of a version control/source code repository.
-2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the intial version of the code base will automatically sent to the PaaS system.
-3. Polls will be sent to and/or from the repository and the PaaS system to monitor for codebase changes, and if a new change is detected, automically re-push the new code onto the PaaS system (i.e. Continuous Deployment).
+2. With repository and client or server app cloud 'Platform as a Service' (PaaS) authorised to link together, the initial version of the code base will automatically be sent to the PaaS system.
+3. Polls will be sent to and/or from the repository and the PaaS system to monitor for codebase changes, and if a new change is detected, automatically re-push the new code onto the PaaS system (i.e. Continuous Deployment).
 4. The client or server app PaaS system will request from a Certificate Authority (CA) for a new or renewed TSL/SSL certificate.
 5. The signed certificate will be sent back to the client or server app PaaS system to enable HTTPS on the deployed client or server app.
 6. For the client app, the public access keys to the cloud authentication services systems will be sent.
@@ -158,30 +154,30 @@ The numbered lists below each Dataflow Diagram indicate the sequence, in ascendi
 
 ![Data Flow Diagram - Diagram 2 - Sign-Up then Automatic Sign-In](./docs/diagrams/data-flow-diagram2.png)
 
-1. From a sign up form on the client app, the user's username, email and password as user input will added to the client app.
-2. With the client-app-side validated username, email and password it will be sent as a POST request to the cloud authentication services. Included in the request will be a flag to bypass any email verification requirements for the sign up.
-3. With the cloud authentication services attempt at validating the email and password on its systems, if this is a *sign up*, attempt to save the user's email and secured password on its systems, alternatively for *sign in* attemp to retrieve the existing user from its systems. The auth services will respond back with an object to the client, depending whether it was successful or not.
+1. From a sign-up form on the client app, the user's username, email and password as user input will be added to the client app.
+2. With the client-app-side validated username, email and password it will be sent as a POST request to the cloud authentication services. Included in the request will be a flag to bypass any email verification requirements for the sign-up.
+3. With the cloud authentication services attempt at validating the email and password on its systems, if this is a *sign up*, attempt to save the user's email and secured password on its systems, alternatively for *sign in* attempt to retrieve the existing user from its systems. The auth services will respond back with an object to the client, depending on whether it was successful or not.
 4. From process #3, one of three error responses may occur: "Weak Password", "Invalid Email", or "Operation Not Allowed". Or only "User Not Found" error if this is a *sign in* request only.
 5. Alternatively, if successful user creation on the auth system services, return a response object with the ID token (JWT) with token metadata such as expiry time.
-6. Clear any existing cookie stored on the end-user's web browser.
+6. Clear any existing cookies stored on the end user's web browser.
 7. Store a copy of the ID token on a cookie on the end-user's web browser.
-8. Send a POST request to the server API app with the ID token for validatation against the "admin" side of the cloud authentication services.
+8. Send a POST request to the server API app with the ID token for validation against the "admin" side of the cloud authentication services.
 9. From process #8, an error response of "Connection Refused" may occur if there's a network error, for example.
 10. Send a POST request with the ID token to the admin cloud authentication services to validate it.
 11. If the ID token is deemed still valid, decode the user's claims from the payload to retrieve the user's details (email, username, etc.) in plain text.
 12. With the decoded claims, as an object, and as a query filter, send a database query to the NoSQL database to create a new user (for *sign up*) on the database, or fetch the user (for *sign in*) from the database.
-13. Respond with any connection/network errors to the database that may have occured.
-14. If the database query was successful retrieve the user's details from the database as a document as per NoSQL database design, of which the server API app will handle and store as an object.
-15. A promise from the client app for the user's details from the database should be resolved and the user's decoded details stored into *state* on the client app.
+13. Respond with any connection/network errors to the database that may have occurred.
+14. If the database query was successful retrieve the user's details from the database as a document as per NoSQL database design, which the server API app will handle and store as an object.
+15. A promise from the client app for the user's details from the database should be resolved and the user's decoded details stored in *state* on the client app.
 
-*Note that for any future requests to protected endpoints that requires sign in or other authorisation (e.g. user administrator role requirements), the token stored in the cookie from process #7 will be used to send back to the server API to repeat the above same token decoding and database query processes.*
+*Note that for any future requests to protected endpoints that require sign-in or other authorisation (e.g. user administrator role requirements), the token stored in the cookie from process #7 will be used to send back to the server API to repeat the above same token decoding and database query processes.*
 
 #### Diagram 3 - Logout
 
 ![Data Flow Diagram - Diagram 3 - Logout](./docs/diagrams/data-flow-diagram3.png)
 
-If the signed in end-user clicks the logout button, the following three processes will occur:
-1. The signed in end-user fires/clicks the logout button on a webpage which will trigger a handler on the client app to request a logout.
+If the signed-in end-user clicks the logout button, the following three processes will occur:
+1. The signed-in end-user fires/clicks the logout button on a webpage which will trigger a handler on the client app to request a logout.
 2. Functions will be executed to delete the cookie on the end-user's web browser.
 3. Functions will be executed to clear out the user *state* on the client app.
 
@@ -194,52 +190,52 @@ Alternatively, if a listener/observer on the client app detects from the cloud a
 1. The end-user triggers an action on their webpage to see all created events.
 2. Or, the end-user triggers an event on their webpage to see only their own created events.
 3. Or, the end-user triggers an event on their webpage to see a particular event by requesting the unique ID (UID) of the event.
-The client app will then either send one of the following relevent CRUD requests (from #4 to #9) to the server API app:
+The client app will then either send one of the following relevant CRUD requests (from #4 to #9) to the server API app:
 4. Send a GET request for all existing events.
 5. Send a GET request for the user's own created events.
 6. Send a GET request to get a particular event by its UID.
 7. Send a POST request to create a new event with the event details (title, address, description, etc.) as an object - only if the user is signed in.
-8. Send a PUT request to edit an event with the updated details as an object - only if the user is signed in, and its their own event or the user is an administrator.
-9. Send a DELETE request to delete an event - only if the user is signed in, and its their own event or the user is an administrator.
+8. Send a PUT request to edit an event with the updated details as an object - only if the user is signed in, and it's their own event or the user is an administrator.
+9. Send a DELETE request to delete an event - only if the user is signed in, and it's their own event or the user is an administrator.
 10. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
 11. Query the database depending on the above CRUD operation chosen.
 12. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following three CRUD processes against the database:
 13. Query the database to create a new event.
 14. Query the database to edit an event.
 15. Query the database to delete an event.
-16. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+16. If there is a database error, the server API app will retrieve a response that the database connection/network has failed as an object.
 17. If the query operation was successful, respond with an object with details of the selected, or updated event. If the event was deleted, respond with the correct status code.
 18. If the POST, PUT or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
-19. The server API will respond to the client app a validated model instance of the event(s) object including status code/message.
+19. The server API will respond to the client app with a validated model instance of the event(s) object including the status code/message.
 
 #### Diagram 5 - Co Cleanup 'Comments' API Resource
 
 ![Data Flow Diagram - Diagram 5 - Co Cleanup 'Comments' API Resource](./docs/diagrams/data-flow-diagram5.png)
 
 1. The end-user triggers an action on their webpage to see all comments by an event UID.
-The client app will then either send one of the following relevent CRUD requests (from #2 to #4) to the server API app:
+The client app will then either send one of the following relevant CRUD requests (from #2 to #4) to the server API app:
 2. Send a GET request for all existing comments on an event.
 3. Send a POST request for a new comment on an event with an object containing the comment description -  only if the user is signed in and they are attending the event.
-4. Send a DELETE request to delete a comment - only if the user is signed in, and its their own comment or the user is an administrator.
+4. Send a DELETE request to delete a comment - only if the user is signed in, and it's their own comment or the user is an administrator.
 5. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
 6. Query the database for comment(s) depending on the above CRUD operation chosen.
 7. If the CRUD event requires authorisation permission and the server API app has approved this, e.g. the user is signed in, and whether or not the user is an administrator, conduct one of the following two CRUD processes against the database:
-8. Query the database to create a new comment to an event.
+8. Query the database to create a new comment for an event.
 9. Query the database to delete a comment on an event.
-10. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+10. If there is a database error, the server API app will retrieve a response that the database connection/network has failed as an object.
 11. If the query operation was successful, respond with an object with details of the selected comment. If the event was deleted, respond with the correct status code.
 12. If the POST or DELETE CRUD operation was unauthorised, respond with a status code 401 error object.
-13. The server API will respond to the client app a validated model instance of the comment(s) object including status code/message.
+13. The server API will respond to the client app with a validated model instance of the comment(s) object including the status code/message.
 
 #### Diagram 6 (Part 1) - Administrator User Role - Find Any User
 
 ![Data Flow Diagram - Diagram 6-1 - Administrator User Role - Find Any User](./docs/diagrams/data-flow-diagram6-1.png)
 
-1. The administrator end-user searches for any user by their username on their administrator only webpage on the client app.
+1. The administrator end-user searches for any user by their username on their administrator-only webpage on the client app.
 2. A GET request with the requested user's username as a query string/param is sent to the server API app.
 3. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
 4. Query the database with the requested user's username and find their database entry by their UID.
-5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
+5. If there is a database error, the server API app will retrieve a response that the database connection/network has failed as an object.
 6. If the query operation was successful, respond with an object with details of the selected user.
 7. The promise on the client app should resolve successfully with the user's details from the server API app.
 
@@ -251,8 +247,8 @@ The client app will then either send one of the following relevent CRUD requests
 2. A PUT request with the found user's details with the enable/disable boolean is sent to the server API.
 3. The server API app may respond with one of the following two errors: "Connection Refused", or later on, a database query error back to the client app as an object.
 4. Query the database with the requested user's UID and find their database entry by their UID and update their database document with the enabled/disabled boolean.
-5. If there is a database error, the server API app will retrieve a response that database connection/network has failed as an object.
-6. If the query operation was successful, respond with an object with details of selected and now updated user.
+5. If there is a database error, the server API app will retrieve a response that the database connection/network has failed as an object.
+6. If the query operation was successful, respond with an object with details of the selected and now updated user.
 7. The promise on the client app should resolve successfully with the now updated user's details from the server API app.
 
 #### Diagram 7 - External 'Map' API Forward Geocoding
@@ -261,7 +257,7 @@ The client app will then either send one of the following relevent CRUD requests
 
 1. The server API app sends a GET request of an object including the URL of the Geocoding API endpoint, and the query string/params of the access token for the API and the address of the location to forward geocode.
 2. The server API app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the server API app.
-3. If successful, the server API app will receive a resolved promise that the Geocoding API will respond with an object containing the latitude and longitude coordinates of the address, if found.
+3. If successful, the server API app will receive a resolved promise that the Geocoding API will respond with an object containing the latitude and longitude coordinates of the address if found.
 
 #### Diagram 8 - External 'Map' API Rendering on Client App
 
@@ -269,7 +265,7 @@ The client app will then either send one of the following relevent CRUD requests
 
 1. The client app sends a GET request of an object including the URL of the Maps API endpoint, and the query string/params of the access token for the API.
 2. The client app may respond with one of the following two errors: "Connection Refused", or an invalid access key/token error, as an object to the client API app.
-3. If successful, the cleint API app will receive a resolved promise that the Maps API will respond with the object with the maps details that the pre-installed client-side SDK of the maps service can utilise to render the map graphics on the client app display.
+3. If successful, the client API app will receive a resolved promise that the Maps API will respond with the object with the map details that the pre-installed client-side SDK of the maps service can utilise to render the map graphics on the client app display.
 
 ## Application Architecture Diagram
 
@@ -316,7 +312,7 @@ This is the original draft User Stories version from Week 1 of the sprint, with 
 ### Revision 2:
 
 In this revision from Week 2 of the sprint, the following changes were made:
-- It was discussed and clarified that our target audience would like to see, as view only, all existing cleaning events that are scheduled without needing to be signed in to the app.
+- It was discussed and clarified that our target audience would like to see, as read only, all existing cleaning events that are scheduled without needing to be signed in to the app.
 - For clarity, when the user first signs up into the app, they can specify a nickname as their username, hence we discarded the user story card relating to concerns of privacy of the user's full, real name.
 
 ![User Stories - Revision 1](./docs/trello-screenshots/user-stories-revision2.png)
@@ -324,7 +320,7 @@ In this revision from Week 2 of the sprint, the following changes were made:
 ### Revision 3:
 
 In this revision from Week 2 of the sprint, the following changes were made:
-- The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of scope of MVP as per discussed project timeframe concerns.
+- The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of the scope of the MVP and will be implemented if the timeframe allows.
 
 ![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
 
@@ -334,8 +330,8 @@ In this revision from Week 2 of the sprint, the following changes were made:
 
 The landing page will be the page that visitors see when they navigate to the root URL. It is designed so that users can quickly learn what the app is for and why it might be useful for them. Details about this page include:
 
-1. The search bar can be used by visitors who are not logged in to view events. When the search bar is focused, the landing page will navigate to the events search page. The about and volunteer links will navigate to information about how the site work and how users can volunteer at events. The create event link will navigate to the create event form, but only if the user is signed in. If the user is not signed in, then this form will navigate to the sign up page.
-2. The log in and sign up links will not be displayed if a user is signed in, instead a user account icon link will be displayed.
+1. The search bar can be used by visitors who are not logged in to view events. When the search bar is focused, the landing page will navigate to the events search page. The about and volunteer links will navigate to information about how the site work and how users can volunteer at events. The create event link will navigate to the create event form, but only if the user is signed in. If the user is not signed in, then this form will navigate to the sign-up page.
+2. The log-in and sign-up links will not be displayed if a user is signed in, instead a user account icon link will be displayed.
 3. The landing page component will consist of a Co Cleanup title, blurb about Co Cleanup, hero image and links to sign up and view events. 
 4. The footer will have links to the about and contact pages, along with copyright text. 
 
@@ -343,23 +339,23 @@ The landing page will be the page that visitors see when they navigate to the ro
 
 ### Sign Up Page
 
-The sign up page is a minimal design that makes it clear to the user what is needed to sign up.
+The sign-up page is a minimal design that makes it clear to the user what is needed to sign up.
 
 5. By signing up the users agree to the Terms of Service, Privacy Policy, and Cookie Policy. Coloring and underlining will show the user that these headings are also clickable links so that they can read the associated terms and policies.
 
 ![Sign Up Page Wireframe](./docs/wireframes/sign-up.png)
 
-### Sign In Page
+### Sign-In Page
 
-The sign in page is another minimal design and will use similar components for the sign up page.
+The sign-in page is another minimal design and will use similar components for the sign-up page.
 
-6. There will be a link to the sign up page, in case the user has not created an account previously. 
+6. There will be a link to the sign-up page, in case the user has not created an account previously. 
 
 ![Sign In Page Wireframe](./docs/wireframes/sign-in.png)
 
 ### Events Search Page
 
-7. The events search page is designed so that users can easily see which clean up events have been organised and where they are located. As users search for either event names or locations, the list of events will be filtered, and associated markers displayed on the map.
+7. The events search page is designed so that users can easily see which clean-up events have been organised and where they are located. As users search for either event names or locations, the list of events will be filtered, and associated markers displayed on the map.
 
 ![Home Events Page Wireframe](./docs/wireframes/home-search.png)
 
@@ -367,7 +363,7 @@ The sign in page is another minimal design and will use similar components for t
 
 The event page is designed to clearly show all details about the upcoming event.
 
-8. A register button so that signed in users can register for an event. If the users are not registered, then this button will navigate them to the sign in page. 
+8. A register button so that signed-in users can register for an event. If the users are not registered, then this button will navigate them to the sign-in page. 
 9. Is a feature for users to be able to leave comments about the event, so that event organisers can reply with further information. 
 
 ![Event Page Wireframe](./docs/wireframes/event.png)
@@ -376,7 +372,7 @@ The event page is designed to clearly show all details about the upcoming event.
 
 The create event page is designed so that users can easily create and update events. 
 
-10. Signed in users can navigate to this page from the create event button in the navbar. If they would like to update an event they can navigate to update event page by a link in their user dashboard under the heading “My Events”, which lists the events they have organised. 
+10. Signed-in users can navigate to this page from the create event button in the navbar. If they would like to update an event they can navigate to the update event page by a link in their user dashboard under the heading “My Events”, which lists the events they have organised. 
 
 ![Create Event Page Wireframe](./docs/wireframes/create-event.png)
 
@@ -440,7 +436,7 @@ The purpose of our sprint reviews is to review what was accomplished during the 
 
 ### Pair Programming
 
-We wanted to incorporate pair programming into our workflow as a way to share knowledge, write better code and problem solve together. We chose to use pair programming as a way get started on our server and client code bases, and when each of us encountered any difficult work items. The main tool we used to pair program was VS Code Live Share. We discovered this was a great tool where we could collaborate and write code in unison live on the one project. While pair programming in VS Code Live Share we used Discord to provide video, voice and chat. 
+We wanted to incorporate pair programming into our workflow as a way to share knowledge, write better code and problem solve together. We chose to use pair programming as a way to get started on our server and client code bases, and when each of us encountered any difficult work items. The main tool we used to pair program was VS Code Live Share. We discovered this was a great tool where we could collaborate and write code in unison live on the one project. While pair programming in VS Code Live Share we used Discord to provide video, voice and chat. 
 
 ### Source Control
 
@@ -462,8 +458,8 @@ Due to the first day of the project starting on Wednesday, and the core contact 
 
 **What is the main sprint goal and the value it would bring to the project?**
 
-- The main sprint goal this week was to have a basic Express server deployed to Heroku with CRUD functionality for ‘users’ and ‘events’, with data being stored on MongoDB cloud. On top of this we would create a React Front end deployed to Netlify with a simple form to create an event. 
-- A secondary goal was to have all of our initial users stories documented
+- The main sprint goal this week was to have a basic Express server deployed to Heroku with CRUD functionality for ‘users’ and ‘events’, with data being stored on MongoDB cloud. On top of this, we would create a React Front end deployed to Netlify with a simple form to create an event. 
+- A secondary goal was to have all of our initial users' stories documented
 - These goals would bring value to our project by following the principles of CI/CD and the mantra “deploy often and deploy early”. Due to the flexibility of Express and the MongoDB data structure we aimed to build a working “core server” that was deployed that we could build upon as we worked through each user story.
 
 **Which items can be moved from the backlog to achieve this goal?**
@@ -473,7 +469,7 @@ Due to the first day of the project starting on Wednesday, and the core contact 
   - Document user stories
   - Scaffold React front-end and deploy
   - Build basic forms for Register & Sign In
-  - Build basic form for Registering an Event
+  - Build a basic form for Registering for an Event
 
 **How should we break down the chosen items into daily increments?**
 
@@ -510,7 +506,7 @@ There were no major adaptations to the project. However, in review, we were able
 
 - Items moved from the backlog included:
   - Research Firebase Authentication
-  - DataFlow Diagram Increment 2
+  - Data Flow Diagram Increment 2
   - Architecture Diagram Increment 2
   - Finalise Wireframes
   - Finalise Part A Readme
