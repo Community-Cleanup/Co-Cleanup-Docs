@@ -4,7 +4,7 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-    - [GitHub Part A Link:](#github-part-a-link)
+    - [GitHub Part A Link](#github-part-a-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
