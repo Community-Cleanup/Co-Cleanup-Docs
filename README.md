@@ -454,7 +454,7 @@ As shown in the below example of a Kanban user story card, each card was marked 
 
 Each user story card was then given the required tasks and sub-tasks to complete that User Story. Each subtask was delegated to a team member, or both of us if we preferred to use pair programming to complete that task. Assigned tasks reflected who would do the bulk of the work to complete each task. Communication was always free-flowing and we both helped each other whenever required with our assigned tasks. 
 
-<img src="./docs/trello-screenshots/delegation-task.png" alt="User Story Tasks Delegation" width="400"/>
+<img src="./docs/trello-screenshots/delegation-task.png" alt="User Story Tasks Delegation" width="500"/>
 
 #### Sprint Planning
 
