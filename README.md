@@ -546,18 +546,18 @@ The below user testers, as the primary developers of Co Cleanup app, have knowle
 
 #### Functional Testing
 
-Modules:
-- User Sign Up
-- User Sign In
-- Event CRUD Operations
-- Event Comments CRUD Operations
-- Administrator User CRUD Operations
+Test Modules:
+- #1: User Sign Up
+- #2: User Sign In
+- #3: Event CRUD Operations
+- #4: Event Comments CRUD Operations
+- #5: Administrator User CRUD Operations
 
 #### Non-Functional Testing
 
 Modules:
-- UI Navigation
-- Accessibility
+- #6: UI Navigation
+- #7: Accessibility
 
 ### Testing Environment
 
