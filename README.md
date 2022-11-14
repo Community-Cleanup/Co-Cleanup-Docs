@@ -444,7 +444,7 @@ The purpose of our sprint reviews is to review what was accomplished during the 
 
 #### Overview
 
-We aimed to be purposeful and considerate in how we delegated tasks. We wanted to both share the workload equally while taking into account our interests, strengths, and weaknesses. We discussed the delegation of tasks during our planning meetings and recorded task delegation in both Kanban task and user story cards and in our sprint planning Gantt chart. We then re-evaluated our assigned tasks each day during our stand-ups.  
+We aimed to be purposeful and considerate in how we delegated tasks. We wanted to both share the workload equally while taking into account our interests, strengths, and weaknesses. We discussed the delegation of tasks during our planning meetings and recorded task delegation in both Kanban task, user story cards and in our sprint planning Gantt chart. We then re-evaluated our assigned tasks each day during our stand-ups.  
 
 #### Kanban Tickets
 
@@ -458,7 +458,7 @@ Each user story card was then given the required tasks and sub-tasks to complete
 
 #### Sprint Planning
 
-We then used the User Story Task delegation to plan our sprints and clearly identify on the sprint Gantt chart who will be completing each task. The names of those who will complete each task can be viewed in the assigned column. The colour of the task bar was designated purple for tasks we both worked on, dark blue for Chris, and light blue for Mick. 
+We then used the User Story Task delegation to plan our sprints and clearly identify on the sprint Gantt chart who will be completing each task. As shown below, the User Story number is recorded with each task and the names of those who will complete each task can be viewed in the assigned column. The User Story number is also recorded with each associated git commit and pull request. The colour of the Gantt chart taskbars were designated purple for tasks we both worked on, dark blue for Chris, and light blue for Mick. 
 
 ![User Story Tasks Delegation](./docs/trello-screenshots/delegation-sprint.png)
 
