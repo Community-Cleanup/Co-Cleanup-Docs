@@ -568,6 +568,7 @@ There were no major adaptations to the project. The end of sprint 2 marks the en
 
 ![Sprint 2 Gantt Chart](./docs/trello-screenshots/sprint2-gantt.png)
 
+
 ## Sprint 3
 
 ### Planning meeting
@@ -613,3 +614,52 @@ There were no major adaptations to the project. We had some discussions about po
 ![Sprint 3 Review Implementation Board](./docs/trello-screenshots/sprint3-implement.png)
 
 ![Sprint 3 Gantt Chart](./docs/trello-screenshots/sprint3-gantt.png)
+
+## User Testing - Development
+
+### Testing Process
+
+Manual testing is the chosen process for development testing of Co Cleanup app. The documented testable items have their test cases categorised to provide extensive code-coverage, using a mixture of the following testing categories:
+- Black-box testing
+- White-box testing
+
+The below user testers, as the primary developers of Co Cleanup app, have knowledge of the inner-workings of the app codebase. As such, an estimated capability of a typical end-user's webpage UI interaction capability and computer literacy skills will be considered in evaluating the pass/fail status of any black-box testing, test cases.
+
+#### User Testers:
+- Chris Hullman (Developer)
+- Mick Caffery (Developer)
+
+### Testable Modules
+
+#### Functional Testing
+
+Test Modules:
+- #1: User Sign Up
+- #2: User Sign In
+- #3: Event CRUD Operations
+- #4: Event Comments CRUD Operations
+- #5: Administrator User CRUD Operations
+
+#### Non-Functional Testing
+
+Modules:
+- #6: Page Navigation
+
+### Testing Environment
+
+Please refer to the [Application Architecture Diagram](#application-architecture-diagram) as the infrastructure used for development manual testing.
+
+For development testing only, `localhost` instances may alternatively be used by the user testers for one or more of the following three cloud-hosted services identified in the above Application Architecture Diagram:
+- Netlify
+- Heroku
+- MongoDB
+The `localhost` environments are configured to represent the cloud-hosted services as accurately as possible within scope of the aforementioned testable items to minimise future potential testing errors in production.
+
+### Test Schedule
+
+Manual testing of test cases are each performed on-demand by the user testers at a time when the developers agree that the corrosponding testable module for the test cases have been programmed and integrated into the Co Cleanup app.
+
+### Completed Test Cases
+
+*To Do: Put screenshots of the completed Google Sheets test cases here*
+
