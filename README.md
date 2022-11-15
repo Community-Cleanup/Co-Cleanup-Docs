@@ -556,8 +556,7 @@ Test Modules:
 #### Non-Functional Testing
 
 Modules:
-- #6: UI Navigation
-- #7: Accessibility
+- #6: Page Navigation
 
 ### Testing Environment
 
