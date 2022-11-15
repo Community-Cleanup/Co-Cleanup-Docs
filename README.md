@@ -4,7 +4,7 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-    - [GitHub Part A Link](#github-part-a-link)
+    - [GitHub Part A Link:](#github-part-a-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
@@ -24,11 +24,11 @@
     - [Diagram 8 - External 'Map' API Rendering on Client App](#diagram-8---external-map-api-rendering-on-client-app)
 - [Application Architecture Diagram](#application-architecture-diagram)
 - [User Stories](#user-stories)
-  - [User Stories - Board Link](#user-stories---board-link)
-  - [User Stories - About](#user-stories---about)
-  - [User Stories Revision 1](#revision-1)
-  - [User Stories Revision 2](#revision-2)
-  - [User Stories Revision 3](#revision-3)
+  - [User Stories - Board Link:](#user-stories---board-link)
+  - [User Stories - About:](#user-stories---about)
+  - [Revision 1:](#revision-1)
+  - [Revision 2:](#revision-2)
+  - [Revision 3:](#revision-3)
 - [Wireframes](#wireframes)
   - [Landing Page](#landing-page)
   - [Sign Up Page](#sign-up-page)
@@ -46,6 +46,11 @@
     - [*Planning Meetings*](#planning-meetings)
     - [*Daily Standups*](#daily-standups)
     - [*Sprint Reviews*](#sprint-reviews)
+  - [Task Delegation](#task-delegation)
+    - [Overview](#overview-2)
+    - [Kanban Tickets](#kanban-tickets)
+    - [Sprint Planning](#sprint-planning)
+    - [Strengths & Weaknesses](#strengths--weaknesses)
   - [Pair Programming](#pair-programming)
   - [Source Control](#source-control)
 - [Sprint 1](#sprint-1)
@@ -399,7 +404,7 @@ The admin dashboard is designed so that administrators of Co Cleanup can manage 
 
 ### Overview
 
-In the beginning, we discussed how we should effectively manage the project and the tools we should use. We aimed to incorporate different tools and methods from Agile Project Management frameworks like Scrum and Kanban that would suit our team size, project scope and timeframe. 
+In the beginning, we discussed how we should effectively manage the project, the tools we should use, and how to delegate tasks effectively. We aimed to incorporate different tools and methods from Agile Project Management frameworks like Scrum and Kanban that would suit our team size, project scope and timeframe. 
 
 ### Timeframe
 
@@ -407,7 +412,7 @@ We were given a timeframe of five weeks to complete both Part A and Part B of th
 
 ### Kanban Board
 
-We decided to use Trello to manage our Kanban board as we both had experience with this product. We used the Kanban board to create a backlog of tasks or user stories that would be required to move the project forward. Then move each item into an “in progress” section while being worked on, then finally move the item to the “done” section once complete. As a team, we both took responsibility for organising the backlog and communicating to each which items were being updated. 
+We decided to use Trello to manage our Kanban board as we both had experience with this product. We used the Kanban board to create a backlog of tasks or user stories that would be required to move the project forward. Then move each item into an “in progress” section while being worked on and assign the task to the team member who will complete it. Finally, move the item to the “done” section once complete. As a team, we both took responsibility for organising the backlog, delegating the tasks and communicating to each which items were being updated or completed. 
 
 ### Scrum Sprints & Ceremonies
 
@@ -415,33 +420,65 @@ We decided to break the 5-week period into five sprints based on the Scrum frame
 
 #### *Planning Meetings*
 
-We decided that each sprint would start each Monday and begin with the planning ceremony (meeting). During each planning meeting we discussed what we would like to achieve during the sprint and the value that goal would bring to the project. We then moved items from the product backlog that were necessary to complete the sprint, and delegated how we would complete these items. Finally each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
+We decided that each sprint would start each Monday and begin with the planning ceremony (meeting). During each planning meeting, we discussed what we would like to achieve during the sprint and the value that goal would bring to the project. We then moved items from the product backlog that was necessary to complete the sprint and delegated how we would complete these items. Finally, each of the items moved from the backlog was broken down into an increment that would be achievable to be completed in one day.
 
 Based on this approach, each planning meeting addressed the following three questions:
 
 **What is the main sprint goal and the value that would bring to the project?**
 
-**Which items can be moved from the backlog to achieve this goal?**
+**Which items can be moved from the backlog to achieve this goal and who will work on them?**
 
 **How should we break down the chosen items into daily increments?**
 
-To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt, making it easy to move tasks in the backlog into each sprint. 
+To help with tracking the tasks in each week's sprint we used a Gantt chart. The Gantt chart we used was a Trello power-up created by TeamGantt, making it easy to move tasks from the backlog into each sprint and delegate them. 
 
 #### *Daily Standups*
 
-The purpose of our team's morning standup (during core days) was to discuss the progress towards the sprint goal and adapt the backlog as necessary. As we were a small team of just two, on top of our morning stand-up we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. 
+The purpose of our team's morning standup (during core days) was to discuss the progress towards the sprint goal and adapt the backlog as necessary. We adjusted any delegation as necessary to help us both complete our tasks. As we were a small team of just two, on top of our morning stand-up we were in frequent communication throughout the day discussing any challenges or re-evaluating the daily plan. 
 
 #### *Sprint Reviews*
 
 The purpose of our sprint reviews is to review what was accomplished during the Sprint, adjust the product backlog, and determine future adaptations to the project. 
 
+### Task Delegation
+
+#### Overview
+
+We aimed to be purposeful and considerate in how we delegated tasks. We wanted to both share the workload equally while taking into account our interests, strengths, and weaknesses. We discussed the delegation of tasks during our planning meetings and recorded task delegation in both Kanban task, user story cards and in our sprint planning Gantt chart. We then re-evaluated our assigned tasks each day during our stand-ups.  
+
+#### Kanban Tickets
+
+As shown in the below example of a Kanban user story card, each card was marked with the names of the team members who will work on the tasks within that card. The card was given an overall difficulty ranking to equally divide the difficult tasks. The example below shows the card difficulty ranked medium. 
+
+![User Story Card Task Delegation](./docs/trello-screenshots/delegation-card.png)
+
+Each user story card was then given the required tasks and sub-tasks to complete that User Story. Each subtask was delegated to a team member, or both of us if we preferred to use pair programming to complete that task. Assigned tasks reflected who would do the bulk of the work to complete each task. Communication was always free-flowing and we both helped each other whenever required with our assigned tasks. 
+
+<img src="./docs/trello-screenshots/delegation-task.png" alt="User Story Tasks Delegation" width="500"/>
+
+#### Sprint Planning
+
+We then used the User Story Task delegation to plan our sprints and clearly identify on the sprint Gantt chart who will be completing each task. As shown below, the User Story number is recorded with each task and the names of those who will complete each task can be viewed in the assigned column. The User Story number is also recorded with each associated git commit and pull request. The colour of the Gantt chart taskbars were designated purple for tasks we both worked on, dark blue for Chris, and light blue for Mick. 
+
+![User Story Tasks Delegation](./docs/trello-screenshots/delegation-sprint.png)
+
+#### Strengths & Weaknesses
+
+When delegating tasks we took into consideration the strengths and weaknesses of our team members, but also what areas we were both interested in learning and improving at. Above all we both wanted to improve in both our front-end and back-end skills and teach each other as much as possible so that we both finished this assignment as confident MERN full-stack developers. 
+
+We both were equal in skills regarding both client and server-side development. However, we both had areas of the project that we were keen to explore and naturally we delegated tasks according to these interests. 
+
+An example being Chris was interested in learning more about Authentication & Authorisation, particularly in relation to using Firebase, and naturally, Chris was delegated to do the bulk of these tasks and then demonstrate to Mick what he had learnt. 
+
+Another example was Mick was interested in learning more about the Mapbox API and implementing mapping and geocoding. Hence, Mick was delegated the bulk of these tasks and in return was able to teach Chris about Mapbox. 
+
 ### Pair Programming
 
-We wanted to incorporate pair programming into our workflow as a way to share knowledge, write better code and problem solve together. We chose to use pair programming as a way to get started on our server and client code bases, and when each of us encountered any difficult work items. The main tool we used to pair program was VS Code Live Share. We discovered this was a great tool where we could collaborate and write code in unison live on the one project. While pair programming in VS Code Live Share we used Discord to provide video, voice and chat. 
+We wanted to incorporate pair programming into our workflow as a way to share knowledge, write better code and problem-solve together. We chose to use pair programming as a way to get started on our server and client code bases, and when each of us encountered any difficult work items. The main tool we used to pair program was VS Code Live Share. We discovered this was a great tool where we could collaborate and write code in unison live on the one project. While pair programming in VS Code Live Share we used Discord to provide video, voice and chat. 
 
 ### Source Control
 
-We decided that the 'Git Feature Branch Workflow' would be the best for our small team size. Both of us would work on separate feature branches and push our branches to the central repository, then merge our changes into the main codebase using a pull request. This meant that the main codebase would never contain broken code and allow for continuous integration of the deployed back-end and front-end.
+We decided that the 'Git Feature Branch Workflow' would be the best for our team size and project requirements. Both of us would work on separate feature branches and push our branches to the central repository, then merge our changes into the main codebase using a pull request. This meant that the main codebase would never contain broken code and allow for continuous integration of the deployed back-end and front-end.
 
 ## Sprint 1
 
