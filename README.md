@@ -60,6 +60,9 @@
 - [Sprint 2](#sprint-2)
   - [Planning meeting](#planning-meeting)
   - [Sprint Review](#sprint-review-1)
+- [Sprint 3](#sprint-3)
+  - [Planning meeting](#planning-meeting-1)
+  - [Sprint Review](#sprint-review-2)
 
 ## Links
 
@@ -565,6 +568,53 @@ There were no major adaptations to the project. The end of sprint 2 marks the en
 
 ![Sprint 2 Gantt Chart](./docs/trello-screenshots/sprint2-gantt.png)
 
+
+## Sprint 3
+
+### Planning meeting
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+- The main sprint goal this week was to start working through the most important user stories and complete the associated tasks and subtasks. Some of the main features we focused on were authentication, sign up/in forms, landing page, and create & view events. 
+- The value these goals would bring to the project would be that we would have working features that we can start show users and complete user tests on. These goals would also mean that we would be making good progress in completing part B of the assignment on time. 
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+The user stories moved from the backlog and associated tasks are included below. The team member delegated to work on the task is provided next to the task.
+- #1: MUST: Be able to see the Landing Page when I first enter the website, so that I know where and how to navigate around the app.
+  - Scaffold initial React app code  - Chris & Mick (Pair Program)
+  - Deploy Client App to Netlify and GitHub  - Chris & Mick (Pair Program)
+  - Show Landing Page on root visit  - Chris & Mick (Pair Program)
+- #4: MUST: Be able to see a link and forms to sign up/register so that I can create an account for myself if I choose to do so.
+	- Configure React Router – Chris
+	- Create Sign Up & Sign In forms - Chris
+- #8 - MUST: Know that my name, email address and password are secured if I choose to sign up so that my details are kept safe.
+	- Secure User Sign Up/In Forms – Chris
+	- Firebase Client User Sign Up/Sign In – Chris
+	- Send User ID Token to Server API App- Chris
+- #3 - MUST: Be able to create & update a cleanup event with the important information about it so that other registered users can join if they wish.
+  - Create Form to Create/Update Events – Mick
+  - Create Mapbox Geocoding Component - Mick
+- #12 - MUST: Be able to view all existing cleanup events so I can see what is happening.
+	- Display Event Locations on Map – Mick
+	- Filter and Display Events as a List - Mick
+
+**How should we break down the chosen items into daily increments?**
+
+- Each of the tasks was designed to be less than one day of work. The tasks were broken down further into subtasks which can be viewed within the Trello board by following the link. 
+
+### Sprint Review
+
+The screenshots below show the implementation board at the end of sprint 3. The Gantt chart shows which items were worked on each day of the sprint. We successfully completed all of the major tasks and are on track to complete part B of the assignment by the due date. 
+
+There were no major adaptations to the project. We had some discussions about possibly using TailwindCSS for styling. We thought that using TailwindCSS may save us some time and provide a consistent style across the app. 
+
+![Sprint 3 Review Implementation Board](./docs/trello-screenshots/sprint3-implement.png)
+
+![Sprint 3 Gantt Chart](./docs/trello-screenshots/sprint3-gantt.png)
+
 ## User Testing - Development
 
 ### Testing Process
@@ -612,3 +662,4 @@ Manual testing of test cases are each performed on-demand by the user testers at
 ### Completed Test Cases
 
 *To Do: Put screenshots of the completed Google Sheets test cases here*
+
