@@ -29,6 +29,7 @@
   - [Revision 1:](#revision-1)
   - [Revision 2:](#revision-2)
   - [Revision 3:](#revision-3)
+  - [Revision 4:](#revision-4)
 - [Wireframes](#wireframes)
   - [Landing Page](#landing-page)
   - [Sign Up Page](#sign-up-page)
@@ -332,6 +333,13 @@ In this revision from Week 2 of the sprint, the following changes were made:
 - A user story card added for the optional user want for a feature to be able to instant message/chat to other attendees of cleanup events.
 
 ![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
+
+### Revision 4:
+
+In this final revision before production release, the following change was made:
+- Discarded User Story #23 as this was an accidental mistake as it was already a *MUST* requirement in User Story #21.
+
+![User Stories - Revision 4](./docs/trello-screenshots/user-stories-revision4.png)
 
 ## Wireframes
 
