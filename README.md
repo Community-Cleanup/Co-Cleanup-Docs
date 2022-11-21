@@ -1,15 +1,23 @@
-# Co Cleanup: MERN full-stack app <!-- omit in toc -->
+<img src="./doc/../docs/logo/logo-icon.svg" alt="User Story Tasks Delegation" width="300"/>
+
 ### Chris Hullman & Mick Caffery <!-- omit in toc -->
+### MERN full-stack app <!-- omit in toc -->
 ### T3A2 (Part A) Assignment <!-- omit in toc -->
+#### Due Date: 24th Nov 2022 <!-- omit in toc -->
+
+---
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-    - [GitHub Part A Link:](#github-part-a-link)
+    - [Live Site:](#live-site)
+    - [Part A Documentation Link:](#part-a-documentation-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
   - [Target Audience](#target-audience)
   - [Tech Stack](#tech-stack)
+- [Libraries](#libraries)
+- [Screenshots](#screenshots)
 - [Dataflow Diagrams](#dataflow-diagrams)
     - [Note about the below diagrams](#note-about-the-below-diagrams)
     - [Dataflow Diagrams Legend](#dataflow-diagrams-legend)
@@ -30,6 +38,7 @@
   - [Revision 2:](#revision-2)
   - [Revision 3:](#revision-3)
 - [Wireframes](#wireframes)
+  - [Figma](#figma)
   - [Landing Page](#landing-page)
   - [Sign Up Page](#sign-up-page)
   - [Sign-In Page](#sign-in-page)
@@ -63,10 +72,23 @@
 - [Sprint 3](#sprint-3)
   - [Planning meeting](#planning-meeting-1)
   - [Sprint Review](#sprint-review-2)
+- [User Testing - Development](#user-testing---development)
+  - [Testing Process](#testing-process)
+    - [User Testers:](#user-testers)
+  - [Testable Modules](#testable-modules)
+    - [Functional Testing](#functional-testing)
+    - [Non-Functional Testing](#non-functional-testing)
+  - [Testing Environment](#testing-environment)
+  - [Test Schedule](#test-schedule)
+  - [Completed Test Cases](#completed-test-cases)
 
 ## Links
 
-#### GitHub Part A Link:
+#### Live Site:
+
+[**https://cocleanup.netlify.app/**](https://cocleanup.netlify.app/)
+
+#### Part A Documentation Link:
 
 [**https://github.com/Community-Cleanup/community-cleanup-docs-partA**](https://github.com/Community-Cleanup/community-cleanup-docs-partA)
 
@@ -133,6 +155,15 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 **Project Management:** Trello & TeamGantt
 
 **UI Design:** Figma
+
+## Libraries
+
+
+
+## Screenshots
+
+
+
 
 ## Dataflow Diagrams
 
@@ -335,6 +366,12 @@ In this revision from Week 2 of the sprint, the following changes were made:
 
 ## Wireframes
 
+### Figma
+
+Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. The different revisions of our wireframes can be viewed on the different pages of the project. 
+
+[Figma Wireframes](https://www.figma.com/file/7jp9yPtxe7STeHsvZgwpen/Community-Cleanup-Wireframes?node-id=20%3A716&t=DgzonqlR0Dj8Op92-1)
+
 ### Landing Page
 
 The landing page will be the page that visitors see when they navigate to the root URL. It is designed so that users can quickly learn what the app is for and why it might be useful for them. Details about this page include:
@@ -461,7 +498,9 @@ Each user story card was then given the required tasks and sub-tasks to complete
 
 #### Sprint Planning
 
-We then used the User Story Task delegation to plan our sprints and clearly identify on the sprint Gantt chart who will be completing each task. As shown below, the User Story number is recorded with each task and the names of those who will complete each task can be viewed in the assigned column. The User Story number is also recorded with each associated git commit and pull request. The colour of the Gantt chart taskbars were designated purple for tasks we both worked on, dark blue for Chris, and light blue for Mick. 
+We then used the User Story Task delegation to plan our sprints and clearly identify on the sprint Gantt chart who will be completing each task. As shown below, the User Story number is recorded with each task and the names of those who will complete each task can be viewed in the assigned column. The User Story number is also recorded with each associated git commit and pull request. 
+
+**The colour of the Gantt chart taskbars were designated *purple* for tasks we both worked on, *dark blue* for Chris, and *light blue* for Mick.** 
 
 ![User Story Tasks Delegation](./docs/trello-screenshots/delegation-sprint.png)
 
@@ -614,6 +653,9 @@ There were no major adaptations to the project. We had some discussions about po
 ![Sprint 3 Review Implementation Board](./docs/trello-screenshots/sprint3-implement.png)
 
 ![Sprint 3 Gantt Chart](./docs/trello-screenshots/sprint3-gantt.png)
+
+
+
 
 ## User Testing - Development
 
