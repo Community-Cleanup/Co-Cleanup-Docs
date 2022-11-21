@@ -17,6 +17,8 @@
   - [Target Audience](#target-audience)
   - [Tech Stack](#tech-stack)
 - [Libraries](#libraries)
+  - [Client Libraries](#client-libraries)
+  - [Server Libraries](#server-libraries)
 - [Screenshots](#screenshots)
 - [Dataflow Diagrams](#dataflow-diagrams)
     - [Note about the below diagrams](#note-about-the-below-diagrams)
@@ -162,12 +164,61 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Libraries
 
+A complete list of client and server libraries are listed below, along with a description of how they were implemented in the app. Node Package Manager (npm) was used as the package manager to install and update each of the libraries.
 
+### Client Libraries
+
+| n.o | Name | Version | Use | Docs |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| 1 | react | 18.2.0 | User Interface Components | [Link](https://www.npmjs.com/package/react) |
+| 2 | react-dom | 18.2.0 | React Virtual DOM | [Link](https://www.npmjs.com/package/react-dom) |
+| 3 | react-scripts | 5.0.1 | create-react-app Scripts | [Link](https://www.npmjs.com/package/react-scripts) |
+| 4 | react-router-dom | 6.4.3 | React Client Routing | [Link](https://www.npmjs.com/package/react-router-dom) |
+| 5 | axios | 1.1.3 | HTTP Client | [Link](https://www.npmjs.com/package/axios) |
+| 6 | firebase | 9.13.0 | Authentication | [Link](https://www.npmjs.com/package/firebase) |
+| 7 | styled-components | 5.3.6 | CSS-in-JS Components | [Link](https://www.npmjs.com/package/styled-components) |
+| 8 | react-loader-spinner | 5.3.4 | SVG Loading Animation | [Link](https://www.npmjs.com/package/react-loader-spinner) |
+| 9 | mapbox-gl | 2.10.0 | Maps | [Link](https://www.npmjs.com/package/mapbox-gl) |
+| 10 | @mapbox/mapbox-gl-geocoder | 5.0.1 | Address Geocoding | [Link](https://www.npmjs.com/package/@mapbox/mapbox-gl-geocoder) |
+| 11 | @testing-library/react | 13.4.0 | React DOM Testing Utilities | [Link](https://www.npmjs.com/package/@testing-library/react) |
+| 12 | @testing-library/jest-dom | 5.16.5 | React Jest Testing | [Link](https://www.npmjs.com/package/@testing-library/jest-dom) |
+| 13 | @testing-library/user-event | 13.5.0 | User Event Testing | [Link](https://www.npmjs.com/package/@testing-library/user-event) |
+| 14 | web-vitals | 2.1.4 | Web Vitals Metrics | [Link](https://www.npmjs.com/package/web-vitals) |
+
+- **1: react** - about
+- **2: react-dom** - about
+- **3: react-scripts** - about
+- **4: react-router-dom** - about
+- **5: axios** - about
+- **6: firebase** - about
+- **7: styled-components** - about
+- **8: react-loader-spinner** - about
+- **9: mapbox-gl** - about
+- **10: @mapbox/mapbox-gl-geocoder** - about
+- **11: @testing-library/react** - about
+- **12: @testing-library/jest-dom** - about
+- **13: @testing-library/user-event** - about
+- **14: web-vitals** - about
+
+### Server Libraries
+
+| n.o | Name | Version | Use | Docs |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| 1 | express | 4.18.2 | RESTful API Framework | [Link](https://www.npmjs.com/package/express) |
+| 2 | cors | 2.8.5 | CORS Middleware | [Link](https://www.npmjs.com/package/cors) |
+| 3 | helmet | 6.0.0 | HTTP Headers | [Link](https://www.npmjs.com/package/helmet) |
+| 4 | mongoose | 6.7.0 | MongoDB Object Modelling | [Link](https://www.npmjs.com/package/mongoose) |
+| 5 | firebase-admin | 11.2.0 | Authentication | [Link](https://www.npmjs.com/package/firebase-admin) |
+| 6 | dotenv | 16.0.3 | Environment Variable Storage | [Link](https://www.npmjs.com/package/dotenv) |
+
+- **1: express** - about
+- **2: cors** - about
+- **3: helmet** - about
+- **4: mongoose** - about
+- **5: firebase-admin** - about
+- **6: dotenv** - about
 
 ## Screenshots
-
-
-
 
 ## Dataflow Diagrams
 
