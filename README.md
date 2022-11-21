@@ -73,6 +73,9 @@
 - [Sprint 3](#sprint-3)
   - [Planning meeting](#planning-meeting-1)
   - [Sprint Review](#sprint-review-2)
+- [Sprint 4](#sprint-4)
+  - [Planning meeting](#planning-meeting-2)
+  - [Sprint Review](#sprint-review-3)
 - [User Testing - Development](#user-testing---development)
   - [Testing Process](#testing-process)
     - [User Testers:](#user-testers)
@@ -662,6 +665,57 @@ There were no major adaptations to the project. We had some discussions about po
 
 ![Sprint 3 Gantt Chart](./docs/trello-screenshots/sprint3-gantt.png)
 
+## Sprint 4
+
+### Planning meeting
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+- The main sprint goal this week was to continue working through user stories with the aim to have a functioning minimum viable product (MVP) by the end of the week. Some of the main features we focused on were the administration dashboard, user account page, event comments, adding styling and improving flow.
+- The value these goals would bring to the project would be that we would have a fully functioning app that we can start road testing with users and continue testing. Achieving these goals would also mean that we would be on track to complete part B of the assignment on time. 
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+User stories moved from the backlog, associated tasks, and delegation included:
+- #5: MUST: Be able to navigate backwards and forwards between all the web pages available to me so that I don't get lost or find broken links.
+  - Configure React Router – Chris & Mick
+- #7: MUST: Expect what the interface elements do such as buttons and input fields so that I know how to interact with the application.
+	- Create & Implement Styled-Components - Mick
+	- Update Wireframes based on testing feedback - Mick
+- #10: WOULD LIKE: For the interface to be aesthetically pleasing so that I feel pleasure using the app.
+	- Add CSS-in-JS Styling for all Styled Components – Mick
+- #11: MUST: Be able to join any existing, open cleanup event if I choose to do so.
+  - Add User Registration Feature to Events – Mick
+- #13: MUST: Be able to add comments on an event that I am attending so that I can openly share information and ask questions for other attendees to see.	
+  - Add Comments Feature to Events – Mick
+- #19: MUST: Be able to delete any users' created events deemed inappropriate so that the community is kept safe and welcoming.
+	- Configure protected route for admin to delete events – Chris
+	- Change admin dashboard to view and delete events – Chris
+- #20: MUST: Be able to disable or reenable a user's account that is fake, inappropriate, or violating terms of use of the app so that the community is kept safe and welcoming.
+  - Configure protected route for admin to disable/reenable users – Chris
+  - Change admin dashboard to disable/reenable users – Chris
+- #21: MUST: To be able to assign the administrator role to any non-admin registered user, so that other administrators can help out.
+	- Configure protected route for admin to assign/revoke admin role
+	- Change admin dashboard to assign/revoke admin role
+- #22: MUST: Be able to delete any users' comments deemed inappropriate so that the community is kept safe and welcoming.
+	- Configure protected route for admin to delete comments – Chris
+	- Change admin dashboard to view and delete comments – Chris
+
+**How should we break down the chosen items into daily increments?**
+
+- Each of the tasks was designed to be less than one day of work. The tasks were broken down further into subtasks which can be viewed within the Trello board by following the link. 
+
+### Sprint Review
+
+The screenshots below show the implementation board at the end of sprint 3. The Gantt chart shows which items were worked on each day of the sprint. Sprint 4 was our largest sprint in terms of workload for the entire project. We both were able to clear our schedules for the entire week to solely work on the project. We were able to achieve a working application that meets the requirements of the project that we can continue testing and refining. 
+
+A notable adaptation to the project during this sprint was the inclusion of the Styled Components library as a way to create a consistent look and theme for the application and create reusable styling. We discussed in detail about the pros and cons of using either Material UI, TailwindCSS or Styled Components. Both of us had little experience with Material UI and Mick only had experience with TailwindCSS. Both of us had strong CSS skills so we decided to go with Styled Components. 
+
+![Sprint 4 Review Implementation Board](./docs/trello-screenshots/sprint4-implement.png)
+
+![Sprint 4 Gantt Chart](./docs/trello-screenshots/sprint4-gantt.png)
 
 
 
