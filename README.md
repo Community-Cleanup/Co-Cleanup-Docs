@@ -36,10 +36,10 @@
 - [User Stories](#user-stories)
   - [User Stories - Board Link:](#user-stories---board-link)
   - [User Stories - About:](#user-stories---about)
-  - [Revision 1:](#revision-1)
-  - [Revision 2:](#revision-2)
-  - [Revision 3:](#revision-3)
-  - [Revision 4:](#revision-4)
+  - [Revision 1](#revision-1)
+  - [Revision 2](#revision-2)
+  - [Revision 3](#revision-3)
+  - [Revision 4](#revision-4)
 - [Wireframes](#wireframes)
   - [Figma](#figma)
   - [Landing Page](#landing-page)
@@ -78,25 +78,27 @@
 - [Sprint 4](#sprint-4)
   - [Planning meeting](#planning-meeting-2)
   - [Sprint Review](#sprint-review-3)
-- [User Testing - Development](#user-testing---development)
+- [User Testing](#user-testing)
   - [Testing Process](#testing-process)
-    - [User Testers:](#user-testers)
+  - [User Testers](#user-testers)
   - [Testable Modules](#testable-modules)
-    - [Functional Testing](#functional-testing)
-    - [Non-Functional Testing](#non-functional-testing)
-  - [Testing Environment](#testing-environment)
+  - [Development Testing Environment](#development-testing-environment)
+  - [Production Testing Environment](#production-testing-environment)
   - [Test Schedule](#test-schedule)
   - [Completed Test Cases](#completed-test-cases)
+    - [Completed Test Cases - Development](#completed-test-cases---development)
+    - [Completed Test Cases - Production](#completed-test-cases---production)
+  - [Production Client Feedback](#production-client-feedback)
 
 ## Links
 
-#### Live Site:
+#### Live Production Site:
 
-[**https://cocleanup.netlify.app/**](https://cocleanup.netlify.app/)
+[**https://cocleanup.social**](https://cocleanup.social/)
 
-#### Part A Documentation Link:
+#### Documentation Link:
 
-[**https://github.com/Community-Cleanup/community-cleanup-docs-partA**](https://github.com/Community-Cleanup/community-cleanup-docs-partA)
+[**https://github.com/Community-Cleanup/Co-Cleanup-Docs**](https://github.com/Community-Cleanup/Co-Cleanup-Docs)
 
 ## Overview
 
@@ -770,23 +772,23 @@ A notable adaptation to the project during this sprint was the inclusion of the 
 
 
 
-## User Testing - Development
+## User Testing
 
 ### Testing Process
 
-Manual testing is the chosen process for development testing of Co Cleanup app. The documented testable items have their test cases categorised to provide extensive code-coverage, using a mixture of the following testing categories:
-- Black-box testing
-- White-box testing
+The documented testable items have their test cases categorised to provide extensive code-coverage, using a mixture of the following testing categories:
+- Black-box testing (client feedback)
+- White-box testing (developers)
 
 The below user testers, as the primary developers of Co Cleanup app, have knowledge of the inner-workings of the app codebase. As such, an estimated capability of a typical end-user's webpage UI interaction capability and computer literacy skills will be considered in evaluating the pass/fail status of any black-box testing, test cases.
 
-#### User Testers:
+### User Testers
 - Chris Hullman (Developer)
 - Mick Caffery (Developer)
 
 ### Testable Modules
 
-#### Functional Testing
+#### Functional Testing:
 
 Test Modules:
 - #1: User Sign Up
@@ -795,26 +797,61 @@ Test Modules:
 - #4: Event Comments CRUD Operations
 - #5: Administrator User CRUD Operations
 
-#### Non-Functional Testing
+#### Non-Functional Testing:
 
-Modules:
+Test Modules:
 - #6: Page Navigation
 
-### Testing Environment
+### Development Testing Environment
 
-Please refer to the [Application Architecture Diagram](#application-architecture-diagram) as the infrastructure used for development manual testing.
+Please refer to the [Application Architecture Diagram](#application-architecture-diagram) as the infrastructure used for development testing, with the following modifications for the development testing environment:
+- Netlify: 
+    - Netlify will instead be replaced with a `localhost` instance on a local machine running a version of `Node JS` that is capable of executing the packages defined in the client app's `package.json`.
+    - Local private copies of related environment variables will be refered to instead of Netlify.
+- Heroku:
+    - Heroku will instead be replaced with a `localhost` instance on a local machine running a version of `Node JS` that is capable of executing the packages defined in the server app's `package.json`.
+    - Local private copies of related environment variables will be refered to instead of Heroku.
 
-For development testing only, `localhost` instances may alternatively be used by the user testers for one or more of the following three cloud-hosted services identified in the above Application Architecture Diagram:
-- Netlify
-- Heroku
+The `localhost` environments listed above are configured to represent the cloud-hosted services as accurately as possible within scope of the aforementioned testable items to minimise future potential testing errors in production.
+
+Production instances of the below external services/APIs are used for development testing:
+- Firebase authentication
 - MongoDB
-The `localhost` environments are configured to represent the cloud-hosted services as accurately as possible within scope of the aforementioned testable items to minimise future potential testing errors in production.
+- MapBox
+
+### Production Testing Environment
+
+Please refer to the [Application Architecture Diagram](#application-architecture-diagram) as the infrastructure used for production testing.
+
+All environment variables required by both the server app and client app code are securely stored in the production Heroku and Netlify instances, respectively.
 
 ### Test Schedule
 
-Manual testing of test cases are each performed on-demand by the user testers at a time when the developers agree that the corrosponding testable module for the test cases have been programmed and integrated into the Co Cleanup app.
+Manual testing of test cases, and Jest unit-testing or integration-testing, are each performed on-demand by the user testers at a time when the developers agree that the corrosponding testable module for the test cases have been programmed and integrated into the Co Cleanup app.
 
 ### Completed Test Cases
 
-*To Do: Put screenshots of the completed Google Sheets test cases here*
+The numbered test modules listed in **Testable Modules** above have been sorted into the below spreadsheets and completed by testers
+
+#### Completed Test Cases - Development
+
+Please find the link to the latest completed development test cases spreadsheets below:
+**Link:** [**Completed Development Testing Spreadsheets**](https://docs.google.com/spreadsheets/d/1BV3NmIpS4TwTJyvf1_pC0X-nhtN5ZabfryrJLH98Mgs/edit?usp=sharing)
+
+#### Completed Test Cases - Production
+
+Please find the link to the latest completed production test cases spreadsheets below:
+**Link:** [**Completed Production Testing Spreadsheets**](https://docs.google.com/spreadsheets/d/1D71VNlbsv3_D9KFeyZcGyVWGpsjTuH32cBMGcCHDnAs/edit?usp=sharing)
+
+### Production Client Feedback
+
+To facilitate black-box testing with real end-users, the following client feedback form has been developed and sent to potential clients/end-users:
+
+[**https://forms.gle/2ioNPsYYRaesKjbh7**](https://forms.gle/2ioNPsYYRaesKjbh7)
+
+The calculated results of the responses are here (as of 23/11/2022):
+
+*(Any names of the responders have been omitted here for privacy)*
+
+*To Do: Add screenshot(s) of client feedback form responses*
 
