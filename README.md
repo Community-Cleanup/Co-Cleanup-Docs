@@ -11,6 +11,8 @@
 - [Links](#links)
   - [Live Production Site](#live-production-site)
   - [Documentation Link](#documentation-link)
+  - [Server App Repository](#server-app-repository)
+  - [Client App Repository](#client-app-repository)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
@@ -99,6 +101,14 @@
 ### Documentation Link:
 
 [**https://github.com/Community-Cleanup/Co-Cleanup-Docs**](https://github.com/Community-Cleanup/Co-Cleanup-Docs)
+
+### Server App Repository:
+
+[**https://github.com/Community-Cleanup/Co-Cleanup-Server**](https://github.com/Community-Cleanup/Co-Cleanup-Server)
+
+### Client App Repository:
+
+[**https://github.com/Community-Cleanup/Co-Cleanup-Client**](https://github.com/Community-Cleanup/Co-Cleanup-Client)
 
 ## Overview
 
