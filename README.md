@@ -9,8 +9,8 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-    - [Live Site:](#live-site)
-    - [Part A Documentation Link:](#part-a-documentation-link)
+  - [Live Production Site](#live-production-site)
+  - [Documentation Link](#documentation-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality & Features](#functionality--features)
@@ -92,11 +92,11 @@
 
 ## Links
 
-#### Live Production Site:
+### Live Production Site:
 
 [**https://cocleanup.social**](https://cocleanup.social/)
 
-#### Documentation Link:
+### Documentation Link:
 
 [**https://github.com/Community-Cleanup/Co-Cleanup-Docs**](https://github.com/Community-Cleanup/Co-Cleanup-Docs)
 
