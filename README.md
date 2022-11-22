@@ -4,16 +4,16 @@
 ### MERN full-stack app <!-- omit in toc -->
 ### Coder Academy <!-- omit in toc -->
 ### T3A2 (Part A) Assignment <!-- omit in toc -->
-#### Due Date: 24th Nov 2022 <!-- omit in toc -->
+#### Due Date: 23rd Nov 2022 <!-- omit in toc -->
 
 ---
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-  - [Live Production Site](#live-production-site)
-  - [Documentation Link](#documentation-link)
-  - [Server App Repository](#server-app-repository)
-  - [Client App Repository](#client-app-repository)
+  - [Live Production Site:](#live-production-site)
+  - [Documentation Link:](#documentation-link)
+  - [Server App Repository:](#server-app-repository)
+  - [Client App Repository:](#client-app-repository)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality \& Features](#functionality--features)
@@ -39,10 +39,10 @@
 - [User Stories](#user-stories)
   - [User Stories - Board Link:](#user-stories---board-link)
   - [User Stories - About:](#user-stories---about)
-  - [Revision 1](#revision-1)
-  - [Revision 2](#revision-2)
-  - [Revision 3](#revision-3)
-  - [Revision 4](#revision-4)
+  - [Revision 1:](#revision-1)
+  - [Revision 2:](#revision-2)
+  - [Revision 3:](#revision-3)
+  - [Revision 4:](#revision-4)
 - [Wireframes](#wireframes)
   - [Figma](#figma)
   - [Landing Page](#landing-page)
@@ -81,10 +81,15 @@
 - [Sprint 4](#sprint-4)
   - [Planning meeting](#planning-meeting-2)
   - [Sprint Review](#sprint-review-3)
+- [Sprint 5](#sprint-5)
+  - [Planning meeting](#planning-meeting-3)
+  - [Sprint Review](#sprint-review-4)
 - [User Testing](#user-testing)
   - [Testing Process](#testing-process)
   - [User Testers](#user-testers)
   - [Testable Modules](#testable-modules)
+    - [Functional Testing:](#functional-testing)
+    - [Non-Functional Testing:](#non-functional-testing)
   - [Development Testing Environment](#development-testing-environment)
   - [Production Testing Environment](#production-testing-environment)
   - [Test Schedule](#test-schedule)
@@ -781,7 +786,44 @@ A notable adaptation to the project during this sprint was the inclusion of the 
 
 ![Sprint 4 Gantt Chart](./docs/trello-screenshots/sprint4-gantt.png)
 
+## Sprint 5
 
+### Planning meeting
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+- This is the final sprint for the project. It is a half sprint has the assignment is due on Wednesday, 23rd November. 
+- The main sprint goals this week was to add finishing touches to the app, finalise testing and documentation, and submit on time.
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+User stories moved from the backlog, associated tasks, and delegation included:
+- #2: MUST: Be able to read about the app's purpose on the Landing Page or About Page so that I can learn what the app is for and why it might be useful for me.
+  - Add the About Page – Mick
+- #6: MUST: Be able to read the Terms and Conditions, or Privacy Policy, of the app, so that I am aware of my privacy and I understand how the app uses my information.
+	- Add Policy Pages – Mick
+- Finalise Front-End Jest Tests – Chris & Mick
+- Complete User Testing Spreadsheets & work through Issues – Chris & Mick
+- Create Client (user) google feedback form and work through responses - Chris
+- List and describe Libraries used in client and server – Chris & Mick
+- Presentation Slides – Mick
+- Finalise Documentation & Submit – Chris & Mick
+
+**How should we break down the chosen items into daily increments?**
+
+- Each of the tasks was designed to be less than one day of work. The tasks were broken down further into subtasks which can be viewed within the Trello board by following the link. 
+
+### Sprint Review
+
+The screenshots below show the implementation board at the end of sprint 5. The Gantt chart shows which items were worked on each day of the sprint.  **Due to this being the final sprint, the implementation board has been re-arranged to better display which tasks were completed on each sprint** 
+
+Sprint 5 mainly consisted of finalising our app by finishing all testing and fixing any small issues that arose. Through Agile processes and consistent effort, we achieved the MVP that was scoped at the beginning of the project. 
+
+![Sprint 5 Review Implementation Board](./docs/trello-screenshots/sprint5-implement.png)
+
+![Sprint 5 Gantt Chart](./docs/trello-screenshots/sprint5-gantt.png)
 
 ## User Testing
 
