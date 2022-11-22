@@ -177,6 +177,8 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Libraries
 
+Co Cleanup is built on the full MERN stack (MongoDB, Express, React, Node).
+
 A complete list of client and server libraries are listed below, along with a description of how they were implemented in the app. Node Package Manager (npm) was used as the package manager to install and update each of the libraries.
 
 ### Client Libraries
@@ -224,9 +226,9 @@ A complete list of client and server libraries are listed below, along with a de
 | 5 | firebase-admin | 11.2.0 | Authentication | [Link](https://www.npmjs.com/package/firebase-admin) |
 | 6 | dotenv | 16.0.3 | Environment Variable Storage | [Link](https://www.npmjs.com/package/dotenv) |
 
-- **1: express** - about
-- **2: cors** - about
-- **3: helmet** - about
+- **1: express** - Express is used as a minimal and flexible Node.js web application framework. It is used by Co Cleanup to establish and maintain a HTTP server that listens upon HTTP requests and request methods from the client, and to handle HTTP API routes/end-points, middleware, and send HTTP responses to the client. Co Cleanup uses Express' application-level middleware, router-level middleware, and built-in middleware where appropriate. Express has also been configured to only accept incoming requests as JSON objects, and to respond with only JSON objects.
+- **2: cors** - cors is used as Express middleware to enable CORS (Cross-origin resource sharing) for the Co Cleanup client-side app URL. It has been configured on the server to automatically apply CORS to all routes.
+- **3: helmet** - helmet is used as Express middleware as an extra security solution that sets varrious HTTP headers. Co Cleanup's implementation of helmet uses all default headers and their values, except that the Content-Security-Policy (CSP) header is configured with a specific directive to aid in mitigating XSS attacks.
 - **4: mongoose** - about
 - **5: firebase-admin** - about
 - **6: dotenv** - about
