@@ -2,6 +2,7 @@
 
 ### Chris Hullman & Mick Caffery <!-- omit in toc -->
 ### MERN full-stack app <!-- omit in toc -->
+### Coder Academy <!-- omit in toc -->
 ### T3A2 (Part A) Assignment <!-- omit in toc -->
 #### Due Date: 24th Nov 2022 <!-- omit in toc -->
 
@@ -13,7 +14,7 @@
     - [Part A Documentation Link:](#part-a-documentation-link)
 - [Overview](#overview)
   - [Purpose](#purpose)
-  - [Functionality & Features](#functionality--features)
+  - [Functionality \& Features](#functionality--features)
   - [Target Audience](#target-audience)
   - [Tech Stack](#tech-stack)
 - [Libraries](#libraries)
@@ -47,14 +48,14 @@
   - [Sign-In Page](#sign-in-page)
   - [Events Search Page](#events-search-page)
   - [Event Page](#event-page)
-  - [Create & Update Event Page](#create--update-event-page)
+  - [Create \& Update Event Page](#create--update-event-page)
   - [User Dashboard](#user-dashboard)
   - [Admin Dashboard](#admin-dashboard)
 - [Project Management](#project-management)
   - [Overview](#overview-1)
   - [Timeframe](#timeframe)
   - [Kanban Board](#kanban-board)
-  - [Scrum Sprints & Ceremonies](#scrum-sprints--ceremonies)
+  - [Scrum Sprints \& Ceremonies](#scrum-sprints--ceremonies)
     - [*Planning Meetings*](#planning-meetings)
     - [*Daily Standups*](#daily-standups)
     - [*Sprint Reviews*](#sprint-reviews)
@@ -62,7 +63,7 @@
     - [Overview](#overview-2)
     - [Kanban Tickets](#kanban-tickets)
     - [Sprint Planning](#sprint-planning)
-    - [Strengths & Weaknesses](#strengths--weaknesses)
+    - [Strengths \& Weaknesses](#strengths--weaknesses)
   - [Pair Programming](#pair-programming)
   - [Source Control](#source-control)
 - [Sprint 1](#sprint-1)
