@@ -154,7 +154,7 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 **Front-end:** HTML5, CSS3, JavaScript, React.js, Axios
 
-**Back-end:** Node, ExpressJS, Mongoose, MongoDB, Firebase Authentication, Firebase Cloud Storage
+**Back-end:** Node, ExpressJS, Mongoose, MongoDB, Firebase Authentication
 
 **Authentication:** Firebase Authentication
 
