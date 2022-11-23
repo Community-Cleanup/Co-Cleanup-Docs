@@ -209,14 +209,14 @@ A complete list of client and server libraries are listed below, along with a de
 - **4: react-router-dom** - about
 - **5: axios** - about
 - **6: firebase** - about
-- **7: styled-components** - about
-- **8: react-loader-spinner** - about
-- **9: mapbox-gl** - about
-- **10: @mapbox/mapbox-gl-geocoder** - about
-- **11: @testing-library/react** - about
-- **12: @testing-library/jest-dom** - about
-- **13: @testing-library/user-event** - about
-- **14: web-vitals** - about
+- **7: styled-components** is a React specific CSS-in-JS styling package that allows for an HTML element to be styled with custom CSS and imported into JSX components. In our project, we utilised this package by doing all of our CSS stylings within styled-components. We broke our components into elements like buttons, input fields, etc. Then we made utility divs that applied margin, widths, padding, flex, grid, etc. 
+- **8: react-loader-spinner** provided a simple React SVG spinner component that displayed during async await operations so that the user understood that the page was loading.
+- **9: mapbox-gl** is a JavaScript library for interactive, customizable vector maps on the web provided by Mapbox. We used this library to display maps and location data as layers on each map. 
+- **10: @mapbox/mapbox-gl-geocoder** is a geocoder control for mapbox-gl-js using the Mapbox Geocoding API. We used geocoding in our Event Forms to get addresses and the coordinates for each address. The Mapbox Geocoder with mapbox styling was built for vanilla JS projects, however we converted it to be used in a React component.
+- **11: @testing-library/react** - React Testing Library (RTL) is a light-weight solution for testing React components. We installed this package as we were planning to implement detailed front-end testing. Due to time constraints and our current skills, we were not able to fully utilise RTL and will be an area for our team members to improve on after the completion of this assignment. 
+- **12: @testing-library/jest-dom** is a part of the RTL library and allows for Jest to be used to write tests about the state of a DOM. 
+- **13: @testing-library/user-event** is a part of the RTL library and simulates real events that would occur in a browser as a user interacts with it.
+- **14: web-vitals** comes included with create-react-app projects. Taken from the web-vitals docs. web-vitals library is a tiny (~1.5K, brotli'd), a modular library for measuring all the Web Vitals metrics on real users, in a way that accurately matches how they're measured by Chrome and reported to other Google tools. We did not utilise this package, however, did not uninstall it (due to its size) in case we wanted to use it for future use.
 
 ### Server Libraries
 
@@ -448,7 +448,7 @@ In this final revision before production release, the following change was made:
 
 ### Figma
 
-Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. The different revisions of our wireframes can be viewed on the different pages of the project. 
+Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. **Following Agile principles, we adjusted our wireframes as we gained feedback through the development process and user testing.** The different revisions of our wireframes can be viewed on the different pages of the Figma project. 
 
 [Figma Wireframes](https://www.figma.com/file/7jp9yPtxe7STeHsvZgwpen/Community-Cleanup-Wireframes?node-id=20%3A716&t=DgzonqlR0Dj8Op92-1)
 
