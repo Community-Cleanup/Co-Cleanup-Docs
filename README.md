@@ -4,16 +4,16 @@
 ### MERN full-stack app <!-- omit in toc -->
 ### Coder Academy <!-- omit in toc -->
 ### T3A2 (Part A) Assignment <!-- omit in toc -->
-#### Due Date: 23th Nov 2022 <!-- omit in toc -->
+#### Due Date: 23rd Nov 2022 <!-- omit in toc -->
 
 ---
 
 ## Table of Contents <!-- omit in toc -->
 - [Links](#links)
-  - [Live Production Site](#live-production-site)
-  - [Documentation Link](#documentation-link)
-  - [Server App Repository](#server-app-repository)
-  - [Client App Repository](#client-app-repository)
+  - [Live Production Site:](#live-production-site)
+  - [Documentation Link:](#documentation-link)
+  - [Server App Repository:](#server-app-repository)
+  - [Client App Repository:](#client-app-repository)
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Functionality \& Features](#functionality--features)
@@ -39,10 +39,10 @@
 - [User Stories](#user-stories)
   - [User Stories - Board Link:](#user-stories---board-link)
   - [User Stories - About:](#user-stories---about)
-  - [Revision 1](#revision-1)
-  - [Revision 2](#revision-2)
-  - [Revision 3](#revision-3)
-  - [Revision 4](#revision-4)
+  - [Revision 1:](#revision-1)
+  - [Revision 2:](#revision-2)
+  - [Revision 3:](#revision-3)
+  - [Revision 4:](#revision-4)
 - [Wireframes](#wireframes)
   - [Figma](#figma)
   - [Landing Page](#landing-page)
@@ -81,10 +81,15 @@
 - [Sprint 4](#sprint-4)
   - [Planning meeting](#planning-meeting-2)
   - [Sprint Review](#sprint-review-3)
+- [Sprint 5](#sprint-5)
+  - [Planning meeting](#planning-meeting-3)
+  - [Sprint Review](#sprint-review-4)
 - [User Testing](#user-testing)
   - [Testing Process](#testing-process)
   - [User Testers](#user-testers)
   - [Testable Modules](#testable-modules)
+    - [Functional Testing:](#functional-testing)
+    - [Non-Functional Testing:](#non-functional-testing)
   - [Development Testing Environment](#development-testing-environment)
   - [Production Testing Environment](#production-testing-environment)
   - [Test Schedule](#test-schedule)
@@ -138,6 +143,7 @@ The functionality & features are described below for unregistered visitors, regi
 - Secure sign-up & sign-in with a robust cloud authentication platform (Firebase)
 - Can create clean-up events
 - Functionality to upload and display photos to an event the user has created.
+  - **Due to the time constraints of the project, it was decided that the photo upload feature would not be included in Part B MVP scope.**
 - Can register to participate in a clean-up event
 - Can add comments to a clean-up event that you are registered for or have created
 
@@ -206,14 +212,14 @@ A complete list of client and server libraries are listed below, along with a de
 - **4: react-router-dom** - React Router is a necessary use by Co Cleanup client app to simulate URL-based HTTP routing on the client, despite it being a Single Page Application (SPA). Co Cleanup's implementation of this includes automatic client-side navigation, and automatic redirection on any unhandled, 404 Not Found, page/component routes.
 - **5: axios** - Axios, as a promise-based HTTP client for the browser in our case, is the primary library used by the client app to handle all HTTP requests, and the subsequent responses (successful or not), to our server API route end-points as RESTful operations. Axios provides easy-to-implement functions for handling the CRUD requests as HTTP verbs, and for including any body data or headers in each request.
 - **6: firebase** - The Firebase JavaScript SDK, not to be confused with the Firebase Admin SDK described in the following section, implements the client-side libraries to interact with Firebase. Co Cleanup's implementation of this on the client app imports the Firebase Authentication services needed to both securely create a new user account on Firebase via email and password (i.e. sign up), and to sign in the user with authentication and validation, which if successful, generates a unique ID token (JWT). Co Cleanup client app uses this token for session persistence and to send as request headers to the Co Cleanup server app for processing by the Firebase Admin SDK (described in the following section).
-- **7: styled-components** - about
-- **8: react-loader-spinner** - about
-- **9: mapbox-gl** - about
-- **10: @mapbox/mapbox-gl-geocoder** - about
-- **11: @testing-library/react** - about
-- **12: @testing-library/jest-dom** - about
-- **13: @testing-library/user-event** - about
-- **14: web-vitals** - about
+- **7: styled-components** is a React specific CSS-in-JS styling package that allows for an HTML element to be styled with custom CSS and imported into JSX components. In our project, we utilised this package by doing all of our CSS stylings within styled-components. We broke our components into elements like buttons, input fields, etc. Then we made utility divs that applied margin, widths, padding, flex, grid, etc. 
+- **8: react-loader-spinner** provided a simple React SVG spinner component that displayed during async await operations so that the user understood that the page was loading.
+- **9: mapbox-gl** is a JavaScript library for interactive, customizable vector maps on the web provided by Mapbox. We used this library to display maps and location data as layers on each map. 
+- **10: @mapbox/mapbox-gl-geocoder** is a geocoder control for mapbox-gl-js using the Mapbox Geocoding API. We used geocoding in our Event Forms to get addresses and the coordinates for each address. The Mapbox Geocoder with mapbox styling was built for vanilla JS projects, however we converted it to be used in a React component.
+- **11: @testing-library/react** - React Testing Library (RTL) is a light-weight solution for testing React components. We installed this package as we were planning to implement detailed front-end testing. Due to time constraints and our current skills, we were not able to fully utilise RTL and will be an area for our team members to improve on after the completion of this assignment. 
+- **12: @testing-library/jest-dom** is a part of the RTL library and allows for Jest to be used to write tests about the state of a DOM. 
+- **13: @testing-library/user-event** is a part of the RTL library and simulates real events that would occur in a browser as a user interacts with it.
+- **14: web-vitals** comes included with create-react-app projects. Taken from the web-vitals docs. web-vitals library is a tiny (~1.5K, brotli'd), a modular library for measuring all the Web Vitals metrics on real users, in a way that accurately matches how they're measured by Chrome and reported to other Google tools. We did not utilise this package, however, did not uninstall it (due to its size) in case we wanted to use it for future use.
 
 ### Server Libraries
 
@@ -449,7 +455,7 @@ In this final revision before the production release, the following change was m
 
 ### Figma
 
-Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. The different revisions of our wireframes can be viewed on the different pages of the project. 
+Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. **Following Agile principles, we adjusted our wireframes as we gained feedback through the development process and user testing.** The revisions of our wireframes can be viewed on the different pages of the Figma project. 
 
 [Figma Wireframes](https://www.figma.com/file/7jp9yPtxe7STeHsvZgwpen/Community-Cleanup-Wireframes?node-id=20%3A716&t=DgzonqlR0Dj8Op92-1)
 
@@ -787,7 +793,44 @@ A notable adaptation to the project during this sprint was the inclusion of the 
 
 ![Sprint 4 Gantt Chart](./docs/trello-screenshots/sprint4-gantt.png)
 
+## Sprint 5
 
+### Planning meeting
+
+**The topics discussed were:**
+
+**What is the main sprint goal and the value that would bring to the project?**
+
+- This is the final sprint for the project. It is a half sprint has the assignment is due on Wednesday, 23rd November. 
+- The main sprint goals this week was to add finishing touches to the app, finalise testing and documentation, and submit on time.
+
+**Which items can be moved from the backlog to achieve this goal?**
+
+User stories moved from the backlog, associated tasks, and delegation included:
+- #2: MUST: Be able to read about the app's purpose on the Landing Page or About Page so that I can learn what the app is for and why it might be useful for me.
+  - Add the About Page – Mick
+- #6: MUST: Be able to read the Terms and Conditions, or Privacy Policy, of the app, so that I am aware of my privacy and I understand how the app uses my information.
+	- Add Policy Pages – Mick
+- Finalise Front-End Jest Tests – Chris & Mick
+- Complete User Testing Spreadsheets & work through Issues – Chris & Mick
+- Create Client (user) google feedback form and work through responses - Chris
+- List and describe Libraries used in client and server – Chris & Mick
+- Presentation Slides – Mick
+- Finalise Documentation & Submit – Chris & Mick
+
+**How should we break down the chosen items into daily increments?**
+
+- Each of the tasks was designed to be less than one day of work. The tasks were broken down further into subtasks which can be viewed within the Trello board by following the link. 
+
+### Sprint Review
+
+The screenshots below show the implementation board at the end of sprint 5. The Gantt chart shows which items were worked on each day of the sprint.  **Due to this being the final sprint, the implementation board has been re-arranged to better display which tasks were completed on each sprint** 
+
+Sprint 5 mainly consisted of finalising our app by finishing all testing and fixing any small issues that arose. Through Agile processes and consistent effort, we achieved the MVP that was scoped at the beginning of the project. 
+
+![Sprint 5 Review Implementation Board](./docs/trello-screenshots/sprint5-implement.png)
+
+![Sprint 5 Gantt Chart](./docs/trello-screenshots/sprint5-gantt.png)
 
 ## User Testing
 
