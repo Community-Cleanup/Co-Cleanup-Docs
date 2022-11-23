@@ -228,14 +228,16 @@ A complete list of client and server libraries are listed below, along with a de
 
 - **1: express** - Express is used as a minimal and flexible Node.js web application framework. It is used by Co Cleanup to establish and maintain a HTTP server that listens upon HTTP requests and request methods from the client, and to handle HTTP API routes/end-points, middleware, and send HTTP responses to the client. Co Cleanup uses Express' application-level middleware, router-level middleware, and built-in middleware where appropriate. Express has also been configured to only accept incoming requests as JSON objects, and to respond with only JSON objects.
 - **2: cors** - cors is used as Express middleware to enable CORS (Cross-origin resource sharing) for the Co Cleanup client-side app URL. It has been configured on the server to automatically apply CORS to all routes.
-- **3: helmet** - helmet is used as Express middleware as an extra security solution that sets varrious HTTP headers. Co Cleanup's implementation of helmet uses all default headers and their values, except that the Content-Security-Policy (CSP) header is configured with a specific directive to aid in mitigating XSS attacks.
-- **4: mongoose** - about
-- **5: firebase-admin** - about
-- **6: dotenv** - about
+- **3: helmet** - Helmet is used as Express middleware as an extra security solution that sets varrious HTTP headers. Co Cleanup's implementation of helmet uses all default headers and their values, except that the Content-Security-Policy (CSP) header is configured with a specific directive to aid in mitigating XSS attacks.
+- **4: mongoose** - Due to the NoSQL, schemaless nature of MongoDB, Mongoose is implemented in the Co Cleanup application to provide a schema-based solution, which the server app uses mostly for validation and type casting of values in MongoDB document storage. Its Object Data Modeling (ODM) library also provides easy to use methods for querying documents in MongoDB within our app's various middleware and other functions.
+- **5: firebase-admin** - The Firebase Admin SDK is implemented and instantiated on Co Cleanup's server app, where only the Admin Auth API services are utilised. Specfically, the identity verification services that the Firebase Authentication API provides. When required, mostly on protected middleware routes, the Admin SDK verifies and decodes the Firebase ID token that is sent in from the client's request header to extract the token's claims (e.g. the email address), which is used to verify against the relevant MongoDB documents. Note that there is no implementation or use of any *custom* user claims by Co Cleanup.
+- **6: dotenv** - Dotenv allows for the contents of private/secret `.env` files (contents as key/value pairs) to be automatically read and loaded as global environment variables (specifically, Node's `process.env` property) for use throughout both the server app and client app's lifecycle. Co Cleanup uses this specifically to hold the private credentials and connection details for Co Cleanup's Firebase and MongoDB accounts for app connection, authentication and authorisation. Note that the production, cloud deployment instances of the server app and client app have their own independed copy of these environment variables.
 
 ## Screenshots
 
 ## Dataflow Diagrams
+
+**Update 23/11/2022 - Unfortunately due to time constraints, no change has been made any of the below Dataflow Diagrams and their description since the Part A assessment submission due to time constraints. The current implementation of Co Cleanup has some slight modifications to the dataflows described.**
 
 #### Note about the below diagrams
 
