@@ -57,6 +57,7 @@
   - [Overview](#overview-1)
   - [Timeframe](#timeframe)
   - [Kanban Board](#kanban-board)
+  - [Trello Implementation Board Link:](#trello-implementation-board-link)
   - [Scrum Sprints \& Ceremonies](#scrum-sprints--ceremonies)
     - [*Planning Meetings*](#planning-meetings)
     - [*Daily Standups*](#daily-standups)
@@ -539,7 +540,11 @@ We were given a timeframe of five weeks to complete both Part A and Part B of th
 
 ### Kanban Board
 
-We decided to use Trello to manage our Kanban board as we both had experience with this product. We used the Kanban board to create a backlog of tasks or user stories that would be required to move the project forward. Then move each item into an “in progress” section while being worked on and assign the task to the team member who will complete it. Finally, move the item to the “done” section once complete. As a team, we both took responsibility for organising the backlog, delegating the tasks and communicating to each which items were being updated or completed. 
+We decided to use Trello to manage our Kanban board as we both had experience with this product. We used the Kanban board to create a backlog of tasks or user stories that would be required to move the project forward. Then move each item into an “in progress” section while being worked on and assign the task to the team member who will complete it. Finally, move the item to the “done” section once complete. As a team, we both took responsibility for organising the backlog, delegating the tasks and communicating to each which items were being updated or completed.
+
+### Trello Implementation Board Link: 
+
+[**https://trello.com/b/jLaQiEnG/implementation-board-co-cleanup**](https://trello.com/b/jLaQiEnG/implementation-board-co-cleanup)
 
 ### Scrum Sprints & Ceremonies
 
