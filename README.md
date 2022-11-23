@@ -143,6 +143,7 @@ The functionality & features are described below for unregistered visitors, regi
 - Secure sign-up & sign-in with a robust cloud authentication platform (Firebase)
 - Can create clean-up events
 - Functionality to upload and display photos to an event the user has created.
+  - **Due to the time constraints of the project, it was decided that the photo upload feature would not be included in Part B MVP scope.**
 - Can register to participate in a clean-up event
 - Can add comments to a clean-up event that you are registered for or have created
 
@@ -448,7 +449,7 @@ In this final revision before production release, the following change was made:
 
 ### Figma
 
-Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. **Following Agile principles, we adjusted our wireframes as we gained feedback through the development process and user testing.** The different revisions of our wireframes can be viewed on the different pages of the Figma project. 
+Our team used Figma to create our wireframes, allowing us to easily collaborate and share ideas. Our Figma wireframe project can be viewed at the below link. **Following Agile principles, we adjusted our wireframes as we gained feedback through the development process and user testing.** The revisions of our wireframes can be viewed on the different pages of the Figma project. 
 
 [Figma Wireframes](https://www.figma.com/file/7jp9yPtxe7STeHsvZgwpen/Community-Cleanup-Wireframes?node-id=20%3A716&t=DgzonqlR0Dj8Op92-1)
 
