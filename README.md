@@ -205,7 +205,7 @@ A complete list of client and server libraries are listed below, along with a de
 - **3: react-scripts** - about
 - **4: react-router-dom** - about
 - **5: axios** - about
-- **6: firebase** - about
+- **6: firebase** - The Firebase JavaScript SDK, not to be confused with the Firebase Admin SDK described in the following section, implements the client-side libraries to interact with Firebase. Co Cleanup's implementation of this on the client app imports the Firebase Authentication services needed to both securely create a new user account on Firebase via email and password (i.e. sign up), and to sign in the user with authentication and validation, which if successful, generates a unique ID token (JWT). Co Cleanup client app uses this token for session persistence and to send as request headers to the Co Cleanup server app for processing by the Firebase Admin SDK (described in the following section).
 - **7: styled-components** - about
 - **8: react-loader-spinner** - about
 - **9: mapbox-gl** - about
