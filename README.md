@@ -183,6 +183,8 @@ Co Cleanup is aimed at community members, organisations, emergency services or c
 
 ## Libraries
 
+Co Cleanup is built on the full MERN stack (MongoDB, Express, React, Node).
+
 A complete list of client and server libraries are listed below, along with a description of how they were implemented in the app. Node Package Manager (npm) was used as the package manager to install and update each of the libraries.
 
 ### Client Libraries
@@ -204,12 +206,12 @@ A complete list of client and server libraries are listed below, along with a de
 | 13 | @testing-library/user-event | 13.5.0 | User Event Testing | [Link](https://www.npmjs.com/package/@testing-library/user-event) |
 | 14 | web-vitals | 2.1.4 | Web Vitals Metrics | [Link](https://www.npmjs.com/package/web-vitals) |
 
-- **1: react** - about
-- **2: react-dom** - about
-- **3: react-scripts** - about
-- **4: react-router-dom** - about
-- **5: axios** - about
-- **6: firebase** - about
+- **1: react** - This package alone provides the high-level necessary functionality to define React components, included by default with Create React App, and is used by Co Cleanup in close alignment with the below package, react-dom.
+- **2: react-dom** - This is used for React rendering for the web, and included with Create React App, and is used by Co Cleanup to allow React renderers to access the DOM.
+- **3: react-scripts** - React scripts provide the code base from Create React App to handle the easy build and execution pipeline for the React app. With its listing in `package.json` scripts, Co Cleanup developers can execute these scripts every time by executing the React app with the command `npm start` (or `yarn start`), and building the production release with `npm build`.
+- **4: react-router-dom** - React Router is a necessary use by Co Cleanup client app to simulate URL-based HTTP routing on the client, despite it being a Single Page Application (SPA). Co Cleanup's implementation of this includes automatic client-side navigation, and automatic redirection on any unhandled, 404 Not Found, page/component routes.
+- **5: axios** - Axios, as a promise-based HTTP client for the browser in our case, is the primary library used by the client app to handle all HTTP requests, and the subsequent responses (successful or not), to our server API route end-points as RESTful operations. Axios provides easy-to-implement functions for handling the CRUD requests as HTTP verbs, and for including any body data or headers in each request.
+- **6: firebase** - The Firebase JavaScript SDK, not to be confused with the Firebase Admin SDK described in the following section, implements the client-side libraries to interact with Firebase. Co Cleanup's implementation of this on the client app imports the Firebase Authentication services needed to both securely create a new user account on Firebase via email and password (i.e. sign up), and to sign in the user with authentication and validation, which if successful, generates a unique ID token (JWT). Co Cleanup client app uses this token for session persistence and to send as request headers to the Co Cleanup server app for processing by the Firebase Admin SDK (described in the following section).
 - **7: styled-components** is a React specific CSS-in-JS styling package that allows for an HTML element to be styled with custom CSS and imported into JSX components. In our project, we utilised this package by doing all of our CSS stylings within styled-components. We broke our components into elements like buttons, input fields, etc. Then we made utility divs that applied margin, widths, padding, flex, grid, etc. 
 - **8: react-loader-spinner** provided a simple React SVG spinner component that displayed during async await operations so that the user understood that the page was loading.
 - **9: mapbox-gl** is a JavaScript library for interactive, customizable vector maps on the web provided by Mapbox. We used this library to display maps and location data as layers on each map. 
@@ -230,16 +232,18 @@ A complete list of client and server libraries are listed below, along with a de
 | 5 | firebase-admin | 11.2.0 | Authentication | [Link](https://www.npmjs.com/package/firebase-admin) |
 | 6 | dotenv | 16.0.3 | Environment Variable Storage | [Link](https://www.npmjs.com/package/dotenv) |
 
-- **1: express** - about
-- **2: cors** - about
-- **3: helmet** - about
-- **4: mongoose** - about
-- **5: firebase-admin** - about
-- **6: dotenv** - about
+- **1: express** - Express is used as a minimal and flexible Node.js web application framework. It is used by Co Cleanup to establish and maintain a HTTP server that listens to HTTP requests and request methods from the client, and to handle HTTP API routes/end-points, middleware, and sending of HTTP responses to the client. Co Cleanup uses Express' application-level middleware, router-level middleware, and built-in middleware where appropriate. Express has also been configured to only accept incoming requests as JSON objects, and to respond with only JSON objects.
+- **2: cors** - cors is used as Express middleware to enable CORS (Cross-origin resource sharing) for the Co Cleanup client-side app URL. It has been configured on the server to automatically apply CORS to all routes.
+- **3: helmet** - Helmet is used as Express middleware as an extra security solution that sets various HTTP headers. Co Cleanup's implementation of helmet uses all default headers and their values, except that the Content-Security-Policy (CSP) header is configured with a specific directive to aid in mitigating XSS attacks.
+- **4: mongoose** - Due to the NoSQL, schemaless nature of MongoDB, Mongoose is implemented in the Co Cleanup application to provide a schema-based solution, which the server app uses mostly for validation and type casting of values in MongoDB document storage. Its Object Data Modeling (ODM) library also provides easy-to-use methods for querying documents in MongoDB within our app's various middleware and other functions.
+- **5: firebase-admin** - The Firebase Admin SDK is implemented and instantiated on Co Cleanup's server app, where only the Admin Auth API services are utilised. Specifically, the identity verification services that the Firebase Authentication API provides. When required, mostly on protected middleware routes, the Admin SDK verifies and decodes the Firebase ID token that is sent in from the client's request header to extract the token's claims (e.g. the email address), which is used to verify against the relevant MongoDB documents. Note that there is no implementation or use of any *custom* user claims by Co Cleanup.
+- **6: dotenv** - Dotenv allows for the contents of private/secret `.env` files (contents as key/value pairs) to be automatically read and loaded as global environment variables (specifically, Node's `process.env` property) for use throughout both the server app and client app's lifecycle. Co Cleanup uses this specifically to hold the private credentials and connection details for Co Cleanup's Firebase and MongoDB accounts for app connection, authentication and authorisation. Note that the production, cloud deployment instances of the server app and client app have their own independent copy of these environment variables.
 
 ## Screenshots
 
 ## Dataflow Diagrams
+
+**Update 23/11/2022 - Unfortunately, no change has been made to any of the below Dataflow Diagrams and their description since the Part A assessment submission due to time constraints. The current implementation of Co Cleanup has some slight modifications to the dataflows described.**
 
 #### Note about the below diagrams
 
@@ -401,6 +405,8 @@ The client app will then either send one of the following relevant CRUD requests
 
 ## User Stories
 
+**Update 23/11/2022 - To keep track of which of our Git commits correspond to which User Story card number, it was opted that for Git commits for both the server app and client app code, all commits that related to a specific User Story card would begin with the sentence "US# - ...." followed by the rest of the commit message (the # being replaced with the number of the User Story card).**
+
 ### User Stories - Board Link: 
 
 [**https://trello.com/b/kBMQdaEN/user-stories-co-cleanup**](https://trello.com/b/kBMQdaEN/user-stories-co-cleanup)
@@ -425,8 +431,8 @@ This is the original draft User Stories version from Week 1 of the sprint, with 
 ### Revision 2:
 
 In this revision from Week 2 of the sprint, the following changes were made:
-- It was discussed and clarified that our target audience would like to see, as read only, all existing cleaning events that are scheduled without needing to be signed in to the app.
-- For clarity, when the user first signs up into the app, they can specify a nickname as their username, hence we discarded the user story card relating to concerns of privacy of the user's full, real name.
+- It was discussed and clarified that our target audience would like to see, as read-only, all existing cleaning events that are scheduled without needing to be signed in to the app.
+- For clarity, when the user first signs up in the app, they can specify a nickname as their username, hence we discarded the user story card relating to concerns of privacy of the user's full, real name.
 
 ![User Stories - Revision 1](./docs/trello-screenshots/user-stories-revision2.png)
 
@@ -434,13 +440,13 @@ In this revision from Week 2 of the sprint, the following changes were made:
 
 In this revision from Week 2 of the sprint, the following changes were made:
 - The functionality for a user to upload and attach one or more photos to an event when creating their own event will be an optional (i.e. "would like to") requirement outside of the scope of the MVP and will be implemented if the timeframe allows.
-- A user story card added for the optional user want for a feature to be able to instant message/chat to other attendees of cleanup events.
+- A user story card was added for the optional user want for a feature to be able to instant message/chat with other attendees of cleanup events.
 
 ![User Stories - Revision 3](./docs/trello-screenshots/user-stories-revision3.png)
 
 ### Revision 4:
 
-In this final revision before production release, the following change was made:
+In this final revision before the production release, the following change was made:
 - Discarded User Story #23 as this was an accidental mistake as it was already a *MUST* requirement in User Story #21.
 
 ![User Stories - Revision 4](./docs/trello-screenshots/user-stories-revision4.png)
@@ -459,7 +465,7 @@ The landing page will be the page that visitors see when they navigate to the ro
 
 1. The search bar can be used by visitors who are not logged in to view events. When the search bar is focused, the landing page will navigate to the events search page. The about and volunteer links will navigate to information about how the site work and how users can volunteer at events. The create event link will navigate to the create event form, but only if the user is signed in. If the user is not signed in, then this form will navigate to the sign-up page.
 2. The log-in and sign-up links will not be displayed if a user is signed in, instead a user account icon link will be displayed.
-3. The landing page component will consist of a Co Cleanup title, blurb about Co Cleanup, hero image and links to sign up and view events. 
+3. The landing page component will consist of a Co Cleanup title, a blurb about Co Cleanup, hero image and links to sign up and view events. 
 4. The footer will have links to the about and contact pages, along with copyright text. 
 
 ![Landing Page Wireframe](./docs/wireframes/landing-page.png)
@@ -676,7 +682,7 @@ There were no major adaptations to the project. However, in review, we were able
 
 **How should we break down the chosen items into daily increments?**
 
-- Following on from our previous sprint, the dataflow diagram and architecture diagram have already been broken down into a daily increments, with the first increments being completed in sprint 1. The remainder of the tasks have been planned to take less than one day.
+- Following on from our previous sprint, the dataflow diagram and architecture diagram have already been broken down into daily increments, with the first increments being completed in sprint 1. The remainder of the tasks have been planned to take less than one day.
 
 ### Sprint Review
 
@@ -861,12 +867,12 @@ Test Modules:
 Please refer to the [Application Architecture Diagram](#application-architecture-diagram) as the infrastructure used for development testing, with the following modifications for the development testing environment:
 - Netlify: 
     - Netlify will instead be replaced with a `localhost` instance on a local machine running a version of `Node JS` that is capable of executing the packages defined in the client app's `package.json`.
-    - Local private copies of related environment variables will be refered to instead of Netlify.
+    - Local private copies of related environment variables will be referred to instead of Netlify.
 - Heroku:
     - Heroku will instead be replaced with a `localhost` instance on a local machine running a version of `Node JS` that is capable of executing the packages defined in the server app's `package.json`.
-    - Local private copies of related environment variables will be refered to instead of Heroku.
+    - Local private copies of related environment variables will be referred to instead of Heroku.
 
-The `localhost` environments listed above are configured to represent the cloud-hosted services as accurately as possible within scope of the aforementioned testable items to minimise future potential testing errors in production.
+The `localhost` environments listed above are configured to represent the cloud-hosted services as accurately as possible within the scope of the aforementioned testable items to minimise future potential testing errors in production.
 
 Production instances of the below external services/APIs are used for development testing:
 - Firebase authentication
@@ -881,7 +887,7 @@ All environment variables required by both the server app and client app code ar
 
 ### Test Schedule
 
-Manual testing of test cases, and Jest unit-testing or integration-testing, are each performed on-demand by the user testers at a time when the developers agree that the corrosponding testable module for the test cases have been programmed and integrated into the Co Cleanup app.
+Manual testing of test cases, and Jest unit-testing or integration-testing, are each performed on-demand by the user testers at a time when the developers agree that the corresponding testable module for the test cases has been programmed and integrated into the Co Cleanup app.
 
 ### Completed Test Cases
 
@@ -899,13 +905,6 @@ Please find the link to the latest completed production test cases spreadsheets 
 
 ### Production Client Feedback
 
-To facilitate black-box testing with real end-users, the following client feedback form has been developed and sent to potential clients/end-users:
+To facilitate black-box testing with real end-users, the following client feedback form has been developed and sent to potential clients/end-users and their anonymous responses will be recorded and charted throughout production use:
 
 [**https://forms.gle/2ioNPsYYRaesKjbh7**](https://forms.gle/2ioNPsYYRaesKjbh7)
-
-The calculated results of the responses are here (as of 23/11/2022):
-
-*(Any names of the responders have been omitted here for privacy)*
-
-*To Do: Add screenshot(s) of client feedback form responses*
-
