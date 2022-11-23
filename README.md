@@ -200,8 +200,8 @@ A complete list of client and server libraries are listed below, along with a de
 | 13 | @testing-library/user-event | 13.5.0 | User Event Testing | [Link](https://www.npmjs.com/package/@testing-library/user-event) |
 | 14 | web-vitals | 2.1.4 | Web Vitals Metrics | [Link](https://www.npmjs.com/package/web-vitals) |
 
-- **1: react** - about
-- **2: react-dom** - about
+- **1: react** - This package alone provides the high-level necessary functionality to define React components, included by default with Create React App, and is used by Co Cleanup in close alignment with the below pacakge, react-dom.
+- **2: react-dom** - This is used for React rendering for the web, included with Create React App, and is used by Co Cleanup to allow React renderers to access the DOM.
 - **3: react-scripts** - about
 - **4: react-router-dom** - about
 - **5: axios** - about
